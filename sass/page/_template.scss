@@ -246,7 +246,7 @@ section {
         position: relative;
         @include screen('mobile') {
             padding-top: 3em;
-            background: url(../images/kv_m_bg.jpg) no-repeat top center #2e333d;
+            background: url(../images/kv_m.jpg) no-repeat top center #2e333d;
         }
         .container {
             align-self: 100%;
@@ -537,6 +537,7 @@ section {
                     font-size: 2em;
                     position: relative;
                     margin: 0.5em 0 1.5em;
+                    line-height: 1.45em;
                     @include screen('mobile') {
                         margin: 0.25em 0 1em;
                     }
