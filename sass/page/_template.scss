@@ -28,6 +28,7 @@ body {
     @include screen('mobile') {
         background: #fff;
         overflow: hidden;
+        overflow-x: hidden !important;
         overflow-y: auto;
     }
 }
