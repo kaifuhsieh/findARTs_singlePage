@@ -18,14 +18,14 @@ body {
     }
 }
 // google font
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Playfair+Display&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Playfair+Display&display=swap');
 
 // 最外圍預設為100%
 .wrapper {
     width: 100%;
     margin: 0px auto;
-    @include screen("mobile") {
+    @include screen('mobile') {
         background: #fff;
         overflow: hidden;
         overflow-x: hidden !important;
@@ -78,7 +78,7 @@ body {
             flex-basis: calc(100% - 300px);
             max-width: calc(100% - 300px);
         }
-        @include screen("tablet") {
+        @include screen('tablet') {
             display: none;
             + .center_block {
                 flex: none;
@@ -111,8 +111,8 @@ h2.title {
     margin: 0 auto 0.5em;
     span {
         font-size: 2em;
-        font-family: "Bodoni Moda", serif;
-        font-family: "Playfair Display", serif;
+        font-family: 'Bodoni Moda', serif;
+        font-family: 'Playfair Display', serif;
         color: #333;
         font-weight: normal;
         position: relative;
@@ -121,30 +121,30 @@ h2.title {
         line-height: 1.45em;
         br {
             display: none;
-            @include screen("mobile") {
+            @include screen('mobile') {
                 display: block;
             }
         }
-        @include screen("mobile") {
+        @include screen('mobile') {
             font-size: 1.75em;
             line-height: 1.25em;
             margin-bottom: 0.5em;
         }
         &:after {
             position: absolute;
-            content: "";
+            content: '';
             width: 250px;
             border-top: 2px solid #97a745;
             left: 50%;
             margin-left: -125px;
             bottom: -0.5em;
-            @include screen("mobile") {
+            @include screen('mobile') {
                 bottom: -0.25em;
             }
         }
     }
     p {
-        font-size: 1.125rem;
+        font-size: 0.938rem;
         line-height: 1.45em;
         font-weight: normal;
         color: #444;
@@ -162,7 +162,7 @@ header {
         height: 80px;
         border-bottom: 1px solid #eee;
         transition: 0.5s $cubic;
-        @include screen("mobile") {
+        @include screen('mobile') {
             height: 80px;
             border: none;
         }
@@ -174,7 +174,7 @@ header {
         transition: 0.5s $cubic;
         margin: 0;
         height: 65px;
-        @include screen("mobile") {
+        @include screen('mobile') {
             height: 40px;
         }
         img {
@@ -182,7 +182,7 @@ header {
             height: 65px;
             transform: scale(0.8);
             transition: 0.5s $cubic;
-            @include screen("mobile") {
+            @include screen('mobile') {
                 transform: scale(0.9);
                 width: 93px;
                 height: 40px;
@@ -193,7 +193,7 @@ header {
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: auto;
-        @include screen("mobile") {
+        @include screen('mobile') {
             display: none;
         }
         ul {
@@ -244,10 +244,7 @@ section {
         background: url(../images/kv_bg.jpg) no-repeat top center #2e333d;
         display: flex;
         position: relative;
-        @media (min-width: 1200px) {
-            height: 860px;
-        }
-        @include screen("mobile") {
+        @include screen('mobile') {
             padding-top: 3em;
             background: url(../images/kv_m.jpg) no-repeat top center #2e333d;
         }
@@ -261,13 +258,13 @@ section {
             left: 50%;
             top: 20%;
             margin-left: -48%;
-            @include screen("tablet") {
+            @include screen('tablet') {
                 left: 50%;
                 width: 60%;
                 top: 20%;
                 margin-left: -48%;
             }
-            @include screen("mobile") {
+            @include screen('mobile') {
                 left: 50%;
                 top: 3em;
                 width: 90%;
@@ -279,7 +276,7 @@ section {
                 width: 360px;
                 margin-bottom: 1em;
                 border-bottom: 1px solid #fff;
-                @include screen("mobile") {
+                @include screen('mobile') {
                     width: 240px;
                     margin: 0 auto 0.5em;
                 }
@@ -297,16 +294,16 @@ section {
                     display: block;
                     font-weight: normal;
                     font-size: 1.35em;
-                    font-family: "Bodoni Moda", serif;
-                    font-family: "Playfair Display", serif;
+                    font-family: 'Bodoni Moda', serif;
+                    font-family: 'Playfair Display', serif;
                     line-height: 1.25em;
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         font-size: 1.125em;
                         text-align: center;
                     }
                     & + span {
                         text-indent: 4em;
-                        @include screen("tablet") {
+                        @include screen('tablet') {
                             text-indent: 0em;
                         }
                     }
@@ -319,7 +316,7 @@ section {
                     text-align: left;
                     font-weight: normal;
                     text-indent: 8em;
-                    @include screen("tablet") {
+                    @include screen('tablet') {
                         text-indent: 0em;
                         text-align: center;
                     }
@@ -336,18 +333,14 @@ section {
             margin: 0 auto;
             overflow: hidden;
             z-index: 9;
-            @include screen("mobile") {
+            @include screen('mobile') {
                 bottom: 40px;
             }
             .c-line {
                 width: 100%;
                 height: 100%;
                 display: block;
-                background: linear-gradient(
-                    to bottom,
-                    rgba(255, 255, 255, 1) 50%,
-                    rgba(255, 255, 255, 0) 50%
-                );
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 50%);
                 background-position: 0 $line-height-abs;
                 background-size: 100% 200%;
                 animation: scrolldown 1.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
@@ -370,7 +363,7 @@ section {
                 span {
                     color: #fff;
                     margin-bottom: 0;
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         margin-bottom: 1em;
                     }
                 }
@@ -386,37 +379,36 @@ section {
                 display: flex;
                 flex-flow: row wrap;
                 align-content: center;
-                @include screen("mobile") {
+                @include screen('mobile') {
                     flex-basis: 90%;
                     margin: 0 auto 1em;
                 }
                 span {
                     margin: 0 0 0.2em;
                     display: block;
-                    font-size: 0.938em;
+                    font-size: 0.813em;
                     flex: 0 1 100%;
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         text-align: center;
                     }
                 }
                 h3 {
-                    font-family: "Bodoni Moda", serif;
-                    font-family: "Playfair Display", serif;
+                    font-family: 'Bodoni Moda', serif;
+                    font-family: 'Playfair Display', serif;
                     font-size: 3.8em;
                     line-height: 1.125em;
                     font-weight: normal;
                     margin: 0.25em 0 0.5em;
                     flex: 0 1 100%;
-                    @include screen("tablet") {
+                    @include screen('tablet') {
                         font-size: 2.5em;
                     }
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         text-align: center;
                     }
                 }
                 p {
-                    font-size: 1.125em;
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         width: 80%;
                         margin: 0 auto 1em;
                         text-align: center;
@@ -428,7 +420,7 @@ section {
                 flex-basis: 45%;
                 width: 45%;
                 align-self: flex-end;
-                @include screen("mobile") {
+                @include screen('mobile') {
                     flex-basis: 90%;
                     width: 90%;
                     margin: 0 auto;
@@ -457,7 +449,7 @@ section {
             .item {
                 display: flex;
                 margin: 0 0 3em;
-                @include screen("mobile") {
+                @include screen('mobile') {
                     flex-flow: row wrap;
                 }
                 .info {
@@ -465,19 +457,18 @@ section {
                     flex-shrink: 1;
                     flex-basis: 48%;
                     margin: 0;
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         flex-basis: 100%;
                         order: 1;
                     }
                     h3 {
-                        font-family: "Bodoni Moda", serif;
-                        font-family: "Playfair Display", serif;
+                        font-family: 'Bodoni Moda', serif;
+                        font-family: 'Playfair Display', serif;
                         font-size: 2em;
                         margin: 0 0 1em;
                     }
                     p {
                         color: #333;
-                        font-size: 1.125em;
                     }
                 }
                 .img-container {
@@ -486,7 +477,7 @@ section {
                     flex-basis: 48%;
                     margin: 0 0 0 auto;
                     width: 48%;
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         flex-basis: 100%;
                         order: 0;
                         margin-bottom: 1em;
@@ -500,7 +491,7 @@ section {
                     .info {
                         margin: 0 0 0 auto;
                         order: 1;
-                        @include screen("mobile") {
+                        @include screen('mobile') {
                             flex-basis: 100%;
                             order: 1;
                         }
@@ -508,7 +499,7 @@ section {
                     .img-container {
                         margin: 0;
                         order: 0;
-                        @include screen("mobile") {
+                        @include screen('mobile') {
                             flex-basis: 100%;
                             order: 0;
                             margin-bottom: 1em;
@@ -533,27 +524,26 @@ section {
                 padding: 0 1em;
                 text-align: center;
                 margin: 0 0 3em;
-                @include screen("mobile") {
+                @include screen('mobile') {
                     flex-basis: 100%;
                 }
                 span {
-                    font-family: "Bodoni Moda", serif;
-                    font-family: "Playfair Display", serif;
-                    font-size: 1.25rem;
+                    font-family: 'Bodoni Moda', serif;
+                    font-family: 'Playfair Display', serif;
                 }
                 h3 {
-                    font-family: "Bodoni Moda", serif;
-                    font-family: "Playfair Display", serif;
+                    font-family: 'Bodoni Moda', serif;
+                    font-family: 'Playfair Display', serif;
                     font-size: 2em;
                     position: relative;
                     margin: 0.5em 0 1.5em;
                     line-height: 1.45em;
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         margin: 0.25em 0 1em;
                     }
                     &:after {
                         position: absolute;
-                        content: "";
+                        content: '';
                         width: 250px;
                         border-top: 1px solid #313131;
                         left: 50%;
@@ -563,10 +553,6 @@ section {
                 }
                 ul {
                     @include li-reset;
-                    li {
-                        font-size: 1.25em;
-                        margin-bottom: 0.5em;
-                    }
                 }
             }
         }
@@ -575,7 +561,7 @@ section {
     &.good {
         padding-top: 1em;
         h2.title {
-            margin-bottom: 7em;
+            margin-bottom: 5em;
             span {
                 padding: 0 1em;
                 line-height: 1.25em;
@@ -589,7 +575,7 @@ section {
             }
             &:before {
                 position: absolute;
-                content: "";
+                content: '';
                 background: url(../images/h2_bg.jpg) no-repeat center center;
                 width: 100%;
                 max-width: 1360px;
@@ -599,17 +585,17 @@ section {
                 margin-left: -50%;
                 top: -4em;
                 box-shadow: rgba(0, 0, 0, 0.85) 0px 5px 50px -12px;
-                @include screen("tablet") {
+                @include screen('tablet') {
                     top: -3em;
                 }
-                @include screen("xs_mobile") {
+                @include screen('xs_mobile') {
                     top: -2em;
                 }
             }
         }
         .good_content {
             display: flex;
-            @include screen("tablet") {
+            @include screen('tablet') {
                 flex-flow: row wrap;
             }
             .item {
@@ -617,18 +603,18 @@ section {
                 flex-shrink: 1;
                 flex-basis: 33%;
                 padding: 0 1em;
-                @include screen("tablet") {
+                @include screen('tablet') {
                     flex-basis: 100%;
                     margin-bottom: 2em;
                 }
                 h3 {
                     margin: 0 0 1em;
-                    font-family: "Bodoni Moda", serif;
-                    font-family: "Playfair Display", serif;
+                    font-family: 'Bodoni Moda', serif;
+                    font-family: 'Playfair Display', serif;
                     display: flex;
                     font-weight: normal;
                     align-items: center;
-                    font-size: 1.75em;
+                    font-size: 1.5em;
                     height: 2em;
                     padding-left: 3.5em;
                     line-height: 1.45em;
@@ -642,10 +628,10 @@ section {
                         display: block;
                         position: absolute;
                         left: 0em;
-                        font-family: "Times New Roman", Times, serif;
+                        font-family: 'Times New Roman', Times, serif;
                         color: #839705;
                         &:after {
-                            content: ".";
+                            content: '.';
                         }
                     }
                     span {
@@ -655,9 +641,9 @@ section {
                 h4 {
                     font-size: 1.5em;
                     margin: 0 0 1em;
-                    font-family: "Bodoni Moda", serif;
-                    font-family: "Playfair Display", serif;
-                    @include screen("tablet") {
+                    font-family: 'Bodoni Moda', serif;
+                    font-family: 'Playfair Display', serif;
+                    @include screen('tablet') {
                         margin: 0 0 0.5em;
                     }
                 }
@@ -665,7 +651,7 @@ section {
                     color: #666;
                     line-height: 1.5em;
                     min-height: 4.5em;
-                    @include screen("tablet") {
+                    @include screen('tablet') {
                         margin: 0 0 0.5em;
                         min-height: auto;
                     }
@@ -681,21 +667,21 @@ section {
         background: #eaeaea;
         padding: 0;
         min-height: 15em;
-        @include screen("mobile") {
+        @include screen('mobile') {
             padding: 3em 0;
         }
         .container {
             display: flex;
             justify-content: center;
-            @include screen("mobile") {
+            @include screen('mobile') {
                 flex-flow: row wrap;
             }
             .left {
                 flex-grow: 0;
                 flex-shrink: 1;
                 flex-basis: 60%;
-                padding: 5em 1em 5em 0;
-                @include screen("mobile") {
+                padding: 0 1em 0 0;
+                @include screen('mobile') {
                     flex-grow: 0;
                     flex-shrink: 1;
                     flex-basis: 100%;
@@ -713,7 +699,7 @@ section {
                             width: 120px;
                             display: block;
                             margin: 0 auto 0.5em;
-                            @include screen("mobile") {
+                            @include screen('mobile') {
                                 width: 60px;
                             }
                         }
@@ -745,27 +731,27 @@ section {
                 flex-shrink: 1;
                 flex-basis: 100%;
                 p {
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         text-align: center;
                         max-width: 80%;
                         margin: 0 auto 1em;
                     }
                 }
-                @include screen("mobile") {
-                    @include screen("tablet") {
+                @include screen('mobile') {
+                    @include screen('tablet') {
                     }
                 }
                 span {
                     justify-content: flex-start;
                     text-align: left;
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         justify-content: center;
                         text-align: center;
                     }
                     &:after {
                         left: 0;
                         margin-left: 0;
-                        @include screen("mobile") {
+                        @include screen('mobile') {
                             left: 50%;
                             margin-left: -125px;
                         }
@@ -779,7 +765,6 @@ section {
         position: relative;
         display: flex;
         flex-flow: row wrap;
-        padding-top: 4em;
         .container {
             h2.title {
                 text-align: left;
@@ -788,27 +773,27 @@ section {
                 flex-shrink: 1;
                 flex-basis: 100%;
                 p {
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         text-align: center;
                         max-width: 80%;
                         margin: 0 auto 1em;
                     }
                 }
-                @include screen("mobile") {
-                    @include screen("tablet") {
+                @include screen('mobile') {
+                    @include screen('tablet') {
                     }
                 }
                 span {
                     justify-content: flex-start;
                     text-align: left;
-                    @include screen("mobile") {
+                    @include screen('mobile') {
                         justify-content: center;
                         text-align: center;
                     }
                     &:after {
                         left: 0;
                         margin-left: 0;
-                        @include screen("mobile") {
+                        @include screen('mobile') {
                             left: 50%;
                             margin-left: -125px;
                         }
@@ -823,7 +808,7 @@ section {
             background: transparent;
             top: 6em;
             left: 60%;
-            @include screen("mobile") {
+            @include screen('mobile') {
                 width: 300px;
                 left: 60%;
                 top: auto;
@@ -836,7 +821,7 @@ section {
         }
         ul {
             @include li-reset;
-            @include screen("mobile") {
+            @include screen('mobile') {
                 width: 70%;
             }
             li {
@@ -866,8 +851,8 @@ section {
     }
     // professional
     &.professional {
-        padding-top: 5em;
-        padding-bottom: 8em;
+        padding-top: 1em;
+        padding-bottom: 2em;
         min-height: 10em;
         background: url(../images/texture-bg.jpg) no-repeat center top;
         background-size: cover;
@@ -875,7 +860,7 @@ section {
         }
         .professional_content {
             display: flex;
-            @include screen("tablet") {
+            @include screen('tablet') {
                 flex-flow: row wrap;
             }
             .item {
@@ -883,22 +868,22 @@ section {
                 flex-shrink: 1;
                 flex-basis: 25%;
                 padding: 0 1em;
-                @include screen("tablet") {
+                @include screen('tablet') {
                     flex-basis: 50%;
                 }
-                @include screen("xs_mobile") {
+                @include screen('xs_mobile') {
                     flex-basis: 100%;
                 }
                 h3 {
                     margin: 0 0 1em;
-                    font-family: "Bodoni Moda", serif;
-                    font-family: "Playfair Display", serif;
+                    font-family: 'Bodoni Moda', serif;
+                    font-family: 'Playfair Display', serif;
                     display: flex;
                     font-weight: normal;
                     align-items: center;
                     font-size: 1.5em;
                     position: relative;
-                    @include screen("tablet") {
+                    @include screen('tablet') {
                         margin: 0em 0 0.25em;
                     }
                     span {
@@ -909,14 +894,14 @@ section {
                 h4 {
                     font-size: 1.5em;
                     margin: 0 0 1em;
-                    font-family: "Bodoni Moda", serif;
-                    font-family: "Playfair Display", serif;
+                    font-family: 'Bodoni Moda', serif;
+                    font-family: 'Playfair Display', serif;
                 }
                 p {
                     color: #666;
                     line-height: 1.5em;
                     min-height: 4.5em;
-                    @include screen("tablet") {
+                    @include screen('tablet') {
                         margin: 0 0 1em;
                     }
                 }
@@ -929,7 +914,7 @@ footer {
     padding: 3em 0;
     .container {
         display: flex;
-        @include screen("tablet") {
+        @include screen('tablet') {
             flex-flow: row wrap;
         }
         .footer_logo {
@@ -940,7 +925,7 @@ footer {
                 max-height: 50px;
                 margin-right: 2em;
             }
-            @include screen("tablet") {
+            @include screen('tablet') {
                 flex-basis: 100%;
             }
         }
@@ -956,10 +941,10 @@ footer {
                 margin: 0;
                 color: #999;
             }
-            @include screen("tablet") {
+            @include screen('tablet') {
                 flex-basis: 50%;
             }
-            @include screen("xs_mobile") {
+            @include screen('xs_mobile') {
                 flex-basis: 100%;
             }
         }
@@ -982,10 +967,10 @@ footer {
                     color: #ffc37e;
                 }
             }
-            @include screen("tablet") {
+            @include screen('tablet') {
                 flex-basis: 50%;
             }
-            @include screen("xs_mobile") {
+            @include screen('xs_mobile') {
                 flex-basis: 100%;
             }
         }
