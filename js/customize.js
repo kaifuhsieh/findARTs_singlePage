@@ -1,5 +1,18 @@
 // 自行加入的JS請寫在這裡
 $(function () {
+    function closeMenu() {
+        $('.m_menu').removeClass('open');
+        $('.btn_menu').find('#burger').stop().removeClass('open');
+    }
+    function closeAll() {
+        $('.submenu').stop(true, true).hide();
+    }
+    var _windowW = $(window).width();
+    $(window).on('load resize scroll', function (e) {
+        if (_windowW > 992) {
+            closeMenu();
+        }
+    });
     $('.btn_menu')
         .off()
         .click(function (e) {
@@ -7,10 +20,7 @@ $(function () {
             $(this).find('#burger').stop().toggleClass('open');
             e.preventDefault();
         });
-    function closeMenu() {
-        $('.m_menu').removeClass('open');
-        $('.btn_menu').find('#burger').stop().removeClass('open');
-    }
+    //---------------------------------------------------------------------------手機選單---------//
     //----------------------------------------//
     $('.m_menu')
         .find('#m_elegant')
@@ -67,15 +77,14 @@ $(function () {
         .find('#m_download')
         .off()
         .click(function (e) {
-            $(this).siblings('.submenu').stop().toggleSlide('600', 'easeOutQuint');
+            $(this).siblings('.submenu').stop().slideToggle('600', 'easeOutQuint');
         });
-    function closeAll() {
-        $('.submenu').stop(true, true).hide();
-    }
+    //---------------------------------------------------------------------------手機選單---------//
     //m_download
-    if ($('#m_download').length > 0) {
+    if ($('header #m_download').length > 0) {
         var download_Status = false;
-        $('#m_download')
+        $('header')
+            .find('#m_download')
             .off()
             .click(function (e) {
                 if (!download_Status) {
