@@ -448,6 +448,7 @@ section {
                     line-height: 1.25em;
                     @include screen('mobile') {
                         font-size: 1.125em;
+                        line-height: 1.5em;
                         text-align: center;
                     }
                     & + span {

@@ -78,6 +78,7 @@ $(function () {
         .off()
         .click(function (e) {
             $(this).siblings('.submenu').stop().slideToggle('600', 'easeOutQuint');
+            e.preventDefault();
         });
     //---------------------------------------------------------------------------手機選單---------//
     //m_download
