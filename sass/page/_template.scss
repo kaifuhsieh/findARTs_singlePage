@@ -28,7 +28,7 @@ a:focus {
 //明體 https://fonts.google.com/noto/specimen/Noto+Serif+HK?preview.text=%E4%B8%AD%E6%96%87%E5%AD%97%E5%9E%8B&preview.text_type=custom
 // @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400&display=swap');
 // 最外圍預設為100%
 .wrapper {
     width: 100%;
@@ -125,7 +125,7 @@ h2.title {
     margin: 0 auto 0.5em;
     span {
         font-size: 2em;
-        font-family: 'Noto Serif Display', serif;
+        font-family: 'Noto Serif TC', serif;
         color: #333;
         font-weight: normal;
         position: relative;
@@ -139,8 +139,8 @@ h2.title {
             }
         }
         @include screen('mobile') {
-            font-size: 1.75em;
-            line-height: 1.25em;
+            font-size: 1.5em;
+            line-height: 1.5em;
             margin-bottom: 0.5em;
         }
         &:after {
@@ -329,6 +329,9 @@ $line-height-abs: -90px;
 section {
     padding: 3em 0;
     min-height: 480px;
+    @include screen('mobile') {
+        padding:4.5em 0 3em;
+    }
     &.kv {
         width: 100%;
         height: 720px;
@@ -412,9 +415,9 @@ section {
                 margin: 0 auto;
                 color: #fff;
                 span.title {
-                    font-family: 'Noto Serif Display', serif;
+                    font-family: 'Noto Serif TC', serif;
                     font-size: 3.8rem;
-                    line-height: 1.125em;
+                    line-height: 1.25em;
                     font-weight: normal;
                     margin: 0.25em 0 0.5em;
                     flex: 0 1 100%;
@@ -433,6 +436,7 @@ section {
                     @include screen('mobile') {
                         text-align: center;
                         font-size: 1.5em;
+                        line-height: 1.5em;
                     }
                 }
                 span {
@@ -440,7 +444,7 @@ section {
                     text-align: center;
                     font-weight: normal;
                     font-size: 1.5em;
-                    font-family: 'Noto Serif Display', serif;
+                    font-family: 'Noto Serif TC', serif;
                     line-height: 1.25em;
                     @include screen('mobile') {
                         font-size: 1.125em;
@@ -547,7 +551,7 @@ section {
                     }
                 }
                 h3 {
-                    font-family: 'Noto Serif Display', serif;
+                    font-family: 'Noto Serif TC', serif;
                     font-size: 3.8em;
                     line-height: 1.125em;
                     font-weight: normal;
@@ -618,8 +622,7 @@ section {
                         order: 1;
                     }
                     h3 {
-                        font-family: 'Bodoni Moda', serif;
-                        font-family: 'Playfair Display', serif;
+                        font-family: 'Noto Serif TC', serif;
                         font-size: 2em;
                         margin: 0 0 1em;
                         line-height: 1.125em;
@@ -686,16 +689,17 @@ section {
                     flex-basis: 100%;
                 }
                 span {
-                    font-family: 'Noto Serif Display', serif;
+                    font-family: 'Noto Serif TC', serif;
                     font-size: 1.25rem;
                     &.en {
-                        font-size: 1.75em;
+                        font-size: 1.5em;
+                        line-height: 1.5em;
                         margin-bottom: 1em;
                         display: block;
                     }
                 }
                 h3 {
-                    font-family: 'Noto Serif Display', serif;
+                    font-family: 'Noto Serif TC', serif;
                     font-size: 2em;
                     position: relative;
                     margin: 0.5em 0 1.5em;
@@ -786,7 +790,7 @@ section {
                 }
                 h3 {
                     margin: 0 0 1em;
-                    font-family: 'Noto Serif Display', serif;
+                    font-family: 'Noto Serif TC', serif;
                     display: flex;
                     font-weight: normal;
                     align-items: center;
@@ -823,7 +827,7 @@ section {
                 h4 {
                     font-size: 1.5em;
                     margin: 0 0 1em;
-                    font-family: 'Noto Serif Display', serif;
+                    font-family: 'Noto Serif TC', serif;
                     @include screen('tablet') {
                         margin: 0 0 0.5em;
                     }
@@ -1066,7 +1070,7 @@ section {
                 }
                 h3 {
                     margin: 0 0 1em;
-                    font-family: 'Noto Serif Display', serif;
+                    font-family: 'Noto Serif TC', serif;
                     display: flex;
                     font-weight: normal;
                     align-items: center;
@@ -1083,7 +1087,7 @@ section {
                 h4 {
                     font-size: 1.5em;
                     margin: 0 0 1em;
-                    font-family: 'Noto Serif Display', serif;
+                    font-family: 'Noto Serif TC', serif;
                 }
                 p {
                     color: #666;
