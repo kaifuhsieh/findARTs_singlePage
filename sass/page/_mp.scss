@@ -1,12 +1,43 @@
 /////////////////////////////////////////////////////////以下為demo範例///
 // 首頁區塊設定
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap');
 // more按鈕
+
+section.sec {
+    padding: 4em 0 6em;
+    h2,
+    h2.h2_title {
+        text-align: center;
+        font-size: 2.8em;
+        margin: 0 auto 1.5em;
+        line-height: 1.45em;
+        font-family: 'Noto Serif TC', serif;
+        color: #2b2929;
+        max-width: 800px;
+        small {
+            display: block;
+            font-size: 1rem;
+            color: #898989;
+            font-family: $font-family;
+            font-weight: normal;
+            line-height: 1.45em;
+            margin: 1em auto 0.5em;
+            @include screen('mobile') {
+                font-size: 0.938rem;
+            }
+        }
+        @include screen('mobile') {
+            font-size: 2.2em;
+            max-width: 90%;
+        }
+    }
+}
 a.more {
     display: block;
     width: 10em;
     text-align: center;
     height: 2.5em;
-    margin: .5em auto .5em;
+    margin: 0.5em auto 0.5em;
     line-height: 2.5;
     color: $primaryColor;
     border: 1px solid $primaryColor;
@@ -22,20 +53,20 @@ a.more {
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
     &:after {
-        content: "";
+        content: '';
         width: 12px;
         height: 12px;
-        border: 2px solid #FFF;
+        border: 2px solid #fff;
         transform: rotate(45deg);
         position: absolute;
         right: -10px;
         top: 14px;
         border-left: none;
         border-bottom: none;
-        transition: .3s ease-out;
+        transition: 0.3s ease-out;
     }
     &:before {
-        content: "";
+        content: '';
         position: absolute;
         z-index: -1;
         top: 0;
@@ -66,10 +97,867 @@ a.more {
     }
 }
 
-// 範例：
-.demosection {
-    [class^="col"] {
-        border: 2px solid #FFF;
-        background: #DEDEDE;
+.hero {
+    width: 100%;
+    min-height: 870px;
+    height: 90vh;
+    padding: 8em 0;
+    background: url(../images/bg_hero.jpg) no-repeat center center #e4dacd;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    @include screen('notebook') {
+        min-height: 700px;
+        height: 100vh;
+        padding: 18em 0 4em;
+    }
+    @include screen('tablet') {
+        padding: 6em 0 2em;
+        height: auto;
+        height: 80vh;
+    }
+    @include screen('xs_mobile') {
+        height: auto;
+    }
+    .container {
+        display: flex;
+        max-width: 95%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        @include gutter;
+        display: flex;
+        flex-flow: row wrap;
+        @include screen('tablet') {
+            max-width: 100%;
+        }
+        h2 {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 4.8em;
+            margin: 0 0 0.5em;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100%;
+            line-height: 1.45em;
+            @include screen('notebook') {
+                font-size: 3.6em;
+            }
+            span {
+                display: inline-block;
+                visibility: hidden;
+                margin-right: -8px;
+            }
+        }
+        .summary {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 46em;
+            display: flex;
+            flex-flow: row wrap;
+            padding-left: 0.35em;
+            position: relative;
+            z-index: 2;
+            @include screen('notebook') {
+                flex-basis: 33em;
+            }
+            @include screen('tablet') {
+                flex-basis: 100%;
+                order: 2;
+                h2 {
+                    text-align: center;
+                }
+                h3 {
+                    text-align: center;
+                    width: 90%;
+                    display: block;
+                    margin: 0 auto !important;
+                }
+                p {
+                    text-align: center;
+                    width: 90%;
+                    display: block;
+                    margin: 0 auto !important;
+                }
+            }
+            h2,
+            h3 {
+                @include screen('tablet') {
+                    display: none;
+                }
+            }
+            h3 {
+                font-family: 'Noto Serif TC', serif;
+                font-size: 2.6em;
+                line-height: 1.35em;
+                margin: 0 0 1em;
+                @include screen('notebook') {
+                    font-size: 2em;
+                }
+            }
+            p {
+                font-size: 1.0125em;
+                line-height: 1.75em;
+                @include screen('notebook') {
+                    font-size: 1em;
+                }
+            }
+        }
+        .rotate-slider {
+            position: relative;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            z-index: 1;
+            .m_title {
+                display: none;
+            }
+            @include screen('tablet') {
+                flex-basis: 100%;
+                min-height: 720px;
+                order: 1;
+                padding: 20em 0 8em;
+                // outline: 1px solid red;
+                .m_title {
+                    position: absolute;
+                    width: 100%;
+                    height: 20em;
+                    left: 0;
+                    top: 0;
+                    display: block;
+                    h2,
+                    h3 {
+                        text-align: center;
+                        width: 90%;
+                        display: block;
+                        margin: 0 auto !important;
+                    }
+                    h2 {
+                        font-size: 3em;
+                        margin-bottom: 0.5em !important;
+                    }
+                }
+            }
+            @include screen('mobile') {
+                min-height: 420px;
+                padding: 30em 0 0em;
+                // outline: 1px solid red;
+                .m_title {
+                    h2,
+                    h3 {
+                        text-align: center;
+                        width: 90%;
+                        display: block;
+                        margin: 0 auto !important;
+                    }
+                    h2 {
+                        font-size: 2.4em;
+                        margin-bottom: 0.5em !important;
+                    }
+                }
+            }
+            a {
+                pointer-events: none;
+            }
+            [class^='slider'] {
+                object-fit: contain;
+            }
+            .slider-middle {
+                position: absolute;
+                width: 80%;
+                height: 70%;
+                left: 10%;
+                bottom: 10%;
+                z-index: 100;
+                transition: 0.5s $cubic;
+                transform-origin: center center;
+                transform: scale(1.65);
+                @include screen('notebook') {
+                    transform: scale(1.5);
+                }
+                @include screen('tablet') {
+                    transform: scale(1.125);
+                }
+                @include screen('mobile') {
+                    transform: scale(1.25);
+                }
+            }
+            .slider-left-1 {
+                position: absolute;
+                width: 20%;
+                height: 35%;
+                left: 12%;
+                bottom: 15%;
+                z-index: 99;
+                opacity: 0.9;
+                transition: 0.75s $cubic;
+                color: #fff;
+                opacity: 0.5;
+            }
+            .slider-left-2 {
+                position: absolute;
+                width: 14%;
+                height: 22%;
+                left: 10%;
+                bottom: 18%;
+                z-index: 98;
+                opacity: 0.8;
+                transition: 0.75s $cubic;
+                opacity: 0.5;
+            }
+            .slider-right-1 {
+                position: absolute;
+                width: 20%;
+                height: 35%;
+                left: 68%;
+                bottom: 15%;
+                z-index: 99;
+                opacity: 0.9;
+                transition: 0.75s $cubic;
+                opacity: 0.5;
+            }
+            .slider-right-2 {
+                position: absolute;
+                width: 14%;
+                height: 22%;
+                left: 86%;
+                bottom: 18%;
+                z-index: 98;
+                opacity: 0.8;
+                transition: 0.75s $cubic;
+                opacity: 0.5;
+            }
+
+            .slider-hide {
+                width: 0;
+                height: 0;
+                opacity: 0;
+                transition: 0.75s $cubic;
+            }
+            #slider-btn {
+                display: none;
+            }
+
+            #slider-btn .prev-btn {
+                position: absolute;
+                top: 50%;
+                left: 31%;
+                z-index: 200;
+                color: #fff;
+                cursor: pointer;
+                display: none;
+            }
+            #slider-btn .next-btn {
+                position: absolute;
+                top: 50%;
+                left: 66%;
+                z-index: 200;
+                color: #fff;
+                cursor: pointer;
+                display: none;
+            }
+            [class^='arr-'] {
+                /* Arrows @RCB */
+                border: solid currentColor;
+                border-width: 0 0.15em 0.15em 0;
+                display: inline-block;
+                padding: 0.5em;
+            }
+            .arr-right {
+                transform: rotate(-45deg);
+            }
+            .arr-left {
+                transform: rotate(135deg);
+            }
+        }
+    }
+}
+$line-height: 90px;
+$line-height-abs: -90px;
+@keyframes scrolldown {
+    0% {
+        background-position: 0 $line-height-abs;
+    }
+    75% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 $line-height;
+    }
+}
+.solution {
+    background: url(../images/solution_bg.jpg) repeat center center;
+    position: relative;
+    padding: 8em 0 4em !important;
+    @include screen('mobile') {
+        padding: 8em 0 18em !important;
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        width: 500px;
+        height: 500px;
+        left: 50%;
+        margin-left: 200px;
+        bottom: 0;
+        background: url(../images/solution_device.png) no-repeat center center;
+        background-size: contain;
+        z-index: 0;
+        @include screen('notebook') {
+            margin-left: 120px;
+        }
+        @include screen('tablet') {
+            margin-left: -100px;
+        }
+        @include screen('mobile') {
+            margin-left: -240px;
+            z-index: 1;
+        }
+    }
+    &:before {
+        display: none;
+        @include screen('mobile') {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 20em;
+            background: $primaryColor;
+            left: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+    }
+    .c-scrolldown {
+        width: 1px;
+        height: $line-height;
+        position: absolute;
+        top: 1em;
+        left: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        z-index: 9;
+        @include screen('mobile') {
+            bottom: 40px;
+        }
+        &.bottom {
+            top: auto;
+            bottom: 1em;
+            @include screen('tablet') {
+                display: none;
+            }
+        }
+        .c-line {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: linear-gradient(to bottom, rgb(130, 113, 74) 50%, rgba(255, 255, 255, 0) 50%);
+            background-position: 0 $line-height-abs;
+            background-size: 100% 200%;
+            animation: scrolldown 1.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+        }
+    }
+    .solution_card {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 auto 4em;
+        @include screen('tablet') {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: 0 auto 1em;
+        }
+        .item {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 33.3333%;
+            margin: 0 0.5em 0.5em;
+            padding: 0 2em;
+            @include screen('notebook') {
+                padding: 0 1em;
+            }
+            @include screen('tablet') {
+                flex-basis: calc(50% - 1em);
+                padding: 0 1em;
+                margin-bottom: 2em;
+            }
+            @include screen('mobile') {
+                flex-basis: 400px;
+                margin: 0 auto 3.5em;
+            }
+            a {
+                display: block;
+                &:hover,
+                &:focus {
+                    color: $color-word;
+                }
+            }
+            h3 {
+                font-family: 'Noto Serif TC', serif;
+                font-size: 1.75em;
+                line-height: 1.35em;
+                margin: 0 0 0.25em;
+                min-height: 3.6em;
+                @include screen('notebook') {
+                    font-size: 1.75em;
+                    @include text-line(2, 1.35em);
+                }
+                small {
+                    font-size: 0.875rem;
+                    line-height: 1.35em;
+                    margin: 0 0 1.5em;
+                    display: block;
+                    color: #898989;
+                }
+                @include screen('mobile') {
+                    height: auto;
+                    min-height: auto;
+                }
+            }
+            .card {
+                background: #fff;
+                min-height: 30em;
+                box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                p {
+                    margin: 2em 2em 1em;
+                }
+                .img-container {
+                    aspect-ratio: 4/3;
+                    span {
+                        position: absolute;
+                        background: #b5a683;
+                        padding: 0.5em 1em;
+                        font-family: 'Noto Serif TC', serif;
+                        color: #fff;
+                        right: 0;
+                        top: 0;
+                        z-index: 2;
+                        font-size: 1.25em;
+                    }
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    .solution_list {
+        ul {
+            @include li-reset;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: 0 auto 4em;
+            width: 100%;
+            li {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: calc(33.3333% - 1em);
+                margin: 0 0.5em 1em;
+                padding: 0 2em;
+                @include screen('tablet') {
+                    flex-basis: calc(50% - 1em);
+                    padding: 0 1em;
+                }
+                @include screen('mobile') {
+                    flex-basis: 400px;
+                    margin: 0 auto 1em;
+                }
+            }
+            h3 {
+                font-family: 'Noto Serif TC', serif;
+                font-size: 2em;
+                line-height: 1.35em;
+                margin: 0 0 0.5em;
+                @include text-line(2, 1.35em);
+                border-bottom: 1px solid $primaryColor;
+                @include screen('notebook') {
+                    font-size: 1.5em;
+                }
+                @include screen('mobile') {
+                    height: auto;
+                    min-height: auto;
+                    padding-bottom: 0.5em;
+                }
+            }
+            ul {
+                li {
+                    flex-basis: 100%;
+                    width: 100%;
+                    margin: 0 0 0.5em;
+                    padding: 0 0.25em;
+                    font-size: 1.125em;
+                }
+            }
+        }
+    }
+}
+.technology {
+    background: #fff;
+    .tech_content {
+        max-width: 1200px;
+        margin: 0 auto;
+        .item {
+            display: flex;
+            align-items: stretch;
+            margin-bottom: 5em;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                width: 1px;
+                height: 150%;
+                top: 80%;
+                left: 30%;
+                background: #d8d1c1;
+                transform: rotate(-65deg);
+                transform-origin: left top;
+                z-index: 0;
+                @include screen('tablet') {
+                    display: none;
+                }
+            }
+            @include screen('tablet') {
+                flex-flow: row wrap;
+                width: 80%;
+                margin: 0 auto 3em;
+                max-width: 600px;
+            }
+            @include screen('xs_mobile') {
+                width: 100%;
+                @include gutter;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+            &:nth-child(2n) {
+                &:after {
+                    right: 30%;
+                    left: auto;
+                    top: 80%;
+                    transform: rotate(65deg);
+                }
+                .circle {
+                    order: 3;
+                    @include screen('tablet') {
+                        order: 1;
+                    }
+                }
+                .pic {
+                    order: 2;
+                }
+                .tech_info {
+                    order: 1;
+                    @include screen('tablet') {
+                        order: 3;
+                    }
+                    ul {
+                        width: 100%;
+                        li {
+                            text-align: right;
+                            @include screen('mobile') {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .circle {
+                display: flex;
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: 360px;
+                min-width: 360px;
+                height: 360px;
+                background: url(../images/circle_bg.png) no-repeat center center;
+                background-size: contain;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+                @include screen('notebook') {
+                    flex-basis: 300px;
+                    width: 300px;
+                    min-width: 300px;
+                }
+                @include screen('tablet') {
+                    margin: 0 auto 1em;
+                }
+                @include screen('xs_mobile') {
+                    flex-basis: 320px;
+                    width: 320px;
+                    min-width: 320px;
+                }
+                span {
+                    font-family: 'Noto Serif TC', serif;
+                    font-size: 1.75em;
+                    font-weight: bold;
+                    display: block;
+                    text-align: center;
+                    width: 90%;
+                    margin: auto;
+                    line-height: 1.35em;
+                }
+            }
+            .pic {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
+                display: flex;
+                align-items: center;
+                padding: 0 1em;
+                position: relative;
+                z-index: 1;
+                @include screen('tablet') {
+                    margin: 0 auto 1em;
+                    flex-basis: 360px;
+                    padding: 0;
+                }
+                @include screen('xs_mobile') {
+                    width: 320px;
+                    flex-basis: 320px;
+                }
+                img {
+                    max-width: 360px;
+                    @include screen('xs_mobile') {
+                        width: 320px;
+                    }
+                }
+            }
+            .tech_info {
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: 320px;
+                display: flex;
+                align-items: center;
+                padding: 0 1em;
+                position: relative;
+                z-index: 1;
+                @include screen('tablet') {
+                    max-width: 360px;
+                    margin: 0 auto;
+                }
+                ul {
+                    @include li-reset;
+                    @include screen('tablet') {
+                        width: 100%;
+                    }
+                    li {
+                        font-size: 1.25em;
+                        margin-bottom: 1em;
+                        line-height: 1.45em;
+                        @include screen('tablet') {
+                            text-align: center;
+                        }
+                        @include screen('xs_mobile') {
+                            @include gutter;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.certification {
+    .container {
+        padding: 2em 0 4em;
+        min-height: 400px;
+        overflow: hidden;
+        max-width: $container-max;
+        background: url(../images/bg_waterflow.jpg) no-repeat center top;
+        background-size: cover;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .certification_slider {
+        max-width: $container-max;
+        margin: 0 auto 1em;
+        padding: 1em 4em;
+        .item {
+            background: #fff;
+            padding: 0 2em;
+            margin: 0 1em;
+            min-height: 22em;
+            @include screen('mobile') {
+                min-height: 24em;
+                padding: 0;
+            }
+            .img-container {
+                aspect-ratio: 1/1;
+                width: 90%;
+                margin: 1em auto;
+                @include screen('xs_mobile') {
+                    width: 200px;
+                }
+                img {
+                    object-fit: contain;
+                }
+            }
+            span {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                @include screen('mobile') {
+                    @include gutter;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+.service {
+    background: url(../images/bg_greywall.jpg) no-repeat center top #f6f5f3;
+    background-size: contain;
+    min-height: 500px;
+    padding-bottom: 2em;
+    .service_content {
+        max-width: 1200px;
+        margin: 0 auto;
+        .item {
+            display: flex;
+            margin: 2em 0 8em;
+            @include screen('tablet') {
+                flex-flow: row wrap;
+                width: 80%;
+                margin: 0 auto 3em;
+                max-width: 600px;
+            }
+            @include screen('xs_mobile') {
+                width: 100%;
+                @include gutter;
+            }
+            &:last-child {
+                margin: 2em 0 0;
+                @include screen('tablet') {
+                    margin: 0 auto 3em;
+                }
+            }
+            &:nth-child(2n) {
+                .pic {
+                    order: 2;
+                    @include screen('tablet') {
+                        order: 1;
+                    }
+                }
+                .info {
+                    order: 1;
+                    margin: -2em -3em -2em 0em;
+                    padding: 2em 6em 2em 3em;
+                    @include screen('tablet') {
+                        order: 2;
+                        padding: 1em 2em 3em;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .pic {
+                width: 40%;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 40%;
+                position: relative;
+                z-index: 2;
+                @include screen('tablet') {
+                    width: 100%;
+                    flex-basis: 100%;
+                }
+                .img-container {
+                    aspect-ratio: 4/3;
+                    background: none;
+                    @include screen('tablet') {
+                        background: #ccc;
+                    }
+                    span {
+                        position: absolute;
+                        background: #b5a683;
+                        padding: 0.5em 1em;
+                        font-family: 'Noto Serif TC', serif;
+                        color: #fff;
+                        left: 0;
+                        top: 0;
+                        z-index: 2;
+                        font-size: 1.25em;
+                    }
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+            .info {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 60%;
+                padding: 2em 3em 2em 6em;
+                position: relative;
+                z-index: 1;
+                background: #fff;
+                margin: -2em 0em -2em -3em;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                @include screen('tablet') {
+                    padding: 1em 2em 3em;
+                    margin: 0 auto;
+                }
+                @include screen('xs_mobile') {
+                    width: 400px;
+                    flex-basis: 400px;
+                }
+                & > * {
+                    position: relative;
+                    z-index: 1;
+                }
+                h3 {
+                    margin: 0 0 1em;
+                    font-family: 'Noto Serif TC', serif;
+                    font-size: 1.75em;
+                    line-height: 1.5em;
+                }
+                p {
+                    @include text-line(5, 1.65em);
+                    color: #555;
+                    font-size: 0.938em;
+                    margin: 0 0 3em 0;
+                }
+                .tag {
+                    ul {
+                        @include li-reset;
+                        li {
+                            display: inline-block;
+                            margin-left: -4px;
+                            a {
+                                display: block;
+                                color: #fff;
+                                background: $primaryColor;
+                                padding: 0.25em 1em;
+                                font-size: 0.813em;
+                                margin: 0 0.25em 0.25em 0;
+                            }
+                        }
+                    }
+                }
+                a.more {
+                    display: block;
+                    width: 10em;
+                    background: #eee;
+                    color: #888;
+                    margin: 1em 0 0 auto;
+                    border: none;
+                    &:hover,
+                    &:focus {
+                        color: #888;
+                        // color: darken($primaryColor, 10);
+                    }
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        border: 2px solid$primaryColor;
+                        transform: rotate(45deg);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
     }
 }

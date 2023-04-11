@@ -1,147 +1,13 @@
 // 自行加入的JS請寫在這裡
 $(function () {
-    function closeMenu() {
-        $('.m_menu').removeClass('open');
-        $('.btn_menu').find('#burger').stop().removeClass('open');
-    }
-    function closeAll() {
-        $('.submenu').stop(true, true).hide();
-    }
-    var _windowW = $(window).width();
-    $(window).on('load resize scroll', function (e) {
-        if (_windowW > 992) {
-            closeMenu();
-        }
-    });
     $('.btn_menu')
         .off()
         .click(function (e) {
-            $('.m_menu').stop().toggleClass('open');
-            $(this).find('#burger').stop().toggleClass('open');
-            e.preventDefault();
+            $(this).toggleClass('opened');
+            $('.mobile_nav .language').toggleClass('opened');
+            $('.mobile_nav').toggleClass('opened');
+            $(this).blur();
         });
-    //---------------------------------------------------------------------------手機選單---------//
-    //----------------------------------------//
-    $('.m_menu')
-        .find('#m_elegant')
-        .off()
-        .click(function (e) {
-            closeMenu();
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('.elegant').offset().top }, 400, 'linear');
-            e.preventDefault();
-        });
-    $('.m_menu')
-        .find('#m_authorize')
-        .off()
-        .click(function (e) {
-            closeMenu();
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('.authorize').offset().top }, 400, 'linear');
-            e.preventDefault();
-        });
-    $('.m_menu')
-        .find('#m_onestop')
-        .off()
-        .click(function (e) {
-            closeMenu();
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('.set').offset().top }, 400, 'linear');
-            e.preventDefault();
-        });
-    $('.m_menu')
-        .find('#m_tech')
-        .off()
-        .click(function (e) {
-            closeMenu();
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('.intro-1').offset().top }, 400, 'linear');
-            e.preventDefault();
-        });
-    $('.m_menu')
-        .find('#m_contact')
-        .off()
-        .click(function (e) {
-            closeMenu();
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('footer').offset().top }, 400, 'linear');
-            e.preventDefault();
-        });
-    //----------------------------------------//
-    $('.m_menu')
-        .find('#m_download')
-        .off()
-        .click(function (e) {
-            $(this).siblings('.submenu').stop().slideToggle('600', 'easeOutQuint');
-            e.preventDefault();
-        });
-    //---------------------------------------------------------------------------手機選單---------//
-    //m_download
-    if ($('header #m_download').length > 0) {
-        var download_Status = false;
-        $('header')
-            .find('#m_download')
-            .off()
-            .click(function (e) {
-                if (!download_Status) {
-                    $(this).siblings('.submenu').stop(true, true).addClass('open').fadeIn('600', 'easeOutQuint');
-                    download_Status = true;
-                } else {
-                    $(this).siblings('.submenu').stop(true, true).removeClass('open').hide();
-                    download_Status = false;
-                }
-                e.preventDefault();
-            });
-        // click document close lang
-        function closeDownload() {
-            $('.submenu').stop(true, true).hide();
-        }
-        $(document.body).click(function (e) {
-            if (download_Status) {
-                closeDownload();
-                closeAll();
-                download_Status = false;
-            }
-        });
-        $('.submenu ,#m_download').click(function (e) {
-            e.stopPropagation();
-        });
-    }
-    //m_lang
-    // if ($('#m_lang').length > 0) {
-    //     var lang_Status = false;
-    //     $('#m_lang')
-    //         .off()
-    //         .click(function (e) {
-    //             if (!lang_Status) {
-    //                 $(this).siblings('.submenu').stop(true, true).fadeIn('600', 'easeOutQuint');
-    //                 lang_Status = true;
-    //             } else {
-    //                 $(this).siblings('.submenu').stop(true, true).hide();
-    //                 lang_Status = false;
-    //             }
-    //             e.preventDefault();
-    //         });
-    //     // click document close lang
-    //     function closeLang() {
-    //         $('.submenu').stop(true, true).hide();
-    //     }
-    //     $(document.body).click(function (e) {
-    //         if (lang_Status) {
-    //             closeLang();
-    //             closeAll();
-    //             lang_Status = false;
-    //         }
-    //     });
-    //     $('.submenu ,#m_lang').click(function (e) {
-    //         e.stopPropagation();
-    //     });
-    // }
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
     /*-----------------------------------*/
@@ -152,7 +18,7 @@ $(function () {
             $('.scrollToTop').fadeOut();
         }
     });
-    $(window).on('scroll load', function () {
+    $(window).on('scroll', function () {
         if ($(this).scrollTop() > 80) {
             $('header').addClass('fixed');
         } else {
@@ -174,59 +40,142 @@ $(function () {
         _body.find('a.goCenter').focus();
         e.preventDefault();
     });
-    /*-----------------------------------*/
-    ////////////// quick //////////////
-    /*-----------------------------------*/
-    $('header')
-        .find('#m_elegant')
+    //
+    //
+    //
+    //
+    $('.btn-controller')
         .off()
         .click(function (e) {
             $('html, body')
                 .stop(true, true)
-                .animate({ scrollTop: $('.elegant').offset().top }, 400, 'linear');
+                .animate({ scrollTop: $('.controller').offset().top }, 400, 'linear');
+            blur();
         });
-    $('header')
-        .find('#m_authorize')
+    $('.btn-app')
         .off()
         .click(function (e) {
             $('html, body')
                 .stop(true, true)
-                .animate({ scrollTop: $('.authorize').offset().top }, 400, 'linear');
-        });
-
-    $('header')
-        .find('#m_onestop')
-        .off()
-        .click(function (e) {
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('.set').offset().top }, 400, 'linear');
-        });
-    $('header')
-        .find('#m_tech')
-        .off()
-        .click(function (e) {
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('.intro-1').offset().top }, 400, 'linear');
-        });
-    $('header')
-        .find('#m_contact')
-        .off()
-        .click(function (e) {
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('footer').offset().top }, 400, 'linear');
+                .animate({ scrollTop: $('.app').offset().top }, 400, 'linear');
+            blur();
         });
 
-    // $('#m_download')
-    //     .parent('li')
-    //     .hover(
-    //         function () {
-    //             $(this).find('.submenu').stop().fadeIn();
-    //         },
-    //         function () {
-    //             $(this).find('.submenu').stop().hide();
-    //         }
-    //     );
+    //certification_slider slider
+    $('.certification_slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        autoplay: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ],
+    });
+    // rotate slider
+    var sliders = [];
+    var delay = 3000;
+    var timerId;
+    var remaining;
+    var start;
+    var current_playing;
+    // restore user slider img and title or descriptions
+    $('#rotate-slider')
+        .find('img')
+        .each(function () {
+            this.className += ' slider-hide';
+            sliders.push({ html: this });
+        });
+    // initialize the siliders
+    function slider_init() {
+        $('#rotate-slider').css('display', 'block');
+        $('#rotate-slider').append(
+            "<div id='slider-btn'><a class='prev-btn'><i class='arr-left'></i></a><a class='next-btn'><i class='arr-right'></i></a></div>"
+        );
+        slider_display(sliders, 0);
+        slider_loop(sliders, -1, delay);
+    }
+    // display 5 img at a time
+    function slider_display(A, i) {
+        if (i < 0) {
+            i = A.length - 1;
+        }
+        current_playing = i;
+        // mute the one img before
+        A[(i + A.length + 3) % A.length].html.className += ' slider-hide';
+        // display 5 img after the muted one
+        A[(i + A.length) % A.length].html.className = 'slider-middle';
+        A[(i + A.length - 1) % A.length].html.className = 'slider-left-1';
+
+        A[(i + A.length + 1) % A.length].html.className = 'slider-right-1';
+    }
+    // slider
+    function slider_loop(A, i, remaining) {
+        start = new Date();
+        if (i < 0) {
+            i = A.length - 1;
+        }
+        timerId = setTimeout(function () {
+            slider_display(A, i);
+            slider_loop(A, i - 1, delay);
+        }, remaining);
+    }
+
+    // $('#rotate-slider').hover(
+    //     function () {
+    //         window.clearTimeout(timerId);
+    //         remaining = delay - (new Date() - start);
+    //         $('#slider-btn').show();
+    //         $('#slider-btn .prev-btn').click(function () {
+    //             current_playing++;
+    //             slider_display(sliders, current_playing);
+    //         });
+    //         $('#slider-btn .next-btn').click(function () {
+    //             current_playing--;
+    //             slider_display(sliders, current_playing);
+    //         });
+    //     },
+    //     function () {
+    //         slider_loop(sliders, current_playing, remaining);
+    //         $('#slider-btn').hide();
+    //         $('#slider-btn .prev-btn').unbind('click');
+    //         $('#slider-btn .next-btn').unbind('click');
+    //     }
+    // );
+
+    // launch slider
+    slider_init();
 });
