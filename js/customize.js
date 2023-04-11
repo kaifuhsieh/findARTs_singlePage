@@ -114,7 +114,7 @@ $(function () {
     var current_playing;
     // restore user slider img and title or descriptions
     $('#rotate-slider')
-        .find('img')
+        .find('a')
         .each(function () {
             this.className += ' slider-hide';
             sliders.push({ html: this });
@@ -135,12 +135,13 @@ $(function () {
         }
         current_playing = i;
         // mute the one img before
-        A[(i + A.length + 3) % A.length].html.className += ' slider-hide';
+        A[(i + A.length + 4) % A.length].html.className += ' slider-hide';
         // display 5 img after the muted one
         A[(i + A.length) % A.length].html.className = 'slider-middle';
         A[(i + A.length - 1) % A.length].html.className = 'slider-left-1';
-
+        A[(i + A.length - 2) % A.length].html.className = 'slider-left-2';
         A[(i + A.length + 1) % A.length].html.className = 'slider-right-1';
+        A[(i + A.length + 2) % A.length].html.className = 'slider-right-2';
     }
     // slider
     function slider_loop(A, i, remaining) {
