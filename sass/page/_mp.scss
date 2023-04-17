@@ -2,7 +2,12 @@
 // 首頁區塊設定
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap');
 // more按鈕
-
+.detect {
+    position: absolute;
+    opacity: 0;
+    top: -3em;
+    left: -3em;
+}
 section.sec {
     padding: 4em 0 6em;
     h2,
@@ -29,6 +34,21 @@ section.sec {
         @include screen('mobile') {
             font-size: 2.2em;
             max-width: 90%;
+        }
+        &.icon {
+            padding-top: 4rem;
+            position: relative;
+            &:before {
+                position: absolute;
+                content: '';
+                width: 4rem;
+                height: 4rem;
+                left: 50%;
+                top: -0.5rem;
+                margin-left: -2rem;
+                background: url(../images/img_pattern.png) no-repeat center center;
+                background-size: contain;
+            }
         }
     }
 }
@@ -113,12 +133,13 @@ a.more {
         padding: 18em 0 4em;
     }
     @include screen('tablet') {
-        padding: 6em 0 2em;
+        padding: 16em 0 2em;
         height: auto;
-        height: 80vh;
+        // height: 80vh;
     }
     @include screen('xs_mobile') {
         height: auto;
+        padding-bottom: 5em;
     }
     .container {
         display: flex;
@@ -163,6 +184,7 @@ a.more {
             @include screen('tablet') {
                 flex-basis: 100%;
                 order: 2;
+                margin-top: 8em;
                 h2 {
                     text-align: center;
                 }
@@ -178,6 +200,9 @@ a.more {
                     display: block;
                     margin: 0 auto !important;
                 }
+            }
+            @include screen('xs_mobile') {
+                margin-top: 5em;
             }
             h2,
             h3 {
@@ -208,14 +233,16 @@ a.more {
             flex-shrink: 1;
             flex-basis: auto;
             z-index: 1;
+            transform: translateY(-20%);
             .m_title {
                 display: none;
             }
             @include screen('tablet') {
                 flex-basis: 100%;
-                min-height: 720px;
+                min-height: 420px;
                 order: 1;
-                padding: 20em 0 8em;
+                padding: 10em 0 8em;
+                width: 100%;
                 // outline: 1px solid red;
                 .m_title {
                     position: absolute;
@@ -224,6 +251,7 @@ a.more {
                     left: 0;
                     top: 0;
                     display: block;
+                    margin-top: -5em;
                     h2,
                     h3 {
                         text-align: center;
@@ -238,8 +266,8 @@ a.more {
                 }
             }
             @include screen('mobile') {
-                min-height: 420px;
-                padding: 30em 0 0em;
+                min-height: 20px;
+                // padding: 30em 0 0em;
                 // outline: 1px solid red;
                 .m_title {
                     h2,
@@ -257,28 +285,59 @@ a.more {
             }
             a {
                 pointer-events: none;
+                position: relative;
+                width: 100%;
+                text-align: center;
+                span {
+                    position: absolute;
+                    bottom: -10rem;
+                    display: block;
+                    width: 100%;
+                    left: 50%;
+                    margin-left: -50%;
+                    opacity: 0;
+                    font-size: 0.813em;
+                    @include screen('notebook') {
+                        bottom: -5rem;
+                    }
+                    @include screen('tablet') {
+                        bottom: -8rem;
+                    }
+                    @include screen('xs_mobile') {
+                        bottom: -4rem;
+                        font-size: 0.75em;
+                    }
+                }
+                img {
+                    object-fit: contain;
+                    max-height: 26em;
+                }
             }
             [class^='slider'] {
                 object-fit: contain;
             }
             .slider-middle {
                 position: absolute;
-                width: 80%;
+                width: 60%;
                 height: 70%;
-                left: 10%;
+                left: 20%;
                 bottom: 10%;
                 z-index: 100;
                 transition: 0.5s $cubic;
                 transform-origin: center center;
-                transform: scale(1.65);
-                @include screen('notebook') {
-                    transform: scale(1.5);
-                }
-                @include screen('tablet') {
-                    transform: scale(1.125);
-                }
-                @include screen('mobile') {
-                    transform: scale(1.25);
+                transform: scale(1.25);
+                // @include screen('notebook') {
+                //     transform: scale(1.5);
+                // }
+                // @include screen('tablet') {
+                //     transform: scale(1.125);
+                // }
+                // @include screen('mobile') {
+                //     transform: scale(1.25);
+                // }
+                span {
+                    color: #000;
+                    opacity: 1;
                 }
             }
             .slider-left-1 {
@@ -319,7 +378,7 @@ a.more {
                 position: absolute;
                 width: 14%;
                 height: 22%;
-                left: 86%;
+                left: 43%;
                 bottom: 18%;
                 z-index: 98;
                 opacity: 0.8;
@@ -485,6 +544,7 @@ $line-height-abs: -90px;
             }
             a {
                 display: block;
+                pointer-events: none;
                 &:hover,
                 &:focus {
                     color: $color-word;
@@ -808,7 +868,7 @@ $line-height-abs: -90px;
     }
 }
 .service {
-    background: url(../images/bg_greywall.jpg) no-repeat center top #f6f5f3;
+    background: url(../images/bg_greywall.jpg) repeat center top #f6f5f3;
     background-size: contain;
     min-height: 500px;
     padding-bottom: 2em;

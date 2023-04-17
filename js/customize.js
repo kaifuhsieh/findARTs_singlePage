@@ -1,5 +1,45 @@
 // 自行加入的JS請寫在這裡
 $(function () {
+    $('#gotoA')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.inner_content').find('#service_A').offset().top - 70 }, 400, 'linear');
+            // e.preventDefault();
+        });
+    $('#gotoB')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.inner_content').find('#service_B').offset().top - 70 }, 400, 'linear');
+            // e.preventDefault();
+        });
+    $('#gotoC')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.inner_content').find('#service_C').offset().top - 100 }, 400, 'linear');
+            // e.preventDefault();
+        });
+    $('#gotoD')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.inner_content').find('#service_D').offset().top - 100 }, 400, 'linear');
+            // e.preventDefault();
+        });
+    $('#gotoE')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.inner_content').find('#service_E').offset().top - 100 }, 400, 'linear');
+            // e.preventDefault();
+        });
     $('.btn_menu')
         .off()
         .click(function (e) {
