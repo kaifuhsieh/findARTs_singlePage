@@ -20,6 +20,10 @@
         background: url(../images/basic/top.png) no-repeat center top rgba(181, 166, 131, 1) !important;
         box-shadow: none;
     }
+    @include screen('xs_mobile') {
+        bottom:1em;
+        right: 1em;
+    }
 }
 
 //元素對齊 align
