@@ -618,6 +618,7 @@ blockquote {
     border-right: none;
     padding: 2em 0;
     display: flex;
+    margin: 0;
     @include screen('tablet') {
         flex-flow: row wrap;
     }
@@ -758,8 +759,9 @@ blockquote {
             background-color: darken($primaryColor, 10);
         }
         @include screen('tablet') {
-            flex-basis: 48%;
-            margin: 0 0.25em 0.25em 0;
+            flex-grow: 1;
+            flex-basis: 45%;
+            margin: 0 0.125em 0.25em;
         }
     }
 }

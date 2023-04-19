@@ -35,6 +35,9 @@ section.sec {
             font-size: 2.2em;
             max-width: 90%;
         }
+        @media screen and (max-width: 400px) {
+            font-size: 2em;
+        }
         &.icon {
             padding-top: 4rem;
             position: relative;
@@ -163,6 +166,7 @@ a.more {
             @include screen('notebook') {
                 font-size: 3.6em;
             }
+
             span {
                 display: inline-block;
                 visibility: hidden;
@@ -279,6 +283,21 @@ a.more {
                     }
                     h2 {
                         font-size: 2.4em;
+                        margin-bottom: 0.5em !important;
+                    }
+                }
+            }
+            @media screen and (max-width: 400px) {
+                .m_title {
+                    h2,
+                    h3 {
+                        text-align: center;
+                        width: 90%;
+                        display: block;
+                        margin: 0 auto !important;
+                    }
+                    h2 {
+                        font-size: 2em;
                         margin-bottom: 0.5em !important;
                     }
                 }
