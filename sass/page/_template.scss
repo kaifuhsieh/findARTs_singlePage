@@ -376,6 +376,16 @@ p {
     h4 {
         font-size: 1.25em;
     }
+    .service {
+        .container {
+            padding: 0;
+        }
+    }
+    .service_content .item {
+        @include screen('mobile') {
+            width: 90% !important;
+        }
+    }
 }
 
 // contact_form
@@ -818,7 +828,7 @@ blockquote {
             @include screen('tablet') {
                 flex-basis: 160px;
             }
-            @media screen and (max-width: 400px) {
+            @media screen and (max-width: 389px) {
                 flex-basis: 140px;
                 margin: 0 0.5em 1em;
             }
