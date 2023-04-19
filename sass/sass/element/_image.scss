@@ -18,11 +18,11 @@ img {
         visibility: visible;
         animation: lazy_animation 0.5s ease-out;
     }
-    .lazyload,
-    .lazyloading {
+    &.lazyload,
+    &.lazyloading {
         opacity: 0;
     }
-    .lazyloaded {
+    &.lazyloaded {
         opacity: 1;
         transition: opacity 300ms;
     }
