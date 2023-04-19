@@ -449,6 +449,7 @@ p {
 }
 // download_list
 .download_list {
+    margin-bottom: 2em;
     ul {
         @include li-reset;
         display: flex;
@@ -467,7 +468,7 @@ p {
             @include screen('mobile') {
                 flex-basis: 98%;
                 max-width: 360px;
-                min-width: 320px;
+                min-width: 300px;
                 margin: 0 auto 1em;
             }
             h4 {
@@ -762,6 +763,68 @@ blockquote {
             flex-grow: 1;
             flex-basis: 45%;
             margin: 0 0.125em 0.25em;
+        }
+    }
+}
+.app_download {
+    display: flex;
+    flex-flow: row wrap;
+    .item {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 31.3333%;
+        margin: 0 1% 1em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        @include screen('tablet') {
+            flex-basis: 48%;
+        }
+        @include screen('mobile') {
+            flex-basis: 98%;
+            max-width: 360px;
+            min-width: 320px;
+            margin: 0 auto 1em;
+        }
+        @include screen('xs_mobile') {
+            text-align: center;
+            justify-content: center;
+        }
+        p {
+            display: block;
+        }
+        &.app_info {
+            flex-grow: 0;
+            display: block;
+            p {
+                @include screen('mobile') {
+                    text-align: center;
+                }
+            }
+            .img-container {
+                aspect-ratio: 1/1;
+                width: 160px !important;
+                @include screen('mobile') {
+                    margin: 0 auto 1em;
+                }
+            }
+        }
+        .app_link {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 200px;
+            margin: 0 1em 1em 0;
+            background: #fff;
+            @include screen('tablet') {
+                flex-basis: 160px;
+            }
+            @media screen and (max-width: 400px) {
+                flex-basis: 140px;
+                margin: 0 0.5em 1em;
+            }
+            img {
+                max-width: 100%;
+            }
         }
     }
 }

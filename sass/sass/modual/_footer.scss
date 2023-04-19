@@ -16,6 +16,10 @@ footer {
         @include screen('tablet') {
             flex-wrap: wrap;
         }
+        @include screen('mobile') {
+            width: 100%;
+            padding-right: 1em;
+        }
     }
     a {
         text-decoration: none;
@@ -41,6 +45,7 @@ footer {
         }
         @include screen('xs_mobile') {
             @include gutter;
+            flex-grow: 1;
             flex-basis: 100%;
         }
     }
@@ -48,6 +53,9 @@ footer {
         flex: 0 1 180px;
         display: flex;
         align-items: center;
+        @include screen('mobile') {
+            flex: 0 1 120px;
+        }
     }
     .footer_info {
         flex: 1 1 auto;
