@@ -18,6 +18,14 @@ img {
         visibility: visible;
         animation: lazy_animation 0.5s ease-out;
     }
+    .lazyload,
+    .lazyloading {
+        opacity: 0;
+    }
+    .lazyloaded {
+        opacity: 1;
+        transition: opacity 300ms;
+    }
 }
 @keyframes lazy_animation {
     from {
