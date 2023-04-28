@@ -155,7 +155,7 @@
     }
     h1 {
         width: 300px;
-        margin: 0;
+        margin: 0.5rem 0 0 0.25rem;
         padding: 0;
         box-sizing: border-box;
         flex-grow: 0;
@@ -181,6 +181,7 @@
             height: 40px;
             left: 10px;
             top: 10px;
+            margin: 0;
         }
     }
     nav {
@@ -191,6 +192,13 @@
         transition: 0.3s ease-out;
         @include screen('tablet') {
             display: none;
+        }
+        &.en {
+            li {
+                a {
+                    font-size: 1em;
+                }
+            }
         }
         ul {
             @include li-reset;
@@ -206,7 +214,13 @@
                 a {
                     font-size: 1.125em;
                     color: #2b2929;
+                    font-weight: bold;
                     white-space: nowrap;
+                    font-family: 'Noto Serif TC', serif;
+                    &:hover,
+                    &:focus {
+                        color: darken($primaryColor, 15);
+                    }
                     @include screen('tablet') {
                         font-size: 0.938em;
                     }
@@ -540,6 +554,7 @@ header.fixed {
     }
     h1 {
         flex-basis: 120px;
+        margin: 0;
         a {
             display: flex;
             align-items: center;

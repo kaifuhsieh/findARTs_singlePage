@@ -213,6 +213,12 @@ a.more {
                 @include screen('tablet') {
                     display: none;
                 }
+                &.en {
+                    font-size: 3em;
+                    @include screen('mobile') {
+                        font-size: 1.5em;
+                    }
+                }
             }
             h3 {
                 font-family: 'Noto Serif TC', serif;
@@ -222,12 +228,18 @@ a.more {
                 @include screen('notebook') {
                     font-size: 2em;
                 }
+                &.en {
+                    font-size: 2em;
+                }
             }
             p {
                 font-size: 1.0125em;
                 line-height: 1.75em;
                 @include screen('notebook') {
                     font-size: 1em;
+                }
+                &.en {
+                    line-height: 1.5em;
                 }
             }
         }
@@ -266,6 +278,18 @@ a.more {
                     h2 {
                         font-size: 3em;
                         margin-bottom: 0.5em !important;
+                        &.en {
+                            font-size: 2em;
+                            white-space: nowrap;
+                            @include screen('xs_mobile') {
+                                font-size: 1.45em;
+                            }
+                        }
+                    }
+                    h3 {
+                        &.en {
+                            font-size: 1em;
+                        }
                     }
                 }
             }
@@ -575,6 +599,7 @@ $line-height-abs: -90px;
                 line-height: 1.35em;
                 margin: 0 0 0.25em;
                 min-height: 3.6em;
+                text-align: center;
                 @include screen('notebook') {
                     font-size: 1.75em;
                     @include text-line(2, 1.35em);
@@ -596,6 +621,12 @@ $line-height-abs: -90px;
                 min-height: 30em;
                 box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
                     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                &.en {
+                    min-height: 36em;
+                    p {
+                        // font-size: 0.938em;
+                    }
+                }
                 p {
                     margin: 2em 2em 1em;
                 }
@@ -611,6 +642,9 @@ $line-height-abs: -90px;
                         top: 0;
                         z-index: 2;
                         font-size: 1.25em;
+                        &.en {
+                            display: none;
+                        }
                     }
                     img {
                         object-fit: cover;
@@ -657,6 +691,9 @@ $line-height-abs: -90px;
                     min-height: auto;
                     padding-bottom: 0.5em;
                 }
+                &.en {
+                    font-size: 1.75em;
+                }
             }
             ul {
                 li {
@@ -665,6 +702,9 @@ $line-height-abs: -90px;
                     margin: 0 0 0.5em;
                     padding: 0 0.25em;
                     font-size: 1.125em;
+                    &.en {
+                        margin: 0 0 0.75em;
+                    }
                 }
             }
         }
@@ -907,6 +947,12 @@ $line-height-abs: -90px;
                 width: 100%;
                 @include gutter;
             }
+            &.en {
+                @include screen('xs_mobile') {
+                    @include gutter(0);
+                    margin: 0 auto 2em;
+                }
+            }
             &:last-child {
                 margin: 2em 0 0;
                 @include screen('tablet') {
@@ -982,6 +1028,7 @@ $line-height-abs: -90px;
                     width: 400px;
                     flex-basis: 400px;
                 }
+
                 & > * {
                     position: relative;
                     z-index: 1;
@@ -991,6 +1038,12 @@ $line-height-abs: -90px;
                     font-family: 'Noto Serif TC', serif;
                     font-size: 1.75em;
                     line-height: 1.5em;
+                    &.en {
+                        font-size: 1.5em;
+                        @include screen('mobile') {
+                            font-size: 1.35em;
+                        }
+                    }
                 }
                 p {
                     @include text-line(5, 1.65em);
