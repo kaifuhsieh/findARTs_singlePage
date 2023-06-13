@@ -5,7 +5,7 @@ $(function () {
         .click(function (e) {
             $('html, body')
                 .stop(true, true)
-                .animate({ scrollTop: $('.inner_content').find('#service_A').offset().top - 70 }, 400, 'linear');
+                .animate({ scrollTop: $('.inner_content').find('#service_A').offset().top - 80 }, 400, 'linear');
             // e.preventDefault();
         });
     $('#gotoB')
@@ -13,7 +13,7 @@ $(function () {
         .click(function (e) {
             $('html, body')
                 .stop(true, true)
-                .animate({ scrollTop: $('.inner_content').find('#service_B').offset().top - 70 }, 400, 'linear');
+                .animate({ scrollTop: $('.inner_content').find('#service_B').offset().top - 80 }, 400, 'linear');
             // e.preventDefault();
         });
     $('#gotoC')
@@ -21,7 +21,15 @@ $(function () {
         .click(function (e) {
             $('html, body')
                 .stop(true, true)
-                .animate({ scrollTop: $('.inner_content').find('#service_C').offset().top - 100 }, 400, 'linear');
+                .animate({ scrollTop: $('.inner_content').find('#service_C').offset().top - 80 }, 400, 'linear');
+            // e.preventDefault();
+        });
+    $('.tag_gotoC')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.inner_content').find('#service_C').offset().top - 80 }, 400, 'linear');
             // e.preventDefault();
         });
     $('#gotoD')
@@ -29,7 +37,15 @@ $(function () {
         .click(function (e) {
             $('html, body')
                 .stop(true, true)
-                .animate({ scrollTop: $('.inner_content').find('#service_D').offset().top - 100 }, 400, 'linear');
+                .animate({ scrollTop: $('.inner_content').find('#service_D').offset().top - 80 }, 400, 'linear');
+            // e.preventDefault();
+        });
+    $('.tag_gotoD')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.inner_content').find('#service_D').offset().top - 80 }, 400, 'linear');
             // e.preventDefault();
         });
     $('#gotoE')
@@ -37,7 +53,15 @@ $(function () {
         .click(function (e) {
             $('html, body')
                 .stop(true, true)
-                .animate({ scrollTop: $('.inner_content').find('#service_E').offset().top - 100 }, 400, 'linear');
+                .animate({ scrollTop: $('.inner_content').find('#service_E').offset().top - 80 }, 400, 'linear');
+            // e.preventDefault();
+        });
+    $('.tag_gotoE')
+        .off()
+        .click(function (e) {
+            $('html, body')
+                .stop(true, true)
+                .animate({ scrollTop: $('.inner_content').find('#service_E').offset().top - 80 }, 400, 'linear');
             // e.preventDefault();
         });
     $('.btn_menu')
