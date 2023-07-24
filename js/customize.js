@@ -1,5 +1,35 @@
 // 自行加入的JS請寫在這裡
 $(function () {
+    $('.header nav').find('ul ul').hide();
+
+    $('.header nav > ul > li').mouseover(function (e) {
+        $(this).children('.submenu').stop().show();
+    });
+    $('.header nav > ul > li').mouseout(function (e) {
+        $(this).children('.submenu').stop().hide();
+    });
+
+    //
+    $('.open_Privacy')
+        .off()
+        .click(function (e) {
+            $('.privacy_lightbox').stop().fadeIn();
+            e.preventDefault();
+        });
+    $('.privacy_lightbox')
+        .find('.close')
+        .off()
+        .click(function (e) {
+            $('.privacy_lightbox').stop().hide();
+            e.preventDefault();
+        });
+    $('.btn-close')
+        .off()
+        .click(function (e) {
+            $('.privacy_lightbox').stop().hide();
+            e.preventDefault();
+        });
+    //
     $('#gotoA')
         .off()
         .click(function (e) {
