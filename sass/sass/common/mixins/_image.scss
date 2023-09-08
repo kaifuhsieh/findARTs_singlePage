@@ -5,6 +5,8 @@
 //   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 // }
 
+@use "sass:math";
+
 img{
     max-width: 100%;
 }
@@ -15,7 +17,7 @@ img{
     &:before {
         display: inline-block;
         content: "";
-        padding-top: ($height / $width) * 100%;
+        padding-top: math.div($height, $width) * 100%;
     }
     img {
         display: block;

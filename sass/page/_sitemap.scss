@@ -1,5 +1,7 @@
  /* sitemap */
- .sitemap {
+ @use "sass:math";
+
+.sitemap {
      margin: 0px auto 1em;
      @extend %clearfix;
      p {
@@ -25,7 +27,7 @@
      }
  }
  $sitemapLength : 4;
- $sitemapWidth:100%/ $sitemapLength;
+ $sitemapWidth:math.div(100%, $sitemapLength);
  .cascading {
      border-top: 1px solid #CCC;
      @include gutter;

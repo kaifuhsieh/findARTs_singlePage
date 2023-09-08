@@ -385,10 +385,10 @@
     }
     //Arrows
     .slick-prev {
-        left: -1 * $grid-gutter-width/2;
+        left: -1 * $grid-gutter-width*0.5;
     }
     .slick-next {
-        right: -1 * $grid-gutter-width/2;
+        right: -1 * $grid-gutter-width*0.5;
     }
     a {
         color: #555;
