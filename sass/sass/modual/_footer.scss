@@ -6,7 +6,7 @@ footer {
     padding: 2em 0;
     background: #d8d1c1;
     .container {
-        @include gutter;
+        @include gutter();
         max-width: $container-max;
         margin:0 auto;
         > div {
@@ -67,7 +67,7 @@ footer {
             margin-right: 1em;
         }
         @include screen('xs_mobile') {
-            @include gutter;
+            @include gutter();
             flex-grow: 1;
             flex-basis: 100%;
         }
@@ -95,20 +95,21 @@ footer {
             
         }
     }
-        .auo_logo{
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: 100px;
-        margin:0 0 0 auto;
-        @include screen('xs_mobile') {
-            margin:0 auto 0 1em ;
-            position: absolute;
-            top:.75em;
-            right:1.75em;
-            img{
-                max-width: 100px;;
-            }
-        }
+    .auo_logo{
+        // flex-grow: 0;
+        // flex-shrink: 1;
+        // flex-basis: 100px;
+        // margin:0 0 0 auto;
+        display: none;
+        // @include screen('xs_mobile') {
+        //     margin:0 auto 0 1em ;
+        //     position: absolute;
+        //     top:.75em;
+        //     right:1.75em;
+        //     img{
+        //         max-width: 100px;;
+        //     }
+        // }
 
     }
     .footer_info {

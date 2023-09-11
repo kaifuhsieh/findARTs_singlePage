@@ -527,6 +527,44 @@ p {
         }
     }
 }
+.app_download .item p{
+    display:block
+}
+.app_download{
+    position: relative;
+    padding-bottom: 48px;
+
+    .app_help_download{
+        @media screen and (max-width: 767px) {
+            position: absolute;
+            bottom: 0;
+            width: 98%;
+            left: 0;
+            max-width: 360px;
+            margin: auto;
+            right: 0;
+        }
+
+        a {
+            display: block;
+            margin: auto;
+            background-color: #b5a683;
+            padding: 0em;
+            text-align: center;
+            color: #fff;
+            font-size: 1.5em;
+            line-height: 1.8;
+        
+            &:hover{
+                background-color: #a28f63;
+            }
+            @media screen and (min-width: 768px) {
+                    margin: 0;
+            }
+        }
+    }
+}
+
 .news_list {
     background: #f5f5f5;
 
@@ -879,8 +917,18 @@ blockquote {
                 max-width: 100%;
             }
         }
+        @media screen and (max-width: 991px){
+            .app_link{
+                flex-basis: calc(50% - 1em);
+                margin:0 1em 1em 0;
+            }
+            .app_link + .app_link{
+                margin:0 0 1em 1em;
+            } 
+        }
     }
 }
+
 .cp {
     padding: 0 0 3em;
     @include screen('mobile') {

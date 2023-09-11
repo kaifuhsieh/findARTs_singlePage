@@ -1141,7 +1141,7 @@ $line-height-abs: -90px;
                     }
                 }
                 p {
-                    @include text-line(5, 1.65em);
+                    // @include text-line(5, 1.65em);
                     color: #555;
                     font-size: 0.938em;
                     margin: 0 0 3em 0;
