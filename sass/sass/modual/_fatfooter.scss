@@ -10,7 +10,7 @@
     .container {
         overflow: hidden;
         box-sizing: border-box;
-        @include gutter;
+        @include gutter();
     }
     // 按鈕
     .btn-fatfooter {
