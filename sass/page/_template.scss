@@ -324,28 +324,28 @@ p {
     }
 
     &.contact {
-        background: url(../images/contact_inner_bg.jpg) no-repeat center center;
+        background: url(../images/contact_inner_bg.webp) no-repeat center center;
         background-size: cover;
         height: 12em;
     }
     &.download {
-        background: url(../images/download_inner_bg.jpg) no-repeat center center;
+        background: url(../images/download_inner_bg.webp) no-repeat center center;
         background-size: cover;
         height: 12em;
     }
     &.news {
-        background: url(../images/news_inner_bg.jpg) no-repeat center center;
+        background: url(../images/news_inner_bg.webp) no-repeat center center;
         background-size: cover;
         height: 12em;
     }
     &.service_inner {
-        background: url(../images/service_inner_bg.jpg) no-repeat center center;
+        background: url(../images/service_inner_bg.webp) no-repeat center center;
         background-size: cover;
         height: 12em;
     }
 }
 .inner_content {
-    background: url(../images/bg_greywall.jpg) repeat center center;
+    background: url(../images/bg_greywall.webp) repeat center center;
     position: relative;
     padding: 2em 0 0;
     min-height: 50em;
@@ -412,7 +412,7 @@ p {
         content: '';
         width: 50%;
         height: 800px;
-        background: url(../images/contact_bg.png) no-repeat center bottom;
+        background: url(../images/contact_bg.webp) no-repeat center bottom;
         background-size: contain;
         bottom: -7em;
         right: -50%;
@@ -510,7 +510,7 @@ p {
                         font-size: 0.938em;
                         padding-right: 7em;
                         span {
-                            background: url(../images/icon_download.png) no-repeat right center;
+                            background: url(../images/icon_download.webp) no-repeat right center;
                             background-size: contain;
                             position: absolute;
                             font-size: 0.75em;
@@ -1066,7 +1066,7 @@ blockquote {
             position: absolute;
             width: 2em;
             height: 2em;
-            background: url(../images/icon_close.png) no-repeat center center;
+            background: url(../images/icon_close.webp) no-repeat center center;
             background-size: 100%;
             top: 2em;
             right: 2em;

@@ -49,7 +49,7 @@ section.sec {
                 left: 50%;
                 top: -0.5rem;
                 margin-left: -2rem;
-                background: url(../images/img_pattern.png) no-repeat center center;
+                background: url(../images/img_pattern.webp) no-repeat center center;
                 background-size: contain;
             }
         }
@@ -125,7 +125,7 @@ a.more {
     min-height: 870px;
     height: 95vh;
     padding: 8em 0;
-    background: url(../images/bg_hero.jpg) no-repeat center center #e4dacd;
+    background: url(../images/bg_hero.webp) no-repeat center center #e4dacd;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -537,7 +537,7 @@ $line-height-abs: -90px;
     }
 }
 .solution {
-    background: url(../images/solution_bg.jpg) repeat center center;
+    background: url(../images/solution_bg.webp) repeat center center;
     position: relative;
     padding: 8em 0 4em !important;
     @include screen('mobile') {
@@ -551,7 +551,7 @@ $line-height-abs: -90px;
         left: 50%;
         margin-left: 200px;
         bottom: 0;
-        background: url(../images/solution_device.png) no-repeat center center;
+        background: url(../images/solution_device.webp) no-repeat center center;
         background-size: contain;
         z-index: 0;
         @include screen('notebook') {
@@ -846,7 +846,7 @@ $line-height-abs: -90px;
                 flex-basis: 360px;
                 min-width: 360px;
                 height: 360px;
-                background: url(../images/circle_bg.png) no-repeat center center;
+                background: url(../images/circle_bg.webp) no-repeat center center;
                 background-size: contain;
                 align-items: center;
                 position: relative;
@@ -943,7 +943,7 @@ $line-height-abs: -90px;
         min-height: 400px;
         overflow: hidden;
         max-width: $container-max;
-        background: url(../images/bg_waterflow.jpg) no-repeat center top;
+        background: url(../images/bg_waterflow.webp) no-repeat center top;
         background-size: cover;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
@@ -984,7 +984,7 @@ $line-height-abs: -90px;
     }
 }
 .service {
-    background: url(../images/bg_greywall.jpg) repeat center top;
+    background: url(../images/bg_greywall.webp) repeat center top;
     min-height: 500px;
     padding-bottom: 2em;
     h3.line {
@@ -1012,7 +1012,7 @@ $line-height-abs: -90px;
         span {
             padding: 0.25em 1em;
             display: block;
-            background: url(../images/bg_greywall.jpg) repeat center center;
+            background: url(../images/bg_greywall.webp) repeat center center;
             position: relative;
             z-index: 2;
             width: auto;
