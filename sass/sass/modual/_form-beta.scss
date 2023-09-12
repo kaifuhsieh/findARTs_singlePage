@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $form_title_width: 150px; // 表單title寬度
 $m-gutter: 4px; // Flex grid system default margin
 
@@ -761,9 +763,9 @@ select::-ms-expand {
 
     .form_col-2-2-2-2-2-2 {
         > .form_grp {
-            width: (100% / 6);
-            flex-basis: (100% / 6);
-            max-width: (100% / 6);
+            width: math.div(100%, 6);
+            flex-basis: math.div(100%, 6);
+            max-width: math.div(100%, 6);
 
             @include screen('mobile') {
                 width: 50%;

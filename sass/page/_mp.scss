@@ -249,7 +249,7 @@ a.more {
                         font-size: 2.65em;
                         white-space: nowrap;
                     }
-                    @media screen and( max-width:1100px) {
+                    @media screen and (max-width:1100px) {
                         font-size: 2.5em;
                     }
                 }
@@ -1141,7 +1141,7 @@ $line-height-abs: -90px;
                     }
                 }
                 p {
-                    @include text-line(5, 1.65em);
+                    // @include text-line(5, 1.65em);
                     color: #555;
                     font-size: 0.938em;
                     margin: 0 0 3em 0;
