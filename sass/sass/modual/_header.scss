@@ -173,6 +173,7 @@
         img {
             display: block;
             max-width: 100%;
+            height: auto;
         }
         @include screen('tablet') {
             width: 260px;
@@ -318,6 +319,7 @@
         img {
             max-width: 80px;
             margin-top: 0.25em;
+            height: auto;
             @include screen('tablet') {
                 margin-top: 0.5em;
             }

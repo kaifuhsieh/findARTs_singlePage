@@ -895,6 +895,7 @@ $line-height-abs: -90px;
                 }
                 img {
                     max-width: 360px;
+                    height: auto;
                     @include screen('xs_mobile') {
                         width: 320px;
                     }
