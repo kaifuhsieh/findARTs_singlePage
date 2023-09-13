@@ -86,6 +86,7 @@ footer {
         }
         img{
             max-width: 260px;
+            height: auto;
             @include screen('mobile') {
             max-width: 200px;
         }
