@@ -216,9 +216,6 @@ $(function () {
     // initialize the siliders
     function slider_init() {
         $('#rotate-slider').css('display', 'block');
-        $('#rotate-slider').append(
-            "<div id='slider-btn'><a class='prev-btn'><i class='arr-left'></i></a><a class='next-btn'><i class='arr-right'></i></a></div>"
-        );
         slider_display(sliders, 0);
         slider_loop(sliders, -1, delay);
     }
