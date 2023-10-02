@@ -492,6 +492,83 @@ p {
     }
     .collapse-list {
         display: none;
+        padding-top: 1em;
+        // 處理過寬的邊界
+        & + .collapse-list{
+            padding-top: 0;
+        }
+        // 處理文字折行後與checkbox垂直置中不好看
+        .form_inline{
+            align-items: flex-start;
+
+            label {
+                align-items: flex-start;
+            }
+            .long-label{
+                min-width: 65.6%;
+            }
+        }
+        h4{
+            font-family: Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;;
+            font-size: 16px;
+            padding: 0;
+            color: #2b2929;
+            .note{
+                display: inline-block;
+                // 支援hover的裝置要呈現灰色圓形
+                @media (hover: hover) {
+                    width: 1em;
+                    height: 1em;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 1;
+                    background-color: #898989;
+                    color: #fff;
+                    position: relative;
+                    cursor: help;
+                }
+                @media (hover: none) {
+                    .icon{
+                        display: none;
+                    }
+                }
+                
+            }
+            .note-content{
+                font-size: 12px;
+                color: #777;
+                @media (hover: hover) {
+                    display: none;
+                    position: absolute;
+                    bottom: 100%;
+                    margin-bottom: 3px;
+                    padding: .416em .8em;
+                    left: 50%;
+                    translate: -50% 0px;
+                    background-color: #000C;
+                    color: #fff;
+                    white-space: nowrap;
+                    border-radius: 6px;
+                    
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 0;
+                        height: 0;
+                        border-top: 3px solid #000c;
+                        border-left: 3px solid #0000;
+                        border-right: 3px solid #0000;
+                    }
+                }
+            }
+            .note:hover .note-content{
+                display: block;
+            }
+        }
     }
     .contact-h3{
         width: 100%;
@@ -507,7 +584,17 @@ p {
         }
     }
 }
-
+// 我同意隱私權
+.agree_privacy{
+    &.form_inline label{
+        padding-bottom: 0;
+        align-items: flex-start;
+    }
+    p{
+        margin-top: .5em;
+        padding-left: 1.6em;
+    }
+}
 // download_list
 .download_list {
     margin-bottom: 2em;
@@ -1107,6 +1194,9 @@ blockquote {
             @include screen('xs_mobile') {
                 font-size: 1.5em;
             }
+        }
+        span[lang="en"]{
+            padding-inline: 0.1em;
         }
         .close {
             position: absolute;
