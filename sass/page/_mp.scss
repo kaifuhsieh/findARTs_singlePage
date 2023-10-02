@@ -404,6 +404,9 @@ a.more {
                 img {
                     object-fit: contain;
                     max-height: 26em;
+                    @include screen('xs_mobile') {
+                        max-height: 11em;
+                    }
                 }
             }
             [class^='slider'] {
