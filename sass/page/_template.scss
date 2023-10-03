@@ -1648,8 +1648,13 @@ blockquote {
 
 
 .fluid-title{
+    margin-inline: 2em;
+    @include screen('mobile'){
+        margin-inline: 1em;
+    }
     h2{
         font-size: 48px;
+        line-height: 1;
         @include screen('mobile') {
             font-size: 32px;
         }
