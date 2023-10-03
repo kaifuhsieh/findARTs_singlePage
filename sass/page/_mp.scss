@@ -1320,6 +1320,7 @@ $line-height-abs: -90px;
         }
     }
 }
+// 擬真藝屏頁面
 .product_series{
 
 }
@@ -1347,9 +1348,21 @@ $line-height-abs: -90px;
         @include screen('xs_mobile') {
             // width: 50%;
         }
-        .card{}
+        h3:after{
+            display: none;
+        }
+        .card{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
         .btn-group{
+            margin-top: auto;
+            display: flex;
             .btn{
+                width: 0;
+                max-width: 8em;
+                flex-grow: 1;
                 background-color: #B5A683;
                 color: #fff;
             }
