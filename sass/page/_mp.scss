@@ -1374,6 +1374,7 @@ section.products {
 .products_card{
     display: flex;
     flex-wrap: wrap;
+    row-gap: 30px;
 
     .item{
         width: 33.333333%;
@@ -1389,7 +1390,6 @@ section.products {
         .card{
             background-color: #fff;
             height: 100%;
-            margin-bottom: 30px;
             display: flex;
             flex-direction: column;
             @include screen('mobile') {
@@ -1417,10 +1417,12 @@ section.products {
         .btn-group{
             margin: auto 2rem 1rem;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             .btn{
                 // font-size: 1em;
-                width: 0;
-                max-width: 8em;
+                min-width: 6em;
+                max-width: 12em;
                 flex-grow: 1;
                 background-color: #B5A683;
                 color: #fff;
