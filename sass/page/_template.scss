@@ -1380,6 +1380,7 @@ blockquote {
             .showroom {
                 display: flex;
                 margin-bottom: 2em;
+                align-items: start;
                 @include screen('tablet') {
                     flex-flow: row wrap;
                 }
@@ -1405,6 +1406,8 @@ blockquote {
                     flex-basis: 55%;
                     padding: 1em;
                     margin: 0 2em 1em 0;
+                    position: sticky;
+                    top: 100px;
                     @include screen('tablet') {
                         flex-grow: 0;
                         flex-shrink: 1;
@@ -1479,8 +1482,10 @@ blockquote {
                     // background: #000;
                     width: 0; //新增
                     flex: 1;
+                    position: sticky;
+                    top: 100px;
                     .img-container {
-                        aspect-ratio: 1/1;
+                        // aspect-ratio: 1/1;
                         background-color: transparent;
                         img {
                             object-fit: contain;
