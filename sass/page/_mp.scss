@@ -1323,31 +1323,36 @@ $line-height-abs: -90px;
 // 擬真藝屏頁面
 // banner slider
 .products_slider {
-    &.slick-slider{
-        margin-bottom: 0;
-    }
-    .slick-dots {
-        li{
-            margin: 0 9px;
-
-            button{
-                width: 16px;
-                height: 16px;
-                padding: 0;
-                opacity: 0.4;
-                background-color: #F6F6F6;
-                font-size: 0;
-                &::before{
-                    display: none;
+    background-color: #21282e;
+    .products_slider_content {
+        max-width: 1920px;
+        margin: 0 auto;
+        &.slick-slider{
+            margin-bottom: 0;
+        }
+        .slick-dots {
+            li{
+                margin: 0 9px;
+    
+                button{
+                    width: 16px;
+                    height: 16px;
+                    padding: 0;
+                    opacity: 0.4;
+                    background-color: #F6F6F6;
+                    font-size: 0;
+                    &::before{
+                        display: none;
+                    }
+                    &:hover{
+                        background-color: #fff;
+                        opacity: 1;
+                    }
                 }
-                &:hover{
+                &.slick-active button{
                     background-color: #fff;
                     opacity: 1;
                 }
-            }
-            &.slick-active button{
-                background-color: #fff;
-                opacity: 1;
             }
         }
     }
