@@ -131,7 +131,9 @@
                 </div>
             </div> -->
             <div class="products_slider">
-                <div><img src="images/img_cover_artbook_1_1x.webp" alt=""></div>
+                <div class="products_slider_content">
+                    <div><img src="images/img_cover_artbook_1_1x.webp" alt=""></div>
+                </div>
             </div>
             
             <div class="inner_content">
@@ -413,7 +415,7 @@
     <script>
         new WOW().init();
         $(
-            $('.products_slider').slick({
+            $('.products_slider_content').slick({
                 dots: false,
                 infinite: true,
                 speed: 500,
