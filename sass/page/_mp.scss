@@ -1326,6 +1326,7 @@ $line-height-abs: -90px;
     background-color: #21282e;
     .products_slider_content {
         max-width: 1920px;
+        max-height: 99vh;
         margin: 0 auto;
         &.slick-slider{
             margin-bottom: 0;
