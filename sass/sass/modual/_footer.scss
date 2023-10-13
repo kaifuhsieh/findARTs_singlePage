@@ -76,13 +76,16 @@ footer {
         flex: 2 1 260px;
         display: flex;
         align-items: center;
+        margin-left: calc(env(safe-area-inset-left));
         @include screen('xs_mobile') {
             flex: 1 1 220px;
             margin-left: 1em;
+            margin-left: calc(env(safe-area-inset-left));
         }
         @include screen('mobile') {
             flex: 0 1 200px;
             margin-left: 0;
+            margin-left: calc(env(safe-area-inset-left));
         }
         img{
             max-width: 260px;
