@@ -9,6 +9,12 @@
     transition: 0.3s ease-out;
     display: flex;
     align-items: center;
+
+    padding-top: constant(safe-area-inset-top);
+    padding-right: constant(safe-area-inset-right);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-left: constant(safe-area-inset-left);
+
     @extend %clearfix;
     transition: 0.3s ease-out;
     @include screen('tablet') {
@@ -93,6 +99,7 @@
             height: 3em;
             top: 1em;
             right: 0.5em;
+            
             border-radius: 50%;
             -webkit-overflow-scrolling: touch;
             transform: translate3d(0, 0, 0);
@@ -101,14 +108,23 @@
             display: none;
             transition: all 0.3s $cubic;
             transition-delay: 0s;
+
+            // padding-top: constant(safe-area-inset-top);
+            // padding-right: constant(safe-area-inset-right);
+            // padding-bottom: constant(safe-area-inset-bottom);
+            // padding-left: constant(safe-area-inset-left);
             @include screen('tablet') {
                 display: block;
                 top: 0.25em;
                 right: 0.25em;
+                right: env(safe-area-inset-right);
             }
             @include screen('mobile') {
                 top: 0em;
                 right: 0.25em;
+                // right: constant(safe-area-inset-right);
+                // right: calc(0.25em + env(safe-area-inset-right));
+                // right: env(safe-area-inset-right);
             }
 
             span {
@@ -166,6 +182,7 @@
         flex-basis: 220px;
         align-self: center;
         transition: 0.3s ease-out;
+        
         a {
             display: flex;
             align-items: center;
@@ -178,12 +195,14 @@
         @include screen('tablet') {
             width: 260px;
             flex-basis: 120px;
+            margin-left: calc(10px + env(safe-area-inset-left));
         }
         @include screen('mobile') {
             position: absolute;
             width: 120px;
             height: 40px;
             left: 10px;
+            // left: calc(10px + env(safe-area-inset-left));
             top: 10px;
             margin: 0;
         }
@@ -331,6 +350,7 @@
             min-width: 80px;
             margin-left: auto;
             margin-right: 60px;
+            margin-right: calc(40px + env(safe-area-inset-right));
         }
         @include screen('mobile') {
             margin-left: 130px;
@@ -617,6 +637,8 @@ header.fixed {
     h1 {
         flex-basis: 120px;
         margin: 0;
+        margin-left: calc(env(safe-area-inset-left) );
+        // outline: 1px solid red;
         a {
             display: flex;
             align-items: center;
