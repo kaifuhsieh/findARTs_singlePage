@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0"> 
+        <meta name='theme-color' content='#000000'>
+        <meta name="description" content="FindARTs 提供藝術畫作、數位創作等原創作品於數位裝置呈現上擁有最佳的藝術顯示效果，自2016年從護眼技術到藝術顯示科技研發，成功整合 3 大技術包含A.R.T (A.R.T. – Advanced Reflectionless Technology)擬真藝屏硬體介面、最高品質博物館等級色彩還原技術、最安全加密技術雲端平台，讓原畫於數位介面呈現能保持細緻且安心保存。同時我們打造藝術作品多元應用體驗方案，應用範疇包含美術館藝廊可異地策展、飯店商辦VIP ROOM藝術展牆營造、為資深藏家客製藝術精品等等，最頂級永續的服務方案，讓唯一真跡突破有限空間，為您創造無限體驗。">
         <meta property="og:url" content="https://www.findarts.net/" />
         <meta property="og:title" content="FindARTs 全球頂尖藝術顯示科技" />
         <meta
@@ -14,17 +16,12 @@
         <title>FindARTs - AUO</title>
         <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
         <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-        <!-- 燈箱facybox -->
-        <!-- <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" /> -->
-        <!-- fancybox -->
-        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
         <!-- hyUI css -->
         <link rel="stylesheet" href="css/findarts_website.min.css" />
         <link rel="stylesheet" href="css/animate.css" />
         <!-- favicon -->
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
-    <!-- 記得埋一個給國樑 -->
     <div class="detect">absabcd</div>
 
     <body>
@@ -45,6 +42,12 @@
                     <ul>
                         <li>
                             <a href="index.html">關於FindARTs </a>
+                        </li>
+                        <li>
+                            <a href="cht_product_series.html">數位典藏精品特輯</a>
+                        </li>
+                        <li>
+                            <a href="cht_product_series_add.html">新增精選畫冊</a>
                         </li>
                         <li>
                             <a href="cht_service_place.html">應用服務案例 </a>
@@ -69,13 +72,20 @@
                 <div class="container">
                     <h1>
                         <a href="index.html">
-                            <img src="images/logo.png" alt="" />
+                            <img src="images/logo.webp" srcset="images/logo@2x.webp 2x,images/logo@3x.webp 3x,images/logo@4x.webp 4x" alt="FindARTs logo" width="531" height="180" loading="lazy" />
                         </a>
                     </h1>
                     <nav>
                         <ul>
                             <li>
                                 <a href="index.html">關於FindARTs </a>
+                            </li>
+                            <li>
+                                <a href="#">擬真藝屏｜系列產品</a>
+                                <ul class="submenu">
+                                    <li><a href="cht_product_series.html">數位典藏精品特輯</a></li>
+                                    <li><a href="cht_product_series_add.html">新增精選畫冊</a></li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="cht_service_place.html">應用服務案例 </a>
@@ -106,8 +116,12 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- auo logo -->
+                    <div class="auo_logo">
+                        <a href="https://www.auo.com/zh-TW/solutions/index/FindARTs" target="_blank"><img src="images/logo_auo.webp" alt="AUO" width="160" height="64" loading="lazy" /></a>
+                    </div>
                     <!-- RWD menu -->
-                    <button class="btn_menu">
+                    <button class="btn_menu" aria-label="打開選單按鈕">
                         <span class="topBar"></span>
                         <span class="midBar"></span>
                         <span class="btmBar"></span>
@@ -128,7 +142,7 @@
                             <li>
                                 <h4>17吋操作說明</h4>
                                 <div class="img-container">
-                                    <img src="images/download_17.jpg" alt="" />
+                                    <img src="images/download_17.webp" alt="17吋操作說明" width="298" height="227" loading="lazy" />
                                 </div>
                                 <ul>
                                     <li>
@@ -142,7 +156,7 @@
                             <li>
                                 <h4>32吋操作說明</h4>
                                 <div class="img-container">
-                                    <img src="images/download_32.jpg" alt="" />
+                                    <img src="images/download_32.webp" alt="32吋操作說明" width="298" height="227" loading="lazy" />
                                 </div>
                                 <ul>
                                     <li>
@@ -162,7 +176,7 @@
                             <li>
                                 <h4>產品保固聲明</h4>
                                 <div class="img-container">
-                                    <img src="images/document.jpg" alt="" />
+                                    <img src="images/document.webp" alt="產品保固聲明" width="298" height="227" loading="lazy" />
                                 </div>
                                 <ul>
                                     <li>
@@ -184,24 +198,27 @@
                     <div class="app_download">
                         <div class="item app_info">
                             <div class="img-container">
-                                <img src="images/avatar.png" alt="" />
+                                <img src="images/avatar.webp" alt="FindARTs" width="560" height="560" loading="lazy" />
                             </div>
                             <p>APP 適用於購買藝術精品系列產品之使者下載使用</p>
+                            <div class="app_help_download">
+                                <a href="download/FindARTs_APP_UM_TC_V1.00_20230802.pdf">App 說明書下載</a>
+                            </div>
                         </div>
                         <div class="item">
                             <a
                                 href="https://apps.apple.com/tw/app/findarts-%E6%8E%A7%E5%88%B6%E5%99%A8/id1661592400"
                                 class="app_link"
                             >
-                                <img src="images/ios_appstore.jpg" alt="" />
-                                <img src="images/ios_qrcode.jpg" alt="" />
+                                <img src="images/ios_appstore.webp" alt="App Store" width="492" height="148" loading="lazy" />
+                                <img src="images/ios_qrcode.webp" alt="iOS QRcode" width="492" height="492" loading="lazy" />
                             </a>
                             <a
                                 href="https://play.google.com/store/apps/details?id=com.auo.art.phone&hl=zh-TW&pli=1"
                                 class="app_link"
                             >
-                                <img src="images/google_play.jpg" alt="" />
-                                <img src="images/google_qrcode.jpg" alt="" />
+                                <img src="images/google_play.webp" alt="google play" width="492" height="148" loading="lazy" />
+                                <img src="images/google_qrcode.webp" alt="android QRcode" width="492" height="492" loading="lazy" />
                             </a>
                         </div>
                     </div>
@@ -211,36 +228,28 @@
             <footer>
                 <div class="container">
                     <div class="footer_logo">
-                        <img src="images/logo_footer.png" alt="" />
+                        <img src="images/logo_footer.webp" srcset="images/logo_footer@2x.webp 2x,images/logo_footer@3x.webp 3x" width="260" height="88" alt="FindARTs logo" loading="lazy" />
                     </div>
                     <div class="contact">
                         <h4>
                             Contact US
                             <a href="https://www.facebook.com/AUO.DAPO/" target="_blank">
-                                <img src="images/icon_facebook.svg" alt="" />
+                                <img src="images/icon_facebook.svg" alt="facebook icon" loading="lazy" />
                             </a>
                             <a href="https://www.youtube.com/@FindARTs-lo6qi/featured" target="_blank">
-                                <img src="images/icon_youtube.svg" alt="" />
+                                <img src="images/icon_youtube.svg" alt="youtube icon" loading="lazy" />
                             </a>
-                            <!-- <a href="#" target="_blank">
-                                <img src="images/icon_ig.svg" alt="" />
-                            </a> -->
+                            
                         </h4>
                         <p>聯絡我 讓我知道您的需求</p>
                         <a href="mailto:service@findarts.net">service@findarts.net</a>
                         <a href="https://slsp.auo.com/zh-tw/privacy-statement">隱私權聲明</a>
                     </div>
-                    <!-- auo logo -->
-                    <div class="auo_logo">
-                        <a href="http://www.auo.com/zh-TW" target="blank">
-                            <img src="images/logo_auo_footer.png" alt="" />
-                        </a>
-                    </div>
+                    
                 </div>
             </footer>
         </div>
         <a href="javascript:;" class="scrollToTop">回頁首</a>
-        <script src="js/jquery-3.6.0.min.js"></script>
     </body>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="vendor/jquery.easing.min.js"></script>
@@ -261,13 +270,7 @@
             fadeTime: 600,
             threshold: 0,
         });
-        //$('.fancybox').fancybox();
     </script>
-    <!-- <script>
-        document.oncontextmenu = function () {
-            window.event.returnValue = false; //將滑鼠右鍵事件取消
-        };
-    </script> -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTX55SQZKS"></script>
     <script>

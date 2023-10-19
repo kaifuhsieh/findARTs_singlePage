@@ -1,0 +1,65 @@
+
+.mr-50{
+    margin-right: 50%;
+}
+.mr-xl-50{
+    @include screen('notebook'){
+        margin-right: 50%;
+    }
+    // max-width: 1399px
+}
+.mr-lg-50{
+    @include screen('mobile'){
+        margin-right: 50%;
+    }
+    // max-width: 767px
+}
+.mr-sm-50{
+    @include screen('mobile'){
+        margin-right: 50%;
+    }		
+}
+.mr-sm-50{
+    @include screen('tablet'){
+        margin-right: 50%;
+    }
+    // max-width: 991px
+}
+.mr-xs-50{
+    @include screen('xs_mobile'){
+        margin-right: 50%;
+    }
+    // max-width: 575px
+}
+
+
+
+.mr-xl-0{
+    @include screen('notebook'){
+        margin-right: 0%;
+    }
+    // max-width: 1399px
+}
+.mr-lg-0{
+    @include screen('mobile'){
+        margin-right: 0%;
+    }
+    // max-width: 767px
+}
+.mr-sm-0{
+    @include screen('mobile'){
+        margin-right: 0%;
+    }		
+}
+.mr-sm-0{
+    @include screen('tablet'){
+        margin-right: 0%;
+    }
+    // max-width: 991px
+}
+.mr-xs-0{
+    @include screen('xs_mobile'){
+        margin-right: 0%;
+    }
+    // max-width: 575px
+}

@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0"> 
+        <meta name='theme-color' content='#000000'>
+        <meta name="description" content="Considering confidentiality of the collection of your personalinformation, we will inform you of the following matters according to law before collecting personal data from you. We are committed to protecting and respecting your privacy, and your personal data will only be used for contacting our products and services you have consulted. If you agree that please check the box, and you will get our latest news in the future. If you need to cancel your subscription, you can also write to cancel.">
         <meta property="og:url" content="https://www.findarts.net/" />
         <meta property="og:title" content="FindARTs" />
         <meta
@@ -14,17 +16,12 @@
         <title>FindARTs - AUO</title>
         <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
         <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-        <!-- 燈箱facybox -->
-        <!-- <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" /> -->
-        <!-- fancybox -->
-        <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
         <!-- hyUI css -->
         <link rel="stylesheet" href="css/findarts_website.min.css" />
         <link rel="stylesheet" href="css/animate.css" />
         <!-- favicon -->
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
-    <!-- 記得埋一個給國樑 -->
     <div class="detect">absabcd</div>
 
     <body>
@@ -69,7 +66,7 @@
                 <div class="container">
                     <h1>
                         <a href="index_en.html">
-                            <img src="images/logo.png" alt="" />
+                            <img src="images/logo.webp" srcset="images/logo@2x.webp 2x,images/logo@3x.webp 3x,images/logo@4x.webp 4x" alt="FindARTs logo" width="531" height="180" loading="lazy" />
                         </a>
                     </h1>
                     <nav class="en">
@@ -102,8 +99,12 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- auo logo -->
+                    <div class="auo_logo">
+                        <a href="https://www.auo.com/en-global/solutions/index/FindARTs" target="_blank"><img src="images/logo_auo.webp" alt="AUO" width="160" height="64" loading="lazy" /></a>
+                    </div>
                     <!-- RWD menu -->
-                    <button class="btn_menu">
+                    <button class="btn_menu" aria-label="Toggle menu button">
                         <span class="topBar"></span>
                         <span class="midBar"></span>
                         <span class="btmBar"></span>
@@ -124,7 +125,7 @@
                         <time>2023 / 06 </time>
                         <div class="cp_feature">
                             <div class="img-container">
-                                <img src="images/spring_dm.jpg" alt="" />
+                                <img src="images/spring_dm.webp" alt="Exhibition Visual DM" loading="lazy" />
                                 <span>Exhibition Visual DM</span>
                             </div>
                         </div>
@@ -181,36 +182,28 @@
             <footer>
                 <div class="container">
                     <div class="footer_logo">
-                        <img src="images/logo_footer.png" alt="" />
+                        <img src="images/logo_footer.webp" srcset="images/logo_footer@2x.webp 2x,images/logo_footer@3x.webp 3x" width="260" height="88" alt="FindARTs logo" loading="lazy" />
                     </div>
                     <div class="contact">
                         <h4>
                             Contact US
                             <a href="https://www.facebook.com/AUO.DAPO/" target="_blank">
-                                <img src="images/icon_facebook.svg" alt="" />
+                                <img src="images/icon_facebook.svg" alt="facebook icon" loading="lazy" />
                             </a>
                             <a href="https://www.youtube.com/@FindARTs-lo6qi/featured" target="_blank">
-                                <img src="images/icon_youtube.svg" alt="" />
+                                <img src="images/icon_youtube.svg" alt="youtube icon" loading="lazy" />
                             </a>
-                            <!-- <a href="#" target="_blank">
-                                <img src="images/icon_ig.svg" alt="" />
-                            </a> -->
+                            
                         </h4>
                         <!-- <p>聯絡我 讓我知道您的需求</p> -->
                         <a href="mailto:service@findarts.net">service@findarts.net</a>
                         <a href="https://slsp.auo.com/privacy-statement">privacy</a>
                     </div>
-                    <!-- auo logo -->
-                    <div class="auo_logo">
-                        <a href="http://www.auo.com/zh-TW" target="blank">
-                            <img src="images/logo_auo_footer.png" alt="" />
-                        </a>
-                    </div>
+                    
                 </div>
             </footer>
         </div>
         <a href="javascript:;" class="scrollToTop">回頁首</a>
-        <script src="js/jquery-3.6.0.min.js"></script>
     </body>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="vendor/jquery.easing.min.js"></script>
@@ -222,22 +215,6 @@
     <script>
         new WOW().init();
     </script>
-    <!-- <script>
-        //lazyload
-        var lazyLoadInstance = new LazyLoad({
-            elements_selector: 'img.lazy',
-            //placeholder: '/images/basic/placeholder.gif',
-            effect: 'fadeIn',
-            fadeTime: 600,
-            threshold: 0,
-        });
-        //$('.fancybox').fancybox();
-    </script> -->
-    <!-- <script>
-        document.oncontextmenu = function () {
-            window.event.returnValue = false; //將滑鼠右鍵事件取消
-        };
-    </script> -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTX55SQZKS"></script>
     <script>
