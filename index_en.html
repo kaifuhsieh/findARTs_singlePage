@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0"> 
         <meta name='theme-color' content='#000000'>
         <meta name="description" content="Considering confidentiality of the collection of your personalinformation, we will inform you of the following matters according to law before collecting personal data from you. We are committed to protecting and respecting your privacy, and your personal data will only be used for contacting our products and services you have consulted. If you agree that please check the box, and you will get our latest news in the future. If you need to cancel your subscription, you can also write to cancel." />
         <meta property="og:title" content="FindARTs" />
@@ -13,10 +13,26 @@
         />
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
         <title>FindARTs - AUO</title>
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-        <link rel="stylesheet" href="css/findarts_website.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+            <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+            <!-- hyUI css -->
+            <link rel="stylesheet" href="css/findarts_website.min.css" />
+            <link rel="stylesheet" href="css/animate.css" />
+        </noscript>
+        <script>
+            // 定義 CSS 檔案路徑
+            const cssFiles = ['vendor/slick/slick.css', 'vendor/slick/slick-theme.css', 'css/findarts_website.min.css', 'css/animate.css'];
+    
+            // 迴圈創建並設定多個 link 元素
+            for (const cssFile of cssFiles) {
+            const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = cssFile;
+                document.head.appendChild(link);
+            }
+        </script>
         <!-- favicon -->
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
