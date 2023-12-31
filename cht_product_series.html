@@ -14,11 +14,26 @@
         />
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
         <title>數位典藏精品特輯 - FindARTs - AUO</title>
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-        <!-- hyUI css -->
-        <link rel="stylesheet" href="css/findarts_website.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+            <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+            <!-- hyUI css -->
+            <link rel="stylesheet" href="css/findarts_website.min.css" />
+            <link rel="stylesheet" href="css/animate.css" />
+        </noscript>
+        <script>
+            // 定義 CSS 檔案路徑
+            const cssFiles = ['vendor/slick/slick.css', 'vendor/slick/slick-theme.css', 'css/findarts_website.min.css', 'css/animate.css'];
+    
+            // 迴圈創建並設定多個 link 元素
+            for (const cssFile of cssFiles) {
+            const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = cssFile;
+                document.head.appendChild(link);
+            }
+        </script>
         <!-- favicon -->
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
