@@ -15,6 +15,7 @@
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
         <title>FindARTs - AUO</title>
         <noscript>
+            <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap" crossorigin />
             <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
             <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
             <!-- hyUI css -->
@@ -22,9 +23,16 @@
             <link rel="stylesheet" href="css/animate.css" />
         </noscript>
         <script>
+            // 建立 google font
+            const fontLink = document.createElement('link');
+            fontLink.rel = 'preconnect';
+            fontLink.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap';
+            fontLink.crossOrigin = 'anonymous';
+            document.head.appendChild(fontLink);
+            
             // 定義 CSS 檔案路徑
             const cssFiles = ['vendor/slick/slick.css', 'vendor/slick/slick-theme.css', 'css/findarts_website.min.css', 'css/animate.css'];
-    
+
             // 迴圈創建並設定多個 link 元素
             for (const cssFile of cssFiles) {
             const link = document.createElement('link');
@@ -143,24 +151,24 @@
                         </div>
                         
                         <a href="#" target="_blank">
-                            <img src="images/slider_1.webp" srcset="images/slider_1@2x.webp 2x" alt="畫作：看海" width="450" height="324" loading="lazy" />
+                            <img src="images/slider_1.webp" srcset="images/slider_1@2x.webp 2x" alt="畫作：看海" width="450" height="324" />
                             <span>
                                 FindARTs 85 ” 旗艦款 - <br />圖像授權 奇美美術館 《 看海 》
                             
-                                <img src="images/2024award-taiwan.webp" class="slider-2024award" alt="">
+                                <img src="images/2024award-taiwan.webp" class="slider-2024award" width="558" height="222" alt="">
                             </span>
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/slider_2.webp" srcset="images/slider_2@2x.webp 2x" alt="畫作：幽靈網" width="450" height="416" loading="lazy" />
+                            <img src="images/slider_2.webp" srcset="images/slider_2@2x.webp 2x" alt="畫作：幽靈網" width="450" height="416" />
                             <span>FindARTs 32 ” 經典款 - <br />圖像授權 永續基金會 《 幽靈網 》</span>
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/slider_3.webp" srcset="images/slider_3@2x.webp 2x" alt="畫作：淡水夕照" width="450" height="416" loading="lazy" />
+                            <img src="images/slider_3.webp" srcset="images/slider_3@2x.webp 2x" alt="畫作：淡水夕照" width="450" height="416" />
                             <span>FindARTs 17 ” 方形款 -<br />圖像授權 陳澄波文化基金 《 淡水夕照 》</span>
                         </a>
                         
                         <a href="#" target="_blank">
-                            <img src="images/slider_4.webp" srcset="images/slider_4@2x.webp 2x" alt="展牆" width="450" height="401" loading="lazy" />
+                            <img src="images/slider_4.webp" srcset="images/slider_4@2x.webp 2x" alt="展牆" width="450" height="401" />
                             <span>系列展牆</span>
                         </a>
                     </div>
