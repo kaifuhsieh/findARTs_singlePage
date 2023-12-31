@@ -14,8 +14,20 @@
         >
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" >
         <title>蘇憲法《東方詩境》</title>
-        <link rel="stylesheet" href="../css/findarts_website.min.css" >
-        <link rel="stylesheet" href="../css/animate.css" >
+        <noscript>
+            <link rel="stylesheet" href="../css/findarts_website.min.css" >
+            <link rel="stylesheet" href="../css/animate.css" >
+        </noscript>
+        <script>
+            const cssFiles = ['../css/findarts_website.min.css', '../css/animate.css'];
+            for (const cssFile of cssFiles) {
+            const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = cssFile;
+                document.head.appendChild(link);
+            }
+        </script>
         <!-- favicon -->
         <link href="../images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
