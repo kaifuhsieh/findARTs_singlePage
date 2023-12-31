@@ -15,10 +15,18 @@
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
         <title>FindARTs x ART Taipei 2023 | "The Timeless Spectrum " Art Exhibition First Release "Digital Collection Masterpieces" - AUO</title>
         <noscript>
+            <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap" crossorigin />
             <link rel="stylesheet" href="css/findarts_website.min.css" />
             <link rel="stylesheet" href="css/animate.css" />
         </noscript>
         <script>
+            // 建立 google font
+            const fontLink = document.createElement('link');
+            fontLink.rel = 'preconnect';
+            fontLink.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap';
+            fontLink.crossOrigin = 'anonymous';
+            document.head.appendChild(fontLink);
+            
             const cssFiles = ['css/findarts_website.min.css', 'css/animate.css'];
             for (const cssFile of cssFiles) {
             const link = document.createElement('link');

@@ -15,6 +15,7 @@
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
         <title>數位典藏精品特輯 - FindARTs - AUO</title>
         <noscript>
+            <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap" crossorigin />
             <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
             <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
             <!-- hyUI css -->
@@ -22,6 +23,13 @@
             <link rel="stylesheet" href="css/animate.css" />
         </noscript>
         <script>
+            // 建立 google font
+            const fontLink = document.createElement('link');
+            fontLink.rel = 'preconnect';
+            fontLink.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap';
+            fontLink.crossOrigin = 'anonymous';
+            document.head.appendChild(fontLink);
+            
             // 定義 CSS 檔案路徑
             const cssFiles = ['vendor/slick/slick.css', 'vendor/slick/slick-theme.css', 'css/findarts_website.min.css', 'css/animate.css'];
     
