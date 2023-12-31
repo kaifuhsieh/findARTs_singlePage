@@ -8023,12 +8023,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     text-align: center;
     width: 90%;
     display: block;
-    margin: 0 auto !important;
+    margin: 4em auto 0 !important;
   }
 }
 @media screen and (max-width: 575px) {
   .hero .container .summary {
-    margin-top: 5em;
+    margin-top: 4em;
   }
 }
 @media screen and (max-width: 991px) {
@@ -8052,7 +8052,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   margin-right: 0.1em;
 }
 .hero .container .summary h2.en {
-  font-size: 3.2em;
+  font-size: 3em;
 }
 @media screen and (max-width: 1459px) {
   .hero .container .summary h2.en {
@@ -8198,7 +8198,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .hero .container .rotate-slider a span {
   position: absolute;
-  bottom: -10rem;
   display: block;
   width: 100%;
   left: 50%;
@@ -8213,14 +8212,19 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 @media screen and (max-width: 991px) {
   .hero .container .rotate-slider a span {
-    bottom: -8rem;
+    bottom: -12rem;
   }
 }
 @media screen and (max-width: 575px) {
   .hero .container .rotate-slider a span {
-    bottom: -4rem;
+    bottom: -8rem;
     font-size: 0.75em;
   }
+}
+.hero .container .rotate-slider a span .slider-2024award {
+  width: 180px;
+  display: block;
+  margin: auto;
 }
 .hero .container .rotate-slider a img {
   object-fit: contain;
@@ -8288,7 +8292,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   width: 14%;
   height: 22%;
   left: 43%;
-  bottom: 18%;
+  bottom: 28%;
   z-index: 98;
   opacity: 0.8;
   transition: 0.75s cubic-bezier(0.4, 0.01, 0.165, 0.99);
