@@ -157,14 +157,14 @@ a.more {
         }
         h2 {
             font-family: 'Noto Serif TC', serif;
-            font-size: 4.8em;
+            font-size: 3em;
             margin: 0em;
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: 100%;
             line-height: 1.45em;
             @media screen and (max-width: 1600px) {
-                font-size: 4.3em;
+                font-size: 3em;
             }
             @include screen('notebook') {
                 font-size: 3.6em;
@@ -219,11 +219,11 @@ a.more {
                     text-align: center;
                     width: 90%;
                     display: block;
-                    margin: 0 auto !important;
+                    margin: 4em auto 0 !important;
                 }
             }
             @include screen('xs_mobile') {
-                margin-top: 5em;
+                margin-top: 4em;
             }
 
             h2,
@@ -244,7 +244,7 @@ a.more {
                     margin-right: 0.1em;
                 }
                 &.en {
-                    font-size: 3.2em;
+                    font-size: 3em;
                     @include screen('notebook') {
                         font-size: 2.65em;
                         white-space: nowrap;
@@ -256,7 +256,7 @@ a.more {
             }
             h3 {
                 font-family: 'Noto Serif TC', serif;
-                font-size: 2.7em;
+                font-size: 2em;
                 line-height: 1.35em;
                 margin: 0 0 1.5em;
                 white-space: nowrap;
@@ -383,7 +383,7 @@ a.more {
                 text-align: center;
                 span {
                     position: absolute;
-                    bottom: -10rem;
+                    // bottom: -10rem;
                     display: block;
                     width: 100%;
                     left: 50%;
@@ -394,11 +394,16 @@ a.more {
                         bottom: -5rem;
                     }
                     @include screen('tablet') {
-                        bottom: -8rem;
+                        bottom: -12rem;
                     }
                     @include screen('xs_mobile') {
-                        bottom: -4rem;
+                        bottom: -8rem;
                         font-size: 0.75em;
+                    }
+                    .slider-2024award {
+                        width: 180px;
+                        display: block;
+                        margin: auto;
                     }
                 }
                 img {
@@ -407,6 +412,8 @@ a.more {
                     @include screen('xs_mobile') {
                         max-height: 11em;
                     }
+
+                    
                 }
             }
             [class^='slider'] {
@@ -475,7 +482,7 @@ a.more {
                 width: 14%;
                 height: 22%;
                 left: 43%;
-                bottom: 18%;
+                bottom: 28%;
                 z-index: 98;
                 opacity: 0.8;
                 transition: 0.75s $cubic;
@@ -1058,7 +1065,7 @@ $line-height-abs: -90px;
                     margin: 0 auto 3em;
                 }
             }
-            &:nth-of-type(2n) {
+            &:nth-of-type(odd) {
                 .pic {
                     order: 2;
                     @include screen('tablet') {

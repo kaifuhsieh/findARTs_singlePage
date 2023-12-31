@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
         <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0"> 
         <meta name='theme-color' content='#000000'>
         <meta name="description" content="FindARTs 提供藝術畫作、數位創作等原創作品於數位裝置呈現上擁有最佳的藝術顯示效果，自2016年從護眼技術到藝術顯示科技研發，成功整合 3 大技術包含A.R.T (A.R.T. – Advanced Reflectionless Technology)擬真藝屏硬體介面、最高品質博物館等級色彩還原技術、最安全加密技術雲端平台，讓原畫於數位介面呈現能保持細緻且安心保存。同時我們打造藝術作品多元應用體驗方案，應用範疇包含美術館藝廊可異地策展、飯店商辦VIP ROOM藝術展牆營造、為資深藏家客製藝術精品等等，最頂級永續的服務方案，讓唯一真跡突破有限空間，為您創造無限體驗。">
@@ -15,11 +14,29 @@
         />
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
         <title>FindARTs - AUO</title>
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-        <!-- hyUI css -->
-        <link rel="stylesheet" href="css/findarts_website.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+            <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+            <!-- hyUI css -->
+            <link rel="stylesheet" href="css/findarts_website.min.css" />
+            <link rel="stylesheet" href="css/animate.css" />
+        </noscript>
+        <script>
+            // 定義 CSS 檔案路徑
+            const cssFiles = ['vendor/slick/slick.css', 'vendor/slick/slick-theme.css', 'css/findarts_website.min.css', 'css/animate.css'];
+    
+            // 迴圈創建並設定多個 link 元素
+            for (const cssFile of cssFiles) {
+            const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = cssFile;
+                document.head.appendChild(link);
+            }
+        </script>
+        <script src="js/nav-cht.js"></script>
+
+
         <!-- favicon -->
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
@@ -39,33 +56,8 @@
                         </li>
                     </ul>
                 </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html">關於FindARTs </a>
-                        </li>
-                        <li>
-                            <a href="cht_product_series.html">數位典藏精品特輯</a>
-                        </li>
-                        <li>
-                            <a href="cht_product_series_add.html">新增精選畫冊</a>
-                        </li>
-                        <li>
-                            <a href="cht_service_place.html">應用服務案例 </a>
-                        </li>
-                        <li>
-                            <a href="cht_news.html">媒體報導 </a>
-                        </li>
-                        <li>
-                            <a href="cht_download.html">相關下載</a>
-                        </li>
-                        <li>
-                            <a href="cht_contact.html">聯絡我們</a>
-                        </li>
-                        <li>
-                            <a href="cht_gallery.html">實體據點</a>
-                        </li>
-                    </ul>
+                <nav class="m-nav">
+                    <!-- nav-cht.js載入選單 -->
                 </nav>
             </div>
         </div>
@@ -78,36 +70,8 @@
                             <img src="images/logo.webp" srcset="images/logo@2x.webp 2x,images/logo@3x.webp 3x,images/logo@4x.webp 4x" alt="FindARTs logo" width="531" height="180" loading="lazy" />
                         </a>
                     </h1>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="index.html">關於FindARTs </a>
-                            </li>
-                            <li>
-                                <a href="#">擬真藝屏｜系列產品</a>
-                                <ul class="submenu">
-                                    <li><a href="cht_product_series.html">數位典藏精品特輯</a></li>
-                                    <li><a href="cht_product_series_add.html">新增精選畫冊</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="cht_service_place.html">應用服務案例 </a>
-                            </li>
-                            <li>
-                                <a href="cht_news.html">媒體報導 </a>
-                            </li>
-                            <li>
-                                <a href="cht_download.html">相關下載</a>
-                            </li>
-                            <li>
-                                <a href="#">聯絡我們</a>
-                                <!-- <a href="mailto:service@findarts.net">聯絡我們</a> -->
-                                <ul class="submenu">
-                                    <li><a href="cht_contact.html">聯絡我們</a></li>
-                                    <li><a href="cht_gallery.html">實體據點</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <nav class="main-nav">
+                        <!-- nav-cht.js載入選單 -->
                     </nav>
                     <div class="language">
                         <ul>
@@ -177,20 +141,26 @@
                                 FindARTs 全球頂尖藝術顯示科技
                             </h3>
                         </div>
+                        
                         <a href="#" target="_blank">
-                            <img src="images/slider_1.webp" srcset="images/slider_1@2x.webp 2x" alt="畫作：看海" width="788" height="504" loading="lazy" />
-                            <span>FindARTs 85 ” 旗艦款 - <br />圖像授權 奇美美術館 《 看海 》</span>
+                            <img src="images/slider_1.webp" srcset="images/slider_1@2x.webp 2x" alt="畫作：看海" width="450" height="324" loading="lazy" />
+                            <span>
+                                FindARTs 85 ” 旗艦款 - <br />圖像授權 奇美美術館 《 看海 》
+                            
+                                <img src="images/2024award-taiwan.webp" class="slider-2024award" alt="">
+                            </span>
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/slider_2.webp" srcset="images/slider_2@2x.webp 2x" alt="畫作：幽靈網" width="788" height="572" loading="lazy" />
+                            <img src="images/slider_2.webp" srcset="images/slider_2@2x.webp 2x" alt="畫作：幽靈網" width="450" height="416" loading="lazy" />
                             <span>FindARTs 32 ” 經典款 - <br />圖像授權 永續基金會 《 幽靈網 》</span>
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/slider_3.webp" srcset="images/slider_3@2x.webp 2x" alt="畫作：淡水夕照" width="788" height="748" loading="lazy" />
+                            <img src="images/slider_3.webp" srcset="images/slider_3@2x.webp 2x" alt="畫作：淡水夕照" width="450" height="416" loading="lazy" />
                             <span>FindARTs 17 ” 方形款 -<br />圖像授權 陳澄波文化基金 《 淡水夕照 》</span>
                         </a>
+                        
                         <a href="#" target="_blank">
-                            <img src="images/slider_4.webp" srcset="images/slider_4@2x.webp 2x" alt="展牆" width="788" height="401" loading="lazy" />
+                            <img src="images/slider_4.webp" srcset="images/slider_4@2x.webp 2x" alt="展牆" width="450" height="401" loading="lazy" />
                             <span>系列展牆</span>
                         </a>
                     </div>
@@ -373,6 +343,12 @@
                     <div class="certification_slider wow fadeInUp" data-wow-duration=".75s" data-wow-delay="1.5s">
                         <div class="item">
                             <div class="img-container">
+                                <img class="lazyload" data-src="images/img_mark_6.webp" alt="TIPA WORLD AWARD 2020" width="160" height="160" loading="lazy" />
+                            </div>
+                            <span>獲得2024臺灣精品獎殊榮</span>
+                        </div>
+                        <div class="item">
+                            <div class="img-container">
                                 <img class="lazyload" data-src="images/img_mark_1.webp" alt="TIPA WORLD AWARD 2020" width="160" height="160" loading="lazy" />
                             </div>
                             <span>TIPA WORLD AWARD 2020</span>
@@ -408,13 +384,48 @@
             <section class="sec service">
                 <div class="container">
                     <h2 class="h2_title icon wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
-                        服務案例
+                        亮點案例
                         <small
                             >累積至目前為止超過百件經典畫作、原作授權合作，服務擴散至全球 6
                             個國家外，解決方案更於國內北中南亮點應用場域、藝術策展、VVIP營業等空間，創造百萬等級專業服務，衍伸藝術服務與展示空間無限應用價值</small
                         >
                     </h2>
                     <div class="service_content">
+                        <!-- FindARTs 獲選臺灣精品獎殊榮 最高榮譽！ -->
+                        <div class="item wow fadeInUp" data-wow-duration=".75s" data-wow-delay=".75s">
+                            <div class="pic">
+                                <div class="img-container">
+                                    <span>獲獎紀錄</span>
+                                    <img class="lazyload" data-src="images/2024award-taiwan-cover.webp" alt="FindARTs 獲選臺灣精品獎殊榮 最高榮譽！" width="1200" height="800" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3>FindARTs 獲選臺灣精品獎殊榮 最高榮譽！</h3>
+                                <p>
+                                    FindARTs 32吋擬真藝屏代表參賽臺灣精品獎2024獲得精品獎殊榮，期許帶領更多臺灣優質藝術與科技推向國際！<a href="https://www.findarts.net/intro/cht_product_series.html">現正發行臺灣藝術家系列藝術精品</a>，一回精品 年年交誼!
+                                </p>
+                                <div class="tag">
+                                    <ul>
+                                        <li>
+                                            <a href="#">臺灣精品獎2024</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">32吋擬真藝屏</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">國際精品</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a
+                                    href="https://www.auo.com/zh-TW/News_Archive/detail/News_Archive_Product_20231019"
+                                    target="_blank"
+                                    class="more"
+                                    >閱讀更多</a
+                                >
+                            </div>
+                        </div>
+                        <!-- 第一銀行高資產理財旗鑑中心 -->
                         <div class="item wow fadeInUp" data-wow-duration=".75s" data-wow-delay=".75s">
                             <div class="pic">
                                 <div class="img-container">
@@ -452,6 +463,7 @@
                                 >
                             </div>
                         </div>
+                        <!-- 奇美博物館-《時代的臉孔》異地策展 -->
                         <div class="item wow fadeInUp" data-wow-duration=".75s" data-wow-delay="1s">
                             <div class="pic">
                                 <div class="img-container">
@@ -489,6 +501,7 @@
                                 >
                             </div>
                         </div>
+                        <!-- 名家授權 藝廊集錦經典套圖 -->
                         <div class="item wow fadeInUp" data-wow-duration=".75s" data-wow-delay="1.25s">
                             <div class="pic">
                                 <div class="img-container">
