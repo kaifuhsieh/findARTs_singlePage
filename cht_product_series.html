@@ -14,11 +14,27 @@
         />
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
         <title>數位典藏精品特輯 - FindARTs - AUO</title>
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-        <!-- hyUI css -->
-        <link rel="stylesheet" href="css/findarts_website.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+            <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+            <!-- hyUI css -->
+            <link rel="stylesheet" href="css/findarts_website.min.css" />
+            <link rel="stylesheet" href="css/animate.css" />
+        </noscript>
+        <script>
+            // 定義 CSS 檔案路徑
+            const cssFiles = ['vendor/slick/slick.css', 'vendor/slick/slick-theme.css', 'css/findarts_website.min.css', 'css/animate.css'];
+    
+            // 迴圈創建並設定多個 link 元素
+            for (const cssFile of cssFiles) {
+            const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = cssFile;
+                document.head.appendChild(link);
+            }
+        </script>
+        <script src="js/nav-cht.js"></script>
         <!-- favicon -->
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
@@ -38,31 +54,8 @@
                         </li>
                     </ul>
                 </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html">關於FindARTs </a>
-                        </li>
-                        <li>
-                            <a href="cht_product_series.html">數位典藏精品特輯</a>
-                        </li>
-                        <li>
-                            <a href="cht_product_series_add.html">新增精選畫冊</a>
-                        </li>
-                        <li>
-                            <a href="cht_service_place.html">應用服務案例 </a>
-                        </li>
-                        <li>
-                            <a href="cht_news.html">媒體報導 </a>
-                        </li>
-                        <li>
-                            <a href="cht_download.html">相關下載</a>
-                        </li>
-                        <li>
-                            <a href="cht_contact.html">聯絡我們</a>
-                        </li>
-                        <li><a href="cht_gallery.html">實體據點</a></li>
-                    </ul>
+                <nav class="m-nav">
+                    <!-- nav-cht.js載入選單 -->
                 </nav>
             </div>
         </div>
@@ -75,36 +68,8 @@
                             <img src="images/logo.webp" srcset="images/logo@2x.webp 2x,images/logo@3x.webp 3x,images/logo@4x.webp 4x" alt="FindARTs logo" width="531" height="180" loading="lazy" />
                         </a>
                     </h1>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="index.html">關於FindARTs </a>
-                            </li>
-                            <li>
-                                <a href="#">擬真藝屏｜系列產品</a>
-                                <ul class="submenu">
-                                    <li><a href="cht_product_series.html">數位典藏精品特輯</a></li>
-                                    <li><a href="cht_product_series_add.html">新增精選畫冊</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="cht_service_place.html">應用服務案例 </a>
-                            </li>
-                            <li>
-                                <a href="cht_news.html">媒體報導 </a>
-                            </li>
-                            <li>
-                                <a href="cht_download.html">相關下載</a>
-                            </li>
-                            <li>
-                                <a href="#">聯絡我們</a>
-                                <!-- <a href="mailto:service@findarts.net">聯絡我們</a> -->
-                                <ul class="submenu">
-                                    <li><a href="cht_contact.html">聯絡我們</a></li>
-                                    <li><a href="cht_gallery.html">實體據點</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <nav class="main-nav">
+                        <!-- nav-cht.js載入選單 -->
                     </nav>
                     <div class="language">
                         <ul>
