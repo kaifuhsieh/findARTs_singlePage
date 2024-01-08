@@ -7995,7 +7995,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 @media screen and (max-width: 1600px) and (min-width: 1161px) {
   .hero .container .summary.en {
-    flex-basis: 45em;
+    flex-basis: 55%;
   }
 }
 @media screen and (max-width: 1459px) {
@@ -8057,7 +8057,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 @media screen and (max-width: 1459px) {
   .hero .container .summary h2.en {
     font-size: 2.65em;
-    white-space: nowrap;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -8216,6 +8215,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 @media screen and (max-width: 767px) {
   .hero .container .rotate-slider .slider-2024award {
     width: 60vw;
+    transform: translateY(100%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero .container .rotate-slider .slider-2024award.slider-2024award-en {
+    width: 90vw;
     transform: translateY(100%);
   }
 }
