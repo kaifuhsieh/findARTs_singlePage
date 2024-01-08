@@ -155,12 +155,28 @@ $(function () {
             blur();
         });
 
+
     //certification_slider slider
+    
+    $(function(){
+        $(window).scroll(function(){
+            sliderPlay();
+        })
+        function sliderPlay(){
+            const windH = $(window).height();
+            const _certif_slider_pos = $('.certification').offset().top;
+            const winScrollPos = $(window).scrollTop();
+            if(winScrollPos + windH / 2 >= _certif_slider_pos ){
+                $('.certification_slider').slick('slickPlay');
+            } 
+        }
+        sliderPlay()
+    })
     $('.certification_slider').slick({
         dots: false,
         infinite: true,
         speed: 300,
-        autoplay: true,
+        autoplay: false,
         slidesToShow: 5,
         slidesToScroll: 1,
         responsive: [
