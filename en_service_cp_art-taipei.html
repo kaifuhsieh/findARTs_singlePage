@@ -5,20 +5,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0"> 
         <meta name='theme-color' content='#000000'>
-        <meta name="description" content="FindARTs 提供藝術畫作、數位創作等原創作品於數位裝置呈現上擁有最佳的藝術顯示效果，自2016年從護眼技術到藝術顯示科技研發，成功整合 3 大技術包含A.R.T (A.R.T. – Advanced Reflectionless Technology)擬真藝屏硬體介面、最高品質博物館等級色彩還原技術、最安全加密技術雲端平台，讓原畫於數位介面呈現能保持細緻且安心保存。同時我們打造藝術作品多元應用體驗方案，應用範疇包含美術館藝廊可異地策展、飯店商辦VIP ROOM藝術展牆營造、為資深藏家客製藝術精品等等，最頂級永續的服務方案，讓唯一真跡突破有限空間，為您創造無限體驗。">
+        <meta name="description" content='FindARTs will participate in the ART Taipei 2023 Taipei International Art Fair from October 20th to October 23rd. With " The Timeless Spectrum " as the theme, it will showcase the works of 12 artists from classic to contemporary, presenting the spectrum of Taiwan's era across time and space. Through diverse mediums, textures, light, shadow, and creativity, the exhibition will convey stories and evoke emotions of different eras.'>
         <meta property="og:url" content="https://www.findarts.net/" />
         <meta property="og:title" content="FindARTs x ART Taipei 2023 | 「時序光譜」藝展首曝光發行 「數位典藏精品」" />
         <meta
             property="og:description"
-            content="FindARTs 提供藝術畫作、數位創作等原創作品於數位裝置呈現上擁有最佳的藝術顯示效果，自2016年從護眼技術到藝術顯示科技研發，成功整合 3 大技術包含A.R.T (A.R.T. – Advanced Reflectionless Technology)擬真藝屏硬體介面、最高品質博物館等級色彩還原技術、最安全加密技術雲端平台，讓原畫於數位介面呈現能保持細緻且安心保存。同時我們打造藝術作品多元應用體驗方案，應用範疇包含美術館藝廊可異地策展、飯店商辦VIP ROOM藝術展牆營造、為資深藏家客製藝術精品等等，最頂級永續的服務方案，讓唯一真跡突破有限空間，為您創造無限體驗。"
+            content=FindARTs will participate in the ART Taipei 2023 Taipei International Art Fair from October 20th to October 23rd. With ' The Timeless Spectrum ' as the theme, it will showcase the works of 12 artists from classic to contemporary, presenting the spectrum of Taiwan's era across time and space. Through diverse mediums, textures, light, shadow, and creativity, the exhibition will convey stories and evoke emotions of different eras.'
         />
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
-        <title>FindARTs x ART Taipei 2023 | 「時序光譜」藝展首曝光發行 「數位典藏精品」 - AUO</title>
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-        <!-- hyUI css -->
-        <link rel="stylesheet" href="css/findarts_website.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
+        <title>FindARTs x ART Taipei 2023 | "The Timeless Spectrum " Art Exhibition First Release "Digital Collection Masterpieces" - AUO</title>
+        <noscript>
+            <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap" crossorigin />
+            <link rel="stylesheet" href="css/findarts_website.min.css" />
+            <link rel="stylesheet" href="css/animate.css" />
+        </noscript>
+        <script>
+            // 建立 google font
+            const fontLink = document.createElement('link');
+            fontLink.rel = 'preconnect';
+            fontLink.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap';
+            fontLink.crossOrigin = 'anonymous';
+            document.head.appendChild(fontLink);
+            
+            const cssFiles = ['css/findarts_website.min.css', 'css/animate.css'];
+            for (const cssFile of cssFiles) {
+            const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = cssFile;
+                document.head.appendChild(link);
+            }
+        </script>
+        <script src="js/nav-en.js"></script>
         <!-- favicon -->
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
@@ -37,25 +55,8 @@
                         </li>
                     </ul>
                 </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="index_en.html">FindARTs </a>
-                        </li>
-                        <li>
-                            <a href="en_service_place.html">Service Cases</a>
-                        </li>
-                        <li>
-                            <a href="en_news.html">Media Report</a>
-                        </li>
-                        <li>
-                            <a href="en_download.html">Downloads</a>
-                        </li>
-                        <li>
-                            <a href="en_contact.html">Contact Us</a>
-                            <!-- <a href="mailto:service@findarts.net">Contact Us</a> -->
-                        </li>
-                    </ul>
+                <nav class="en main-nav">
+                    <!-- nav-en.js 載入選單 -->
                 </nav>
             </div>
         </div>
@@ -68,25 +69,8 @@
                             <img src="images/logo.webp" srcset="images/logo@2x.webp 2x,images/logo@3x.webp 3x,images/logo@4x.webp 4x" alt="FindARTs logo" width="531" height="180" loading="lazy" />
                         </a>
                     </h1>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="index_en.html">FindARTs </a>
-                            </li>
-                            <li>
-                                <a href="en_service_place.html">Service Cases</a>
-                            </li>
-                            <li>
-                                <a href="en_news.html">Media Report</a>
-                            </li>
-                            <li>
-                                <a href="en_download.html">Downloads</a>
-                            </li>
-                            <li>
-                                <a href="en_contact.html">Contact Us</a>
-                                <!-- <a href="mailto:service@findarts.net">Contact Us</a> -->
-                            </li>
-                        </ul>
+                    <nav class="en main-nav">
+                        <!-- nav-en.js 載入選單 -->
                     </nav>
                     <div class="language">
                         <ul>

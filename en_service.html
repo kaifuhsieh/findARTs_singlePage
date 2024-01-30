@@ -14,11 +14,29 @@
         />
         <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
         <title>FindARTs - AUO</title>
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-        <!-- hyUI css -->
-        <link rel="stylesheet" href="css/findarts_website.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
+        <noscript>
+            <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap" crossorigin />
+            <link rel="stylesheet" href="css/findarts_website.min.css" />
+            <link rel="stylesheet" href="css/animate.css" />
+        </noscript>
+        <script>
+            // 建立 google font
+            const fontLink = document.createElement('link');
+            fontLink.rel = 'preconnect';
+            fontLink.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap';
+            fontLink.crossOrigin = 'anonymous';
+            document.head.appendChild(fontLink);
+            
+            const cssFiles = ['css/findarts_website.min.css', 'css/animate.css'];
+            for (const cssFile of cssFiles) {
+            const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = cssFile;
+                document.head.appendChild(link);
+            }
+        </script>
+        <script src="js/nav-en.js"></script>
         <!-- favicon -->
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
@@ -38,25 +56,8 @@
                         </li>
                     </ul>
                 </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="index_en.html">FindARTs </a>
-                        </li>
-                        <li>
-                            <a href="en_service_place.html">Service Cases</a>
-                        </li>
-                        <li>
-                            <a href="en_news.html">Media Report</a>
-                        </li>
-                        <li>
-                            <a href="en_download.html">Downloads</a>
-                        </li>
-                        <li>
-                            <a href="en_contact.html">Contact Us</a>
-                            <!-- <a href="mailto:service@findarts.net">Contact Us</a> -->
-                        </li>
-                    </ul>
+                <nav class="en main-nav">
+                    <!-- nav-en.js 載入選單 -->
                 </nav>
             </div>
         </div>
@@ -69,25 +70,8 @@
                             <img src="images/logo.webp" srcset="images/logo@2x.webp 2x,images/logo@3x.webp 3x,images/logo@4x.webp 4x" alt="FindARTs logo" width="531" height="180" loading="lazy" />
                         </a>
                     </h1>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="index_en.html">FindARTs </a>
-                            </li>
-                            <li>
-                                <a href="en_service_place.html">Service Cases</a>
-                            </li>
-                            <li>
-                                <a href="en_news.html">Media Report</a>
-                            </li>
-                            <li>
-                                <a href="en_download.html">Downloads</a>
-                            </li>
-                            <li>
-                                <a href="en_contact.html">Contact Us</a>
-                                <!-- <a href="mailto:service@findarts.net">Contact Us</a> -->
-                            </li>
-                        </ul>
+                    <nav class="en main-nav">
+                        <!-- nav-en.js 載入選單 -->
                     </nav>
                     <div class="language">
                         <ul>
