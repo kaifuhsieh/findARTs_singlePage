@@ -8310,12 +8310,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .hero .container .rotate-slider .slider-left-1 {
   position: absolute;
-  width: 20%;
-  height: 35%;
-  left: 12%;
-  bottom: 15%;
+  width: 60%;
+  height: 70%;
+  left: 20%;
+  bottom: 0%;
   z-index: 99;
-  opacity: 0.9;
+  transform: translate(-50%, 20%) scale(0.5);
   transition: 0.75s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   color: #fff;
   opacity: 0.5;
@@ -8332,14 +8332,15 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .hero .container .rotate-slider .slider-left-2 {
   position: absolute;
-  width: 14%;
-  height: 29%;
-  left: 10%;
-  bottom: 18%;
+  width: 60%;
+  height: 70%;
+  left: 20%;
+  bottom: 0%;
   z-index: 98;
   opacity: 0.8;
   transition: 0.75s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   opacity: 0.5;
+  transform: translate(0%, -20%) scale(0.5);
 }
 @media screen and (max-width: 767px) {
   .hero .container .rotate-slider .slider-left-2 {
@@ -8348,19 +8349,20 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 @media screen and (max-width: 575px) {
   .hero .container .rotate-slider .slider-left-2 {
-    bottom: 34%;
+    bottom: 0%;
   }
 }
 .hero .container .rotate-slider .slider-right-1 {
   position: absolute;
-  width: 20%;
-  height: 35%;
-  left: 68%;
-  bottom: 16%;
+  width: 60%;
+  height: 70%;
+  left: 20%;
+  bottom: 0%;
   z-index: 99;
   opacity: 0.9;
   transition: 0.75s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   opacity: 0.5;
+  transform: translate(50%, 20%) scale(0.5);
 }
 @media screen and (max-width: 767px) {
   .hero .container .rotate-slider .slider-right-1 {
@@ -8374,14 +8376,15 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .hero .container .rotate-slider .slider-right-2 {
   position: absolute;
-  width: 14%;
-  height: 29%;
-  left: 43%;
-  bottom: 28%;
+  width: 60%;
+  height: 70%;
+  left: 20%;
+  bottom: 0%;
   z-index: 98;
   opacity: 0.8;
   transition: 0.75s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   opacity: 0.5;
+  transform: translate(0%, -20%) scale(0.5);
 }
 @media screen and (max-width: 767px) {
   .hero .container .rotate-slider .slider-right-2 {
@@ -8390,7 +8393,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 @media screen and (max-width: 575px) {
   .hero .container .rotate-slider .slider-right-2 {
-    bottom: 34%;
+    bottom: 0%;
   }
 }
 .hero .container .rotate-slider .slider-hide {
