@@ -1548,18 +1548,45 @@ section.products {
     }
 }
 .cp{
-     a.more{
-    background: $primaryColor;
-    color:#FFF;
-    margin:0 auto 0 0;
-    padding-right:3em;
-    padding-left:3em;
-    width: 20em;
-  }
-  p{
-      a{
-          margin-left: .25em;
-      margin-right: .25em;;
-      }
-  }
+    a.more{
+        background: $primaryColor;
+        color:#FFF;
+        margin:0 auto 0 0;
+        padding-right:3em;
+        padding-left:3em;
+        width: 20em;
+    }
+    p{
+        a{
+            margin-left: .25em;
+        margin-right: .25em;;
+        }
+    }
+}
+.products_filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include screen('mobile') {
+        justify-content: center;
+    }
+
+    select {
+        max-width: 12em;
+        @include screen('mobile') {
+            max-width: 8em;
+        }
+    }
+}
+.products_card_msg {
+    font-family: "Noto Serif TC", serif;
+    display: none;
+    font-size: 60px;
+    color: #aaa;
+    text-align: center;
+    padding: 80px 0;
+
+    @include screen('mobile') {
+        font-size: 50px;
+    }
 }
