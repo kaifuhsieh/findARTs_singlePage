@@ -9493,4 +9493,37 @@ section.products .h3_title::after {
 .cp p a {
   margin-left: 0.25em;
   margin-right: 0.25em;
+}
+
+.products_filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .products_filter {
+    justify-content: center;
+  }
+}
+.products_filter select {
+  max-width: 12em;
+}
+@media screen and (max-width: 767px) {
+  .products_filter select {
+    max-width: 8em;
+  }
+}
+
+.products_card_msg {
+  font-family: "Noto Serif TC", serif;
+  display: none;
+  font-size: 60px;
+  color: #aaa;
+  text-align: center;
+  padding: 80px 0;
+}
+@media screen and (max-width: 767px) {
+  .products_card_msg {
+    font-size: 50px;
+  }
 }/*# sourceMappingURL=findarts_website.min.css.map */
