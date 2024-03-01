@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        :root {
+            --primary-color: #A1302E;
+            /* --primary-color: #F4DDA5; */
+            --btn-color: #ED6D1F;
+            /* --primary-color: #1D3B8C; */
+            --text-color: #2B2929;
+            --note-color: #898989;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .section {
+            padding: 0 1.5rem;
+        }
+        .btn {
+
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: var(--btn-color);
+        }
+        .btn-primary-outline {
+            color: var(--btn-color);
+            border: 1px solid var(--btn-color);
+        }
+        .container {
+            max-width: 1512px;
+            margin: auto;
+            @media screen and (min-width:768px) {}
+        }
+        .artist-list li.artist-item {
+            text-align: center;
+        }
+        .artist-item {}
+        .artist-item img {
+            width: 100%;
+        }
+        @media screen and (min-width:768px) {
+            .artist-list .slick-track {
+                width: 100% !important;
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+                gap: 20px
+            }
+            .artist-list .slick-track::before {
+                display: none;
+            }
+            .artist-list .slick-track li.artist-item {
+                width: auto!important;
+            }
+        }
+        .section-collector .card {
+            @media screen and (min-width:992px) {
+                display: flex;
+                gap: 20px;
+            }
+        }
+        .section-collector .card .pic {
+            @media screen and (min-width:992px) {
+                width: 0;
+                flex-grow: 1;
+            }
+        }
+        .section-collector .card .pic img {
+                width: 100%;
+        }
+        .section-collector .card .text {
+            @media screen and (min-width:992px) {
+                width: 0;
+                flex-grow: 1;
+            }
+        }
+
+
+        .section-tainan400book .card {
+            width: 100%;
+            
+            @media screen and (min-width:992px) {
+                display: flex;
+                gap: 20px;
+            }
+        }
+        .section-tainan400book .card .pic {
+            @media screen and (min-width:992px) {
+                width: 0;
+                flex-grow: 1;
+            }
+        }
+        .section-tainan400book .card .pic img {
+                width: 100%;
+        }
+        .section-tainan400book .card .text {
+            @media screen and (min-width:992px) {
+                width: 0;
+                flex-grow: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- kv -->
+    <section class="section section-kv">
+        <div class="container"></div>
+        <div class="slider"></div>
+    </section>
+
+
+    <!-- 臺南 400〈富盛印象〉數位藝術版畫  -->
+    <section class="section section-artist">
+        <div class="container">
+            <div class="main-title sr-only">
+                <h2>
+                    臺南 400〈富盛印象〉數位藝術版畫
+                    <small>400套限量發行</small>
+                </h2>
+                <p class="description">
+                    為響應「臺南400」盛典，由臺南市美術館與友達光電 FindARTs 藝術科技合作，推出限量400套「富盛印象」數位藝術版畫，典藏十件來自臺南市美術館典藏庫中的經典，橫跨百餘年間10 位藝術家、10 種媒材、10 種態度、10 處建築底景所組成的「典藏十美」，從作品細微之處可看藝術家所觀察、感知、描述的臺南府城以及埋藏於次元維度中的一百種思維，等待發現……
+                </p>
+                <p class="">
+                    臺南市美術館之「典藏十美」作品包含，蔡草如所畫旭日東升的赤崁樓、潘元石以版畫創作臺南車站、郭柏川繪製臺南祝典武廟、陳澄波在臺 南訪友時留下的〈新樓庭院〉一作、張炳堂用明亮的三原色畫出熱鬧蒸騰的〈開元寺之晨〉、許武勇獨特的切割法畫出 廟會的熱鬧景像、洪顯超融合防風林意象創作而成的當代水墨作品、陳輝東用〈收穫〉傳達對辛勤工作漁民之禮讚、林 智信〈嬉春〉以木雕版畫傳達樸實真摯的情感，以及新生代畫家陳盈如回憶童年時光所繪的〈大合唱〉等。帶給收藏家府城百餘年間所承載的信仰、情緒記憶與祝福以及百種思維。 
+                </p>
+            </div>
+        </div>
+        <!-- 臺南400  | 典藏十美 -->
+        <div class="container">
+            <div class="main-title">
+                <h2>臺南400 | 典藏十美</h2>
+            </div>
+
+            <div class="main-title">
+                <h2>微睜雙眼，從赤崁昭旭 ，拓展新一年的繁盛…</h2>
+                <p>
+                    跨百年，十位寶藏級南美典藏藝術家，從 建城信仰、文化蘊育、地景民生 展現臺南400 晨光暮色「富盛」取自府城諧音，從藝術家百年畫筆下，期待為後人珍藏那些我們可能有時候遺忘了信仰、虔誠、童趣、善惡、勤奮、繁喜、團聚喜意，體驗百年時空與建城空間下縱深記憶臺南城市意象……
+                </p>
+            </div>  
+        </div>
+    </section>
+
+
+    <!-- 限量400組 -->
+    <section class="section section-collector">
+        <div class="container">
+            <div class="card">
+                <div class="pic">
+                    <img src="../images/tainan400/tainan400-img_product_box1.png" alt="臺南400〈富盛印象〉數位藝術版畫 精裝套">
+                </div>
+                <div class="text">
+                    <div class="main-title">
+                        <h2>限量 400組，尋找 400位收藏家</h2>
+                    </div>
+                    <p>
+                        「印象」取自為本次臺南美術館典藏庫中十件藝術作品，結合友達光電FindARTs 最新穎柔科技 A.R.T. (A.R.T. Advanced Reflectionless Technology) 擬真藝屏用最精緻的工藝到最先進的藝術顯示技 術，從驚艷色彩看見時空翻轉下百年韻味，典藏美術館中價值 百萬稀品，讓典藏透過藝術科技永續拓印...
+                    </p>
+                    <div class="pic">
+                        <img src="../images/tainan400/tainan400-img-glasses.png" alt="臺南400〈富盛印象〉數位藝術版畫 精裝套">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 合作藝術家 -->
+    <section class="section section-artist">
+        <div class="container">
+            <div class="main-title">
+                <h2>合作藝術家</h2>
+            </div>
+
+            <ul class="artist-list slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_TsaiCaoJu.png" alt="蔡卓如">
+                    </div>
+                    <span class="artist-name">蔡卓如</span>
+                </li>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_PanYuanShih.png" alt="潘元石">
+                    </div>
+                    <span class="artist-name">潘元石</span>
+                </li>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_KuoPoChuan.png" alt="郭柏川">
+                    </div>
+                    <span class="artist-name">郭柏川</span>
+                </li>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_ChenChenPo.png" alt="陳澄波">
+                    </div>
+                    <span class="artist-name">陳澄波</span>
+                </li>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_ChangPingTang.png" alt="張炳堂">
+                    </div>
+                    <span class="artist-name">張炳堂</span>
+                </li>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_HsuWuYung.png" alt="許武勇">
+                    </div>
+                    <span class="artist-name">許武勇</span>
+                </li>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_HungHsienChao.png" alt="洪顯超">
+                    </div>
+                    <span class="artist-name">洪顯超</span>
+                </li>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_ChenHueidDong.png" alt="陳輝東">
+                    </div>
+                    <span class="artist-name">陳輝東</span>
+                </li>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_LinChihHsin.png" alt="林智信">
+                    </div>
+                    <span class="artist-name">林智信</span>
+                </li>
+                <li class="artist-item">
+                    <div class="pic">
+                        <img src="../images/tainan400/img_artist_ChenYingRu.png" alt="陳盈如">
+                    </div>
+                    <span class="artist-name">陳盈如</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 臺南400〈富盛印象〉 數位藝術版畫 精裝套 -->
+    <section class="section section-tainan400book">
+        <div class="container">
+            <div class="main-title">
+                <h2>臺南400〈富盛印象〉<br>
+                    數位藝術版畫 精裝套</h2>
+                <h3>跨越百年收藏、臺南典藏十美、 藏畫系列</h3>
+                <p class="title-descraption">
+                    結合友達光電FindARTs 最新穎的柔科技，擬真藝屏High Fidelity ART Display A.R.T. (A.R.T. – Advanced Reflectionless Technology) ，臺南三代職人手作畫框，整合博物館等級色彩還原精湛技術、最安全加密技術雲端平台保護原作，從最精緻的工藝即將帶你最高級鑑賞收藏精緻畫作的難以想像的體驗。
+                </p>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <img src="../images/tainan400/tainan400-img_product_box2.png" alt="臺南400〈富盛印象〉數位藝術版畫 精裝套">
+                </div>
+                <div class="text">
+                    <h3>
+                        FindARTs擬真藝屏方形款 1台<br>
+                        典藏十美紀念套盒
+                    </h3>
+                    <ul>
+                        <li>「典藏金鑰」</li>
+                        <li>「典藏畫作圖冊本」</li>
+                        <li>「藝術數位真跡授權證書」(含臺南美術館/市政府鋼印)</li>
+                        <li>「典藏金鑰保固卡」</li>
+                    </ul>
+                    <h3>數位藝術精品賞畫系列配件</h3>
+                    <ul>
+                        <li>賞畫情境遙控器 1 組</li>
+                        <li>職人手作畫框 1件</li>
+                        <li>壁掛與展示腳架配件1組</li>
+                        <li>精緻拭淨布1組</li>
+                    </ul>
+                    <h3>臺南 400〈富盛印象〉套圖(1套10件作品)</h3>
+                    <ul>
+                        <li>蔡草如〈赤崁朝旭〉</li>
+                        <li>潘元石〈臺南車站〉</li>
+                        <li>郭柏川〈臺南祀典武廟〉</li>
+                        <li>陳澄波〈新樓庭院〉</li>
+                        <li>張炳堂〈開元寺之晨〉</li>
+                        <li>許武勇〈臺南普濟殿廟庭〉</li>
+                        <li>洪顯超 〈風林意象之六〉</li>
+                        <li>陳輝東〈收穫〉</li>
+                        <li>林智信〈嬉春〉</li>
+                        <li>陳盈如〈大合唱〉</li>
+                    </ul>
+                    <div class="price">
+                        <span>限量收藏價</span>
+                        <span>$68,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-block">
+                <a href="#" class="btn btn-outline">企業認購</a>
+                <a href="#" class="btn btn-primary">馬上訂購</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 聯絡資訊 -->
+    <section class="section section-artist">
+        <div class="container">
+            <h2>聯絡我們</h2>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="main-footer"></footer>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(function(){
+            // $(".slider").slick({
+            //     // normal options...
+            //     infinite: false,
+
+            //     // the magic
+            //     responsive: [{
+
+            //         breakpoint: 1024,
+            //         settings: {
+            //         slidesToShow: 3,
+            //         infinite: true
+            //         }
+
+            //     }, {
+            //         breakpoint: 768,
+            //         settings: {
+            //         slidesToShow: 2,
+            //         dots: true
+            //         }
+            //     }, {
+            //         breakpoint: 300,
+            //         settings: "unslick" // destroys slick
+            //     }]
+            // });
+
+            $('.artist-list').slick({
+                dots: false,
+                infinite: false,
+                swipe: false,
+                responsive: [
+                    {
+                    breakpoint: 2000,
+                    settings: {
+                        // swipe: false,
+                        draggable: false,
+                    } // destroys slick
+                    },
+                    {
+                    breakpoint: 767,
+                    settings: {
+                        swipe: true,
+                        speed: 300,
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+                });
+        })
+    </script>
+</body>
+</html>
