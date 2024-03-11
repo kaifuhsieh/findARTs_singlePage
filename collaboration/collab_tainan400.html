@@ -66,13 +66,13 @@
         </div>
     </div>
     <!-- header -->
-    <header class="header inner">
+    <header class="header inner infixed">
         <div class="container">
             <h1>
                 <a href="../index.html">
                     <picture>
-                        <source srcset="../images/tainan400/logo-FindARTs-gold.svg" media="(min-width:768px)" />
-                            <img src="../images/tainan400/logo-FindARTs-black.svg" alt="FindARTs logo" width="531" height="180">
+                        <source srcset="../images/tainan400/logo-FindARTs-gold.svg" media="(min-width:993px)" />
+                        <img src="../images/tainan400/logo-FindARTs-black.svg" alt="FindARTs logo" width="531" height="180">
                     </picture>
                 </a>
             </h1>
@@ -111,7 +111,7 @@
             <div class="auo_logo">
                 <a href="https://www.auo.com/zh-TW/solutions/index/FindARTs" target="_blank">
                     <picture>
-                        <source srcset="../images/tainan400/logo-auo-white.svg" media="(min-width:768px)" />
+                        <source srcset="../images/tainan400/logo-auo-white.svg" media="(min-width:993px)" />
                         <img src="../images/tainan400/logo-auo-black.svg" alt="AUO" width="160" height="64" loading="lazy">
                     </picture>
                 </a>
@@ -484,6 +484,8 @@
     <script>
         $(function () {
             let $window = $(window);
+            let $header = $('.header.inner');
+            let st = 0;
 
             $('.btn_menu')
             .off()
@@ -493,6 +495,15 @@
                 $('.mobile_nav').toggleClass('opened');
                 $(this).blur();
             });
+
+            $window.on('scroll',function(){
+                st = $window.scrollTop();
+                if(st > 100){
+                    $header.addClass('infixed');
+                } else {
+                    $header.removeClass(('infixed'));
+                }
+            })
 
             function toggleSlick() {
                 $('.painting-list-slide1,.painting-list-slide2').slick({
@@ -521,6 +532,7 @@
             }
 
             toggleSlick();
+
             $window.on("resize", function () {
                 let $win_w = $window.width;
                 if ($win_w < 768) {
