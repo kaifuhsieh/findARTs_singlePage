@@ -1,17 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>富盛印象 臺南400 從典藏十美 看見城府的百種維度</title>
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <noscript>
+        <link rel="preconnect" type="text/css"
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap" crossorigin />
+        <link rel="stylesheet" href="../css/findarts_website.min.css" />
+        <link rel="stylesheet" href="../css/animate.css" />
+    </noscript>
+    <script>
+        // 建立 google font
+        const fontLink = document.createElement('link');
+        fontLink.rel = 'preconnect';
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap';
+        fontLink.crossOrigin = 'anonymous';
+        document.head.appendChild(fontLink);
+        
+        const cssFiles = ['../css/findarts_website.min.css', '../css/animate.css'];
+        for (const cssFile of cssFiles) {
+        const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = cssFile;
+            document.head.appendChild(link);
+        }
+    </script>
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="../css/collab-tainan400.css">
 </head>
-<body>
-    
+
+<body class="page-tainan400">
+    <!-- mobile nav -->
+    <div class="mobile_nav">
+        <div class="container">
+            <div class="language">
+                <ul>
+                    <li>
+                        <a href="index.html">繁體中文</a>
+                    </li>
+                    <li>
+                        <a href="index_en.html">English</a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="m-nav">
+                <ul>
+                    <li><a href="../index.html">關於FindARTs</a></li>
+                    <li><a href="../cht_product_series.html">數位典藏精品</a></li>
+                    <li><a href="../cht_product_series_add.html">新增精選畫冊</a></li>
+                    <li><a href="../cht_service_place.html">應用服務案例</a></li>
+                    <li><a href="../cht_news.html">媒體報導</a></li>
+                    <li><a href="../cht_download.html">相關下載</a></li>
+                    <li><a href="../cht_contact.html">聯絡我們</a></li>
+                    <li><a href="../cht_gallery.html">實體據點</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- header -->
+    <header class="header inner">
+        <div class="container">
+            <h1>
+                <a href="../index.html">
+                    <picture>
+                        <source srcset="../images/tainan400/logo-FindARTs-gold.svg" media="(min-width:768px)" />
+                            <img src="../images/tainan400/logo-FindARTs-black.svg" alt="FindARTs logo" width="531" height="180">
+                    </picture>
+                </a>
+            </h1>
+            <nav class="main-nav">
+                <!-- nav-cht.js載入選單 -->
+                <ul>
+                    <li><a href="../index.html">關於FindARTs</a></li>
+                    <li><a href="#">擬真藝屏｜系列產品</a>
+                        <ul class="submenu">
+                            <li><a href="cht_product_series.html">數位典藏精品</a></li>
+                            <li><a href="cht_product_series_add.html">新增精選畫冊</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../cht_service_place.html">應用服務案例</a></li>
+                    <li><a href="../cht_news.html">媒體報導</a></li>
+                    <li><a href="../cht_download.html">相關下載</a></li>
+                    <li><a href="#">聯絡我們</a>
+                        <ul class="submenu">
+                            <li><a href="../cht_contact.html">聯絡我們</a></li>
+                            <li><a href="../cht_gallery.html">實體據點</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="language">
+                <ul>
+                    <li>
+                        <a href="../index.html">繁體中文</a>
+                    </li>
+                    <li>
+                        <a href="../index_en.html">English</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- auo logo -->
+            <div class="auo_logo">
+                <a href="https://www.auo.com/zh-TW/solutions/index/FindARTs" target="_blank">
+                    <picture>
+                        <source srcset="../images/tainan400/logo-auo-white.svg" media="(min-width:768px)" />
+                        <img src="../images/tainan400/logo-auo-black.svg" alt="AUO" width="160" height="64" loading="lazy">
+                    </picture>
+                </a>
+            </div>
+            <!-- RWD menu -->
+            <button class="btn_menu" aria-label="打開選單按鈕">
+                <span class="topBar"></span>
+                <span class="midBar"></span>
+                <span class="btmBar"></span>
+            </button>
+        </div>
+    </header>
 
     <!-- kv -->
     <section class="section section-kv" id="home">
@@ -26,9 +138,11 @@
         </div>
         <!-- <div class="slider"></div> -->
         <div class="kv-banner">
-            <div class="pic">
-                <img src="../images/tainan400/kv_banner_xs.png" srcset="../images/tainan400/kv_banner_md.png 768w, ../images/tainan400/kv_banner_lg.png 1024w" alt="">
-            </div>
+            <picture class="pic">
+                <source srcset="../images/tainan400/kv_banner_lg.png" media="(min-width:1024px)" />
+                <source srcset="../images/tainan400/kv_banner_md.png" media="(min-width:768px)" />
+                <img src="../images/tainan400/kv_banner_xs.png" alt="">
+            </picture>
             <p>臺南 400〈富盛印象〉數位藝術版畫</p>
         </div>
     </section>
@@ -43,11 +157,15 @@
                     <small>400套限量發行</small>
                 </h2>
                 <p class="title-description">
-                    為響應「臺南400」盛典，由臺南市美術館與友達光電 FindARTs 藝術科技合作，推出限量400套「富盛印象」數位藝術版畫，典藏十件來自臺南市美術館典藏庫中的經典，橫跨百餘年間10 位藝術家、10 種媒材、10 種態度、10 處建築底景所組成的「典藏十美」，從作品細微之處可看藝術家所觀察、感知、描述的臺南府城以及埋藏於次元維度中的一百種思維，等待發現……
+                    為響應「臺南400」盛典，由臺南市美術館與友達光電 FindARTs 藝術科技合作，推出限量400套「富盛印象」數位藝術版畫，典藏十件來自臺南市美術館典藏庫中的經典，橫跨百餘年間10 位藝術家、10
+                    種媒材、10 種態度、10 處建築底景所組成的「典藏十美」，從作品細微之處可看藝術家所觀察、感知、描述的臺南府城以及埋藏於次元維度中的一百種思維，等待發現……
                 </p>
                 <a href="#" class="more">閱讀更多...</a>
                 <p class="title-note">
-                    臺南市美術館之「典藏十美」作品包含，蔡草如所畫旭日東升的赤崁樓、潘元石以版畫創作臺南車站、郭柏川繪製臺南祝典武廟、陳澄波在臺 南訪友時留下的〈新樓庭院〉一作、張炳堂用明亮的三原色畫出熱鬧蒸騰的〈開元寺之晨〉、許武勇獨特的切割法畫出 廟會的熱鬧景像、洪顯超融合防風林意象創作而成的當代水墨作品、陳輝東用〈收穫〉傳達對辛勤工作漁民之禮讚、林 智信〈嬉春〉以木雕版畫傳達樸實真摯的情感，以及新生代畫家陳盈如回憶童年時光所繪的〈大合唱〉等。帶給收藏家府城百餘年間所承載的信仰、情緒記憶與祝福以及百種思維。 
+                    臺南市美術館之「典藏十美」作品包含，蔡草如所畫旭日東升的赤崁樓、潘元石以版畫創作臺南車站、郭柏川繪製臺南祝典武廟、陳澄波在臺
+                    南訪友時留下的〈新樓庭院〉一作、張炳堂用明亮的三原色畫出熱鬧蒸騰的〈開元寺之晨〉、許武勇獨特的切割法畫出
+                    廟會的熱鬧景像、洪顯超融合防風林意象創作而成的當代水墨作品、陳輝東用〈收穫〉傳達對辛勤工作漁民之禮讚、林
+                    智信〈嬉春〉以木雕版畫傳達樸實真摯的情感，以及新生代畫家陳盈如回憶童年時光所繪的〈大合唱〉等。帶給收藏家府城百餘年間所承載的信仰、情緒記憶與祝福以及百種思維。
                 </p>
             </div>
         </div>
@@ -93,10 +211,12 @@
                 <span>人文</span>
             </h3> -->
             <ul class="painting-list painting-list-slide2">
-                <div class="title">
-                    <span>地景</span>
-                    <span>人文</span>
-                </div>
+                <li>
+                    <div class="title">
+                        <span>地景</span>
+                        <span>人文</span>
+                    </div>
+                </li>
                 <li>
                     <img src="../images/tainan400/thumbnail-s6-2018010026_A001.jpg" alt="">
                     <span>臺南普濟殿廟庭<br>許武勇</span>
@@ -114,7 +234,7 @@
                     <span>嬉春版畫<br>林智信</span>
                 </li>
                 <li>
-                    <img src="../images/tainan400/thumbnail-s10_2021010043_A001.jpg" alt="">
+                    <img src="../images/tainan400/thumbnail-s10_2021010043_A001.png" alt="">
                     <span>大合照<br>陳盈如</span>
                 </li>
             </ul>
@@ -122,9 +242,11 @@
             <div class="main-title">
                 <h3>微睜雙眼，從赤崁昭旭 ，拓展新一年的繁盛…</h3>
                 <p class="title-note">
-                    跨百年，十位寶藏級南美典藏藝術家，從 建城信仰、文化蘊育、地景民生 展現臺南400 晨光暮色「富盛」取自府城諧音，從藝術家百年畫筆下，期待為後人珍藏那些我們可能有時候遺忘了信仰、虔誠、童趣、善惡、勤奮、繁喜、團聚喜意，體驗百年時空與建城空間下縱深記憶臺南城市意象……
+                    跨百年，十位寶藏級南美典藏藝術家，從 建城信仰、文化蘊育、地景民生 展現臺南400
+                    晨光暮色「富盛」取自府城諧音，從藝術家百年畫筆下，期待為後人珍藏那些我們可能有時候遺忘了信仰、虔誠、童趣、善惡、勤奮、繁喜、團聚喜意，體驗百年時空與建城空間下縱深記憶臺南城市意象……
                 </p>
-                <a href="https://kaifuhsieh.github.io/findARTs_singlePage/cht_product_series_add.html" class="btn btn-primary">線上藝廊瀏覽</a>
+                <a href="https://kaifuhsieh.github.io/findARTs_singlePage/cht_product_series_add.html"
+                    class="btn btn-primary">線上藝廊瀏覽</a>
             </div>
         </div>
     </section>
@@ -142,7 +264,8 @@
                         <h3>限量 400組，尋找 400位收藏家</h3>
                     </div>
                     <p>
-                        「印象」取自為本次臺南美術館典藏庫中十件藝術作品，結合友達光電FindARTs 最新穎柔科技 A.R.T. (A.R.T. Advanced Reflectionless Technology) 擬真藝屏用最精緻的工藝到最先進的藝術顯示技 術，從驚艷色彩看見時空翻轉下百年韻味，典藏美術館中價值 百萬稀品，讓典藏透過藝術科技永續拓印...
+                        「印象」取自為本次臺南美術館典藏庫中十件藝術作品，結合友達光電FindARTs 最新穎柔科技 A.R.T. (A.R.T. Advanced Reflectionless
+                        Technology) 擬真藝屏用最精緻的工藝到最先進的藝術顯示技 術，從驚艷色彩看見時空翻轉下百年韻味，典藏美術館中價值 百萬稀品，讓典藏透過藝術科技永續拓印...
                     </p>
                     <div class="pic">
                         <img src="../images/tainan400/tainan400-img-glasses.png" alt="臺南400〈富盛印象〉數位藝術版畫 精裝套">
@@ -233,7 +356,8 @@
                     數位藝術版畫 精裝套</h2>
                 <h3>跨越百年收藏、臺南典藏十美、 藏畫系列</h3>
                 <p class="title-descraption">
-                    結合友達光電FindARTs 最新穎的柔科技，擬真藝屏High Fidelity ART Display A.R.T. (A.R.T. – Advanced Reflectionless Technology) ，臺南三代職人手作畫框，整合博物館等級色彩還原精湛技術、最安全加密技術雲端平台保護原作，從最精緻的工藝即將帶你最高級鑑賞收藏精緻畫作的難以想像的體驗。
+                    結合友達光電FindARTs 最新穎的柔科技，擬真藝屏High Fidelity ART Display A.R.T. (A.R.T. – Advanced Reflectionless
+                    Technology) ，臺南三代職人手作畫框，整合博物館等級色彩還原精湛技術、最安全加密技術雲端平台保護原作，從最精緻的工藝即將帶你最高級鑑賞收藏精緻畫作的難以想像的體驗。
                 </p>
             </div>
             <div class="card">
@@ -260,7 +384,7 @@
                     </ul>
                     <h3>臺南 400〈富盛印象〉套圖(1套10件作品)</h3>
                     <ul class="painter-name-list">
-                        <li>蔡草如〈赤崁朝旭〉</li> 
+                        <li>蔡草如〈赤崁朝旭〉</li>
                         <li>潘元石〈臺南車站〉</li>
                         <li>郭柏川〈臺南祀典武廟〉</li>
                         <li>陳澄波〈新樓庭院〉</li>
@@ -317,50 +441,60 @@
                 <img src="../images/tainan400/img_go-top.png" alt="Back to top">
             </a>
         </div>
-            <div class="container">
-                <div class="footer_logo">
-                    <a href="#">
-                        <img src="../images/tainan400/findarts_logo_white.svg" width="197" height="74" alt="FindARTs logo" loading="lazy" />
-                    </a>
-                </div>
-
-                <div class="footer-partner">
-                    <div class="title">合作夥伴</div>
-                    <div class="info-list">
-                        <div class="info-item">發行單位：臺南市政府、臺南市美術館、友達光電 FindARTs。</div>
-                        <div class="info-item">合作單位：臺積電慈善基金會。</div>
-                        <div class="info-item">策展單位：臺南市美術館、友達光電FindARTs 。</div>
-                        <div class="info-item">產品製作：隆盈紙器股份有限公司、宏吉盒藝股份有限公司。</div>
-                        <div class="info-item">網頁設計：友達光電 數位體驗設計處</div>
-                    </div>
-                </div>
-
-                <div class="contact">
-                    <h4>
-                        Contact US
-                        <a href="https://www.facebook.com/AUO.DAPO/" target="_blank">
-                            <img src="../images/tainan400/icon_fb.svg" alt="facebook icon" loading="lazy" />
-                        </a>
-                        <a href="https://www.youtube.com/@FindARTs-lo6qi/featured" target="_blank">
-                            <img src="../images/tainan400/icon_yt.svg" alt="youtube icon" loading="lazy" />
-                        </a>
-                    </h4>
-                    <p>聯絡我 讓我知道您的需求</p>
-                    <a href="mailto:service@findarts.net">service@findarts.net</a>
-                    <a href="https://slsp.auo.com/zh-tw/privacy-statement">隱私權聲明</a>
-                </div>
-                
+        <div class="container">
+            <div class="footer_logo">
+                <a href="#">
+                    <img src="../images/tainan400/findarts_logo_white.svg" width="197" height="74" alt="FindARTs logo"
+                        loading="lazy" />
+                </a>
             </div>
+
+            <div class="footer-partner">
+                <div class="title">合作夥伴</div>
+                <div class="info-list">
+                    <div class="info-item">發行單位：臺南市政府、臺南市美術館、友達光電 FindARTs。</div>
+                    <div class="info-item">合作單位：臺積電慈善基金會。</div>
+                    <div class="info-item">策展單位：臺南市美術館、友達光電FindARTs 。</div>
+                    <div class="info-item">產品製作：隆盈紙器股份有限公司、宏吉盒藝股份有限公司。</div>
+                    <div class="info-item">網頁設計：友達光電 數位體驗設計處</div>
+                </div>
+            </div>
+
+            <div class="contact">
+                <h4>
+                    Contact US
+                    <a href="https://www.facebook.com/AUO.DAPO/" target="_blank">
+                        <img src="../images/tainan400/icon_fb.svg" alt="facebook icon" loading="lazy" />
+                    </a>
+                    <a href="https://www.youtube.com/@FindARTs-lo6qi/featured" target="_blank">
+                        <img src="../images/tainan400/icon_yt.svg" alt="youtube icon" loading="lazy" />
+                    </a>
+                </h4>
+                <p>聯絡我 讓我知道您的需求</p>
+                <a href="mailto:service@findarts.net">service@findarts.net</a>
+                <a href="https://slsp.auo.com/zh-tw/privacy-statement">隱私權聲明</a>
+            </div>
+
+        </div>
     </footer>
-    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        $(function(){
+        $(function () {
             let $window = $(window);
-            
-            function toggleSlick(){
+
+            $('.btn_menu')
+            .off()
+            .click(function (e) {
+                $(this).toggleClass('opened');
+                $('.mobile_nav .language').toggleClass('opened');
+                $('.mobile_nav').toggleClass('opened');
+                $(this).blur();
+            });
+
+            function toggleSlick() {
                 $('.painting-list-slide1,.painting-list-slide2').slick({
                     dots: false,
                     infinite: false,
@@ -387,12 +521,21 @@
             }
 
             toggleSlick();
-            $window.on("resize", function(){
+            $window.on("resize", function () {
                 let $win_w = $window.width;
-                if ($win_w < 768){
+                if ($win_w < 768) {
                     toggleSlick();
                 }
             });
+
+            if ($window.width() < 768) {
+                $('.section-400set .more').click(function () {
+                    $(this).next('.title-note').toggle();
+                    return false;
+                }
+
+                )
+            }
 
             $('.artist-list').slick({
                 dots: false,
@@ -420,4 +563,5 @@
         })
     </script>
 </body>
+
 </html>
