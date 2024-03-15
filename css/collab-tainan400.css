@@ -96,7 +96,7 @@ p {
     background-color: #ffffff33;
 }
 .header.inner {
-    background-color: #F4DDA5;
+    background-color: transparent;
     box-shadow: none;
     @media screen and (min-width:768px) {
         background-color: transparent;
@@ -107,11 +107,10 @@ p {
     }
 }
 .header.inner.infixed {
-    @media screen and (min-width:992px) {
-        background-color: var(--primary-color);
-        background-image: url(../images/tainan400/bg_400_pattern.png);
-        box-shadow: 0px 2px 5px #0003;
-    }
+    background-color: var(--primary-color);
+    background-image: url(../images/tainan400/bg_400_pattern.png);
+    box-shadow: 0px 2px 5px #0003;
+    @media screen and (min-width:992px) {}
 }
 .header .auo_logo {
     @media screen and (max-width:991px) {
