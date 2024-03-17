@@ -26,7 +26,7 @@
             fontLink.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap';
             fontLink.crossOrigin = 'anonymous';
             document.head.appendChild(fontLink);
-            
+
             const cssFiles = ['css/findarts_website.min.css', 'css/animate.css'];
             for (const cssFile of cssFiles) {
             const link = document.createElement('link');
@@ -41,7 +41,7 @@
         <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     </head>
     <div class="detect">absabcd</div>
-
+    
     <body>
         <!-- mobile nav -->
         <div class="mobile_nav">
@@ -123,7 +123,7 @@
                                             <abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label
                                         >
                                         <div class="form_content">
-                                            <input type="text" id="form_content" value="" />
+                                            <input type="text" id="form_content2" value="" />
                                         </div>
                                     </div>
                                     <div class="form_grp form-6">
@@ -133,13 +133,13 @@
                                             ></label
                                         >
                                         <div class="form_content">
-                                            <input type="text" id="form_content" value="" />
+                                            <input type="text" id="form_content_jobtitle" value="" />
                                         </div>
                                     </div>
                                     <div class="form_grp form-6">
                                         <label for="form_content" class="form_title">company</label>
                                         <div class="form_content">
-                                            <input type="text" id="form_content" value="" />
+                                            <input type="text" id="form_content_dept" value="" />
                                         </div>
                                     </div>
                                     <div class="form_grp form-6">
@@ -149,7 +149,7 @@
                                             ></label
                                         >
                                         <div class="form_content">
-                                            <input type="text" id="form_content" value="" />
+                                            <input type="text" id="form_content_tel" value="" />
                                         </div>
                                     </div>
                                     <div class="form_grp form-6">
@@ -159,11 +159,11 @@
                                             ></label
                                         >
                                         <div class="form_content">
-                                            <input type="text" id="form_content" value="" />
+                                            <input type="text" id="form_content_mail" value="" />
                                         </div>
                                     </div>
                                     <div class="form_grp form-12">
-                                        <fieldset>
+                                        <fieldset id="services_fieldset">
                                             <legend class="form_title">
                                                 Subject Consultation<abbr
                                                     class="necessary"
@@ -174,30 +174,30 @@
                                             <div class="form_content">
                                                 <div class="check_grp form_inline">
                                                     <label>
-                                                        <input type="checkbox" name="" value="" checked="" />Digital
+                                                        <input type="checkbox" name="" value="Digital archive Services" />Digital
                                                         archive Services</label
                                                     >
                                                     <label>
-                                                        <input type="checkbox" name="" value="" />Curating
+                                                        <input type="checkbox" name="" value="Curating Services</label" />Curating
                                                         Services</label
                                                     >
                                                     <label>
-                                                        <input type="checkbox" name="" value="" />FindARTs Curating
+                                                        <input type="checkbox" name="" value="FindARTs Curating tool" />FindARTs Curating
                                                         tool</label
                                                     >
                                                     <label>
-                                                        <input type="checkbox" name="" value="" />Exquisite Boutique of
+                                                        <input type="checkbox" name="" value="Exquisite Boutique of Art" />Exquisite Boutique of
                                                         Art</label
                                                     >
                                                     <label>
-                                                        <input type="checkbox" name="" value="" />ART space
+                                                        <input type="checkbox" name="" value="ART space construction" />ART space
                                                         construction</label
                                                     >
                                                     <label>
-                                                        <input type="checkbox" name="" value="" />The Distinguished
+                                                        <input type="checkbox" name="" value="The Distinguished Artists' Gallery" />The Distinguished
                                                         Artists' Gallery</label
                                                     >
-                                                    <label> <input type="checkbox" name="" value="" />others</label>
+                                                    <label> <input type="checkbox" name="" value="others" />others</label>
                                                 </div>
                                             </div>
                                         </fieldset>
@@ -205,15 +205,15 @@
                                     <div class="form_grp form-12">
                                         <label for="sampleId" class="form_title">Content Consultation</label>
                                         <div class="form_content">
-                                            <textarea name="" id="sampleId" cols="30" rows="10"></textarea>
+                                            <textarea name="" id="form_content_content" cols="30" rows="10"></textarea>
                                         </div>
                                     </div>
                                     <div class="form_grp form-12">
                                         <fieldset>
                                             <div class="form_content">
-                                                <div class="check_grp form_inline">
+                                                <div class="check_grp form_inline agree_privacy">
                                                     <label>
-                                                        <input type="checkbox" name="" value="" />You expressly agree
+                                                        <input type="checkbox" name="" value="" id="agreeCheckBox" />You expressly agree
                                                         that we may from time to time to contact you in order for
                                                         discussing our, products and services with you.</label
                                                     >
@@ -234,8 +234,8 @@
                                         </fieldset>
                                     </div>
                                     <div class="btn_grp">
-                                        <button type="reset" class="btn btn-reset">Cancel</button>
-                                        <button type="button" class="btn btn-primary">Send</button>
+                                        <button id="cancel" style="display: none;" onClick="onClickCancel()"type="reset" class="btn btn-reset">Cancel</button>
+                                        <button id="submit" style="display: none;" onClick="submitContact()" type="button" class="btn btn-primary">Send</button>
                                     </div>
                                 </form>
                             </div>
@@ -315,6 +315,16 @@
     <script>
         new WOW().init();
     </script>
+    <script>
+        //lazyload
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: 'img.lazy',
+            //placeholder: '/images/basic/placeholder.gif',
+            effect: 'fadeIn',
+            fadeTime: 600,
+            threshold: 0,
+        });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTX55SQZKS"></script>
     <script>
@@ -323,7 +333,92 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
+    
         gtag('config', 'G-VTX55SQZKS');
+    </script>
+    <script>
+        var agreeCheckBox = document.getElementById('agreeCheckBox');
+        var cancelButton = document.getElementById('cancel');
+        var submitButton = document.getElementById('submit');
+        
+        agreeCheckBox.addEventListener('change', function () {
+            if (this.checked) {
+            cancelButton.style.display = 'inline-block';
+            submitButton.style.display = 'inline-block';
+            } else {
+            cancelButton.style.display = 'none';
+            submitButton.style.display = 'none';
+            }
+        });
+        
+        function validate() {
+            var errorMessages = "";
+            var firstname = document.getElementById("form_content_name");
+            if (firstname.value === "") {
+                errorMessages += "請輸入姓名。\n";
+            }
+            var tel = document.getElementById("form_content_tel");
+            if (tel.value === "") {
+                errorMessages += "請輸入聯絡電話。\n";
+            }
+            var mail = document.getElementById("form_content_mail");
+            if (mail.value === "") {
+                errorMessages += "請輸入電子信箱。\n";
+            }
+            var checkboxes = document.querySelectorAll('#services_fieldset input:not([id])');
+            var values = [];
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    values.push(checkboxes[i].value);
+                }
+            }
+            if (values.length === 0) {
+                errorMessages += "請選擇至少一項諮詢項目。\n";
+            }
+            if (agreeCheckBox.checked == false) {
+                errorMessages += "請勾選「我同意FindARTs 其他有關產品通訊資訊」檢核框。\n";
+            }
+            if (errorMessages !== "") {
+                alert("請修正以下錯誤：\n\n" + errorMessages);
+                return false;
+            } 
+            return true;
+        }
+        function submitContact() {
+            if (validate()) {
+                var checkboxes = document.querySelectorAll('#services_fieldset input:not([id])');
+                var values = [];
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].checked) {
+                        values.push(checkboxes[i].value);
+                    }
+                }
+                var postData = {
+                    "user_name": $("#form_content_name").val(),
+                    "job_title": $("#form_content_jobtitle").val(),
+                    "department": $("#form_content_dept").val(),
+                    "contact_phone": $("#form_content_tel").val(),
+                    "email": $("#form_content_mail").val(),
+                    "consulting_items": values.join(', '),
+                    "consulting_content": $("#form_content_content").val()
+                }
+                
+                $.ajax({
+                    url: "https://func-portal-contactus.azurewebsites.net/api/contactus_func",
+                    data: JSON.stringify(postData),
+                    type: "post",
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    success: function(returnData){
+                        alert("非常感謝您的咨詢，我們將盡快與您聯絡!");
+                        location.reload();
+                    }
+                });
+            }
+        }
+        function onClickCancel() {
+            cancelButton.style.display = 'none';
+            submitButton.style.display = 'none';
+        }
     </script>
 </html>
