@@ -1366,6 +1366,7 @@ blockquote {
             h2 {
                 @include screen('mobile') {
                     margin: 0 0 1em;
+                    line-height: 1.5;
                 }
             }
             .gps_intro {
@@ -1428,6 +1429,9 @@ blockquote {
                         p.indent {
                             font-size: 0.913rem;
                             text-indent: 2em;
+                        }
+                        .url {
+                            word-break: break-all;
                         }
                     }
                     .author {
