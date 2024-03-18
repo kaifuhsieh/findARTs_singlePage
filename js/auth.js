@@ -1,8 +1,10 @@
+import env from "../env.js";
+
 export default async function accessToken(email, password) {
   try {
     const res = await $.ajax({
       type: "POST",
-      url: "http://localhost:3000/auth/login",
+      url: `${env.FINDARTS_DOMAIN}/auth/login`,
       data: JSON.stringify({
         email,
         password,
