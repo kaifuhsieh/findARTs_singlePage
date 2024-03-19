@@ -1,4 +1,4 @@
-import env from "../env.js";
+import env from "../../env.js";
 
 export default async function accessToken(email, password) {
   try {
