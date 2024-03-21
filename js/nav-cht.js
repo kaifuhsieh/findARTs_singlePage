@@ -15,16 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
             text: '擬真藝屏｜系列產品', 
             submenu: [
                 { 
-                    href: 'collaboration/collab_tainan400.html', 
-                    text: '聯名專區' 
-                },
-                { 
                     href: 'cht_product_series.html', 
                     text: '數位典藏精品' 
                 },
                 { 
                     href: 'cht_product_series_add.html', 
                     text: '新增精選畫冊' 
+                },
+                { 
+                    href: 'collaboration/collab_tainan400.html', 
+                    text: '聯名專區' 
                 }
             ]
         },
@@ -98,12 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
             text: '數位典藏精品' 
         },
         { 
-            href: 'collaboration/collab_tainan400.html', 
-            text: '聯名專區'
-        },
-        { 
             href: 'cht_product_series_add.html', 
             text: '新增精選畫冊' 
+        },
+        { 
+            href: 'collaboration/collab_tainan400.html', 
+            text: '聯名專區'
         },
         { 
             href: 'cht_service_place.html', 
