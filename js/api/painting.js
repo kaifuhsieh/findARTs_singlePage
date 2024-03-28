@@ -1,8 +1,8 @@
 import env from "../../env.js";
 
-const getProduct = async (token, condition) => {
+const getPainting = async (token, condition) => {
   const conditionStr = condition ? "?filter=" + JSON.stringify(condition) : "";
-  const url = `${env.FINDARTS_DOMAIN}/items/Product${conditionStr}`;
+  const url = `${env.FINDARTS_DOMAIN}/items/Gallery_List/${conditionStr}`;
 
   try {
     const res = await $.ajax({
@@ -20,4 +20,4 @@ const getProduct = async (token, condition) => {
   }
 };
 
-export default getProduct;
+export default getPainting;

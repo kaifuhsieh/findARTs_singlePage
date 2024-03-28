@@ -1,598 +1,321 @@
 <!DOCTYPE html>
 <html lang="zh-Hant" class="no-js">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0"> 
-        <meta name='theme-color' content='#000000'>
-        <meta name="description" content="FindARTs 提供藝術畫作、數位創作等原創作品於數位裝置呈現上擁有最佳的藝術顯示效果，自2016年從護眼技術到藝術顯示科技研發，成功整合 3 大技術包含A.R.T (A.R.T. – Advanced Reflectionless Technology)擬真藝屏硬體介面、最高品質博物館等級色彩還原技術、最安全加密技術雲端平台，讓原畫於數位介面呈現能保持細緻且安心保存。同時我們打造藝術作品多元應用體驗方案，應用範疇包含美術館藝廊可異地策展、飯店商辦VIP ROOM藝術展牆營造、為資深藏家客製藝術精品等等，最頂級永續的服務方案，讓唯一真跡突破有限空間，為您創造無限體驗。">
-        <meta property="og:url" content="https://www.findarts.net/" />
-        <meta property="og:title" content="FindARTs 全球頂尖藝術顯示科技" />
-        <meta
-            property="og:description"
-            content="FindARTs 提供藝術畫作、數位創作等原創作品於數位裝置呈現上擁有最佳的藝術顯示效果，自2016年從護眼技術到藝術顯示科技研發，成功整合 3 大技術包含A.R.T (A.R.T. – Advanced Reflectionless Technology)擬真藝屏硬體介面、最高品質博物館等級色彩還原技術、最安全加密技術雲端平台，讓原畫於數位介面呈現能保持細緻且安心保存。同時我們打造藝術作品多元應用體驗方案，應用範疇包含美術館藝廊可異地策展、飯店商辦VIP ROOM藝術展牆營造、為資深藏家客製藝術精品等等，最頂級永續的服務方案，讓唯一真跡突破有限空間，為您創造無限體驗。"
-        />
-        <meta property="og:image" content="https://www.findarts.net/intro/images/fb_cover.jpg" />
-        <title>新增精緻畫冊 - FindARTs - AUO</title>
-        <noscript>
-            <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap" crossorigin />
-            <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-            <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-            <!-- hyUI css -->
-            <link rel="stylesheet" href="css/findarts_website.min.css" />
-            <link rel="stylesheet" href="css/animate.css" />
-        </noscript>
-        <script>
-            // 建立 google font
-            const fontLink = document.createElement('link');
-            fontLink.rel = 'preconnect';
-            fontLink.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap';
-            fontLink.crossOrigin = 'anonymous';
-            document.head.appendChild(fontLink);
-            
-            // 定義 CSS 檔案路徑
-            const cssFiles = ['vendor/slick/slick.css', 'vendor/slick/slick-theme.css', 'css/findarts_website.min.css', 'css/animate.css'];
-    
-            // 迴圈創建並設定多個 link 元素
-            for (const cssFile of cssFiles) {
-            const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.type = 'text/css';
-                link.href = cssFile;
-                document.head.appendChild(link);
-            }
-        </script>
-        <script src="js/nav-cht.js"></script>
-        <!-- favicon -->
-        <link href="images/favicon.png" rel="icon" type="image/x-icon" />
-    </head>
-    <div class="detect">absabcd</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="FindARTs 提供藝術畫作、數位創作等原創作品於數位裝置呈現上擁有最佳的藝術顯示效果，自2016年從護眼技術到藝術顯示科技研發，成功整合 3 大技術包含A.R.T (A.R.T. – Advanced Reflectionless Technology)擬真藝屏硬體介面、最高品質博物館等級色彩還原技術、最安全加密技術雲端平台，讓原畫於數位介面呈現能保持細緻且安心保存。同時我們打造藝術作品多元應用體驗方案，應用範疇包含美術館藝廊可異地策展、飯店商辦VIP ROOM藝術展牆營造、為資深藏家客製藝術精品等等，最頂級永續的服務方案，讓唯一真跡突破有限空間，為您創造無限體驗。"
+    />
+    <meta property="og:url" content="https://www.findarts.net/" />
+    <meta property="og:title" content="FindARTs 全球頂尖藝術顯示科技" />
+    <meta
+      property="og:description"
+      content="FindARTs 提供藝術畫作、數位創作等原創作品於數位裝置呈現上擁有最佳的藝術顯示效果，自2016年從護眼技術到藝術顯示科技研發，成功整合 3 大技術包含A.R.T (A.R.T. – Advanced Reflectionless Technology)擬真藝屏硬體介面、最高品質博物館等級色彩還原技術、最安全加密技術雲端平台，讓原畫於數位介面呈現能保持細緻且安心保存。同時我們打造藝術作品多元應用體驗方案，應用範疇包含美術館藝廊可異地策展、飯店商辦VIP ROOM藝術展牆營造、為資深藏家客製藝術精品等等，最頂級永續的服務方案，讓唯一真跡突破有限空間，為您創造無限體驗。"
+    />
+    <meta
+      property="og:image"
+      content="https://www.findarts.net/intro/images/fb_cover.jpg"
+    />
+    <title>新增精緻畫冊 - FindARTs - AUO</title>
+    <noscript>
+      <link
+        rel="preconnect"
+        type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap"
+        crossorigin
+      />
+      <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="vendor/slick/slick-theme.css"
+      />
+      <!-- hyUI css -->
+      <link rel="stylesheet" href="css/findarts_website.min.css" />
+      <link rel="stylesheet" href="css/animate.css" />
+    </noscript>
+    <script>
+      // 建立 google font
+      const fontLink = document.createElement("link");
+      fontLink.rel = "preconnect";
+      fontLink.href =
+        "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&display=swap";
+      fontLink.crossOrigin = "anonymous";
+      document.head.appendChild(fontLink);
 
-    <body class="product_series_page">
-        <!-- mobile nav -->
-        <div class="mobile_nav">
-            <div class="container">
-                <div class="language">
-                    <ul>
-                        <li>
-                            <a href="index.html">繁體中文</a>
-                        </li>
-                        <li>
-                            <a href="index_en.html">English</a>
-                        </li>
-                    </ul>
-                </div>
-                <nav class="m-nav">
-                    <!-- nav-cht.js載入選單 -->
-                </nav>
-            </div>
+      // 定義 CSS 檔案路徑
+      const cssFiles = [
+        "vendor/slick/slick.css",
+        "vendor/slick/slick-theme.css",
+        "css/findarts_website.min.css",
+        "css/animate.css",
+      ];
+
+      // 迴圈創建並設定多個 link 元素
+      for (const cssFile of cssFiles) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = cssFile;
+        document.head.appendChild(link);
+      }
+    </script>
+    <script src="js/nav-cht.js"></script>
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+  <div class="detect">absabcd</div>
+
+  <body class="product_series_page">
+    <!-- mobile nav -->
+    <div class="mobile_nav">
+      <div class="container">
+        <div class="language">
+          <ul>
+            <li>
+              <a href="index.html">繁體中文</a>
+            </li>
+            <li>
+              <a href="index_en.html">English</a>
+            </li>
+          </ul>
         </div>
-        <div class="wrapper">
-            <!-- header -->
-            <header class="header inner">
-                <div class="container">
-                    <h1>
-                        <a href="index.html">
-                            <img src="images/logo.webp" srcset="images/logo@2x.webp 2x,images/logo@3x.webp 3x,images/logo@4x.webp 4x" alt="FindARTs logo" width="531" height="180" loading="lazy" />
-                        </a>
-                    </h1>
-                    <nav class="main-nav">
-                        <!-- nav-cht.js載入選單 -->
-                    </nav>
-                    <div class="language">
-                        <ul>
-                            <li>
-                                <a href="index.html">繁體中文</a>
-                            </li>
-                            <li>
-                                <a href="index_en.html">English</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- auo logo -->
-                    <div class="auo_logo">
-                        <a href="https://www.auo.com/zh-TW/solutions/index/FindARTs" target="_blank"><img src="images/logo_auo.webp" alt="AUO" width="160" height="64" loading="lazy" /></a>
-                    </div>
-                    <!-- RWD menu -->
-                    <button class="btn_menu" aria-label="打開選單按鈕">
-                        <span class="topBar"></span>
-                        <span class="midBar"></span>
-                        <span class="btmBar"></span>
-                    </button>
-                </div>
-            </header>
-            <!-- inner_img -->
-            <!-- <div class="inner_img service_inner">
+        <nav class="m-nav">
+          <!-- nav-cht.js載入選單 -->
+        </nav>
+      </div>
+    </div>
+    <div class="wrapper">
+      <!-- header -->
+      <header class="header inner">
+        <div class="container">
+          <h1>
+            <a href="index.html">
+              <img
+                src="images/logo.webp"
+                srcset="
+                  images/logo@2x.webp 2x,
+                  images/logo@3x.webp 3x,
+                  images/logo@4x.webp 4x
+                "
+                alt="FindARTs logo"
+                width="531"
+                height="180"
+                loading="lazy"
+              />
+            </a>
+          </h1>
+          <nav class="main-nav">
+            <!-- nav-cht.js載入選單 -->
+          </nav>
+          <div class="language">
+            <ul>
+              <li>
+                <a href="index.html">繁體中文</a>
+              </li>
+              <li>
+                <a href="index_en.html">English</a>
+              </li>
+            </ul>
+          </div>
+          <!-- auo logo -->
+          <div class="auo_logo">
+            <a
+              href="https://www.auo.com/zh-TW/solutions/index/FindARTs"
+              target="_blank"
+              ><img
+                src="images/logo_auo.webp"
+                alt="AUO"
+                width="160"
+                height="64"
+                loading="lazy"
+            /></a>
+          </div>
+          <!-- RWD menu -->
+          <button class="btn_menu" aria-label="打開選單按鈕">
+            <span class="topBar"></span>
+            <span class="midBar"></span>
+            <span class="btmBar"></span>
+          </button>
+        </div>
+      </header>
+      <!-- inner_img -->
+      <!-- <div class="inner_img service_inner">
                 <div class="container">
                     
                 </div>
             </div> -->
-            <div class="products_slider">
-                <div class="products_slider_content">
-                    <div><img src="images/img_cover_artbook_1_1x.webp" alt=""></div>
-                </div>
-            </div>
-            
-            <div class="inner_content">
-                <!-- main title -->
-                <div class="container">
-                    <div class="fluid-title">
-                        <h2>新增精緻畫冊</h2>
-                        <p>您需要擁有至少一台擬真藝屏後，方可依照藝術家類型，喜愛畫風套圖，選擇預計添購的精緻畫冊......</p>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="products_filter">
-                        篩選：
-                        <select name="" id="arts">
-                            <option value="">選擇畫家</option>
-                            <option value="台南400">台南400 | 富盛印象</option>
-                            <option value="齊柏林">齊柏林</option>
-                            <option value="蘇憲法">蘇憲法</option>
-                            <option value="謝明錩">謝明錩</option>
-                            <option value="洪東標">洪東標</option>
-                            <option value="Reydel-ESPINOSA">Reydel ESPINOSA</option>
-                            <option value="FindARTs印象經典">FindARTs印象經典</option>
-                        </select>
-                        <select name="0" id="art-size">
-                            <option value="">選擇畫作尺寸</option>
-                            <option value="17吋方形">17吋方形</option>
-                            <option value="32吋橫幅">32吋橫幅</option>
-                            <option value="32吋直幅">32吋直幅</option>
-                            <option value="85吋橫幅">85吋橫幅</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="container">
-                    <!-- 擬真藝品｜ 系列產品 -->
-                    <section class="sec products products_final">
-                        <div class="container">
-                            <!-- <h3 class="h3_title wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
+      <div class="products_slider">
+        <div class="products_slider_content">
+          <div><img src="images/img_cover_artbook_1_1x.webp" alt="" /></div>
+        </div>
+      </div>
+
+      <div class="inner_content">
+        <!-- main title -->
+        <div class="container">
+          <div class="fluid-title">
+            <h2>新增精緻畫冊</h2>
+            <p>
+              您需要擁有至少一台擬真藝屏後，方可依照藝術家類型，喜愛畫風套圖，選擇預計添購的精緻畫冊......
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="products_filter">
+            篩選：
+            <select name="" id="arts">
+              <option value="">選擇畫家</option>
+              <option value="台南400">台南400 | 富盛印象</option>
+              <option value="齊柏林">齊柏林</option>
+              <option value="蘇憲法">蘇憲法</option>
+              <option value="謝明錩">謝明錩</option>
+              <option value="洪東標">洪東標</option>
+              <option value="Reydel-ESPINOSA">Reydel ESPINOSA</option>
+              <option value="FindARTs印象經典">FindARTs印象經典</option>
+            </select>
+            <select name="0" id="art-size">
+              <option value="">選擇畫作尺寸</option>
+              <option value="17s">17吋方形</option>
+              <option value="32h">32吋橫幅</option>
+              <option value="32v">32吋直幅</option>
+              <option value="85h">85吋橫幅</option>
+            </select>
+          </div>
+        </div>
+        <div class="container">
+          <!-- 擬真藝品｜ 系列產品 -->
+          <section class="sec products products_final">
+            <div id="product" class="container">
+              <!-- <h3 class="h3_title wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
                                 擬真藝品｜ 系列產品
                             </h3> -->
-                            <div class="products_card_msg">
-                                <span>無符合的畫冊</span>
-                            </div>
-                            <div class="products_card">
-                                <!-- 台南400 --------------------------------- -->
-                                <div class="item 台南400 17吋方形" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-S9_17S_A001.jpg" alt="《臺南400 | 富盛印象》紀念款" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>《臺南400 | 富盛印象》紀念款</h3>
-                                        <p>"Tainan 400 |  Fù shèng yìn xiàng—Flourishing Impressions "commemorative edition.</p>
-                                        <p class="size">17吋方形</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/S9_17S_A001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">訂購諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 齊柏林 --------------------------------- -->
-                                <div class="item 齊柏林 32吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/img_card_artbook_1_1x.webp" alt="齊柏林《壯闊台灣》經典版" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>齊柏林<br>《壯闊台灣》經典版</h3>
-                                        <p>"Forward Taiwan" Classic Edition</p>
-                                        <p class="size">32吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32h_cpl001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">訂購諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 齊柏林 32吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/img_card_artbook_2_1x.webp" alt="齊柏林《豐饒》系列" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>齊柏林<br>《豐饒》系列</h3>
-                                        <p>"Bounty" Series</p>
-                                        <p class="size">32吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32h_cpl002.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">訂購諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 齊柏林 32吋直幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/img_card_artbook_3_1x.webp" alt="齊柏林
-                                            《高山島.台灣》系列" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>齊柏林<br>《高山島.台灣》系列</h3>
-                                        <p>"Taiwan the Alpine Island" Series</p>
-                                        <p class="size">32吋直幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32v_cpl001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">訂購諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 齊柏林 17吋方形" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/img_card_artbook_4_1x.webp" alt="齊柏林《秀麗台灣》系列" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>齊柏林<br>《秀麗台灣》系列</h3>
-                                        <p>"Picturesque Taiwan" Series</p>
-                                        <p class="size">17吋方形</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_17s_cpl001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">訂購諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 齊柏林 85吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/web_CPL025_85H1_Tamsui-River-Estuary.webp" alt="齊柏林《秀麗台灣》系列" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>齊柏林<br>《雲上視野 - 壯闊台灣》旗艦版 1</h3>
-                                        <p>"Forward Taiwan" Flagship Edition 1</p>
-                                        <p class="size">85吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_85h_cpl001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">訂購諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 齊柏林 85吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/web_CPL023_85H1_Puding-Tableland.webp" alt="齊柏林《秀麗台灣》系列" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>齊柏林<br>《雲上視野 - 壯闊台灣》旗艦版 2</h3>
-                                        <p>"Forward Taiwan" Flagship Edition 2</p>
-                                        <p class="size">85吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_85h_cpl002.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">訂購諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 蘇憲法 --------------------------------- -->
-                                <div class="item 蘇憲法 32吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_32h_shf001.webp" alt="蘇憲法《韶光四季》" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>蘇憲法<br>《韶光四季》</h3>
-                                        <p>Seasons Down Memory Lane</p>
-                                        <p class="size">32吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32h_shf001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 蘇憲法 32吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_32h_shf002.webp" alt="蘇憲法《城市掠影》" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>蘇憲法<br>《城市掠影》</h3>
-                                        <p>City Impression</p>
-                                        <p class="size">32吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32h_shf002.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 蘇憲法 17吋方形" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_17s_shf001.webp" alt="蘇憲法《東方詩境》系列" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>蘇憲法<br>《東方詩境》</h3>
-                                        <p>Oriental Poetic Realm</p>
-                                        <p class="size">17吋方形</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_17s_shf001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 蘇憲法 32吋直幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_32v_shf001.jpg" alt="蘇憲法《畫荷.意荷》" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>蘇憲法<br>《畫荷.意荷》</h3>
-                                        <p>Essence of Lotus</p>
-                                        <p class="size">32吋直幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32v_shf001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 蘇憲法 32吋直幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_32v_shf002.jpg" alt="蘇憲法《城市印象》" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>蘇憲法<br>《城市印象》</h3>
-                                        <p>City Impression</p>
-                                        <p class="size">32吋直幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32v_shf002.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 蘇憲法 85吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_85h_shf001.jpg" alt="蘇憲法《意象經典》" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>蘇憲法<br>《意象經典》</h3>
-                                        <p>"Imagery Classic" Flagship Edition</p>
-                                        <p class="size">85吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_85h_shf001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- 謝明錩 --------------------------------- -->
-                                <div class="item 謝明錩 32吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_32h_hmc001.webp" alt="謝明錩《豐盛之年》" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>謝明錩<br>《豐盛之年》</h3>
-                                        <p>Year of Abundance</p>
-                                        <p class="size">32吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32h_hmc001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 謝明錩 17吋方形" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_17s_hmc001.webp" alt="謝明錩《光的巡禮》" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>謝明錩<br>《光的巡禮》</h3>
-                                        <p>Wandering Light</p>
-                                        <p class="size">17吋方形</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_17s_hmc001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- 洪東標 --------------------------------- -->
-                                <div class="item 洪東標 32吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_32h_hdb001.webp" alt="洪東標《耀.立體光影》" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>洪東標<br>《耀.立體光影》</h3>
-                                        <p>Radiant Dimensions of Light and Shadow</p>
-                                        <p class="size">32吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32h_hdb001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item 洪東標 17吋方形" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_17s_hdb001.webp" alt="洪東標《律動光影》" width="495" height="288" loading="lazy" />
-                                        </div>
-                                        <h3>洪東標<br>《律動光影》</h3>
-                                        <p>Rhythmic Light and Shadow</p>
-                                        <p class="size">17吋方形</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_17s_hdb001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- Reydel ESPINOSA --------------------------------- -->
-                                <div class="item Reydel-ESPINOSA 32吋直幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_32v_rdl001.webp" alt="雷岱爾《平行宇宙》" width="1200" height="800" loading="lazy" />
-                                        </div>
-                                        <h3>Reydel ESPINOSA<br>《奇幻宇宙》</h3>
-                                        <p>Magical Universe</p>
-                                        <p class="size">32吋直幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32v_rdl001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item Reydel-ESPINOSA 32吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_32h_rdl001.webp" alt="雷岱爾《平行宇宙》" width="1200" height="800" loading="lazy" />
-                                        </div>
-                                        <h3>Reydel ESPINOSA<br>《奇幻宇宙》</h3>
-                                        <p>Magical Universe</p>
-                                        <p class="size">32吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_32h_rdl001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item Reydel-ESPINOSA 17吋方形" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-s9_17s_rdl001.webp" alt="雷岱爾《平行宇宙》" width="1200" height="800" loading="lazy" />
-                                        </div>
-                                        <h3>Reydel ESPINOSA<br>《奇幻宇宙》</h3>
-                                        <p>Magical Universe</p>
-                                        <p class="size">17吋方形</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/s9_17s_rdl001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FindARTs 印象經典 -->
-                                <div class="item FindARTs印象經典 17吋方形" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-web_MET01_001_17S_std1.jpg" alt="《FindARTs印象經典》17方形" width="1200" height="800" loading="lazy" />
-                                        </div>
-                                        <h3>《FindARTs印象經典》17方形</h3>
-                                        <p>FindARTs"Impressionist paintings"17 Square</p>
-                                        <p class="size">17吋方形</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/c9_17s_std001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item FindARTs印象經典 32吋直幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-web_MET01_011_32V_std1.jpg" alt="《FindARTs印象經典》32直幅" width="1200" height="800" loading="lazy" />
-                                        </div>
-                                        <h3>《FindARTs印象經典》32直幅</h3>
-                                        <p>FindARTs"Impressionist paintings" 32 Portrait</p>
-                                        <p class="size">32吋直幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/c9_32v_std001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item FindARTs印象經典 32吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-web_MET01_006_32H_std1.jpg" alt="《FindARTs印象經典》32橫幅" width="1200" height="800" loading="lazy" />
-                                        </div>
-                                        <h3>《FindARTs印象經典》32橫幅</h3>
-                                        <p>FindARTs"Impressionist paintings" 32 Landscape</p>
-                                        <p class="size">32吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/c9_32h_std001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item FindARTs印象經典 85吋橫幅" data-wow-duration=".75s" data-wow-delay=".75s">
-                                    <div class="card">
-                                        <div class="img-container">
-                                            <img class="lazyload" data-src="images/cover-web_WIK01_001_85H_std1.jpg" alt="《FindARTs印象經典》85橫幅" width="1200" height="800" loading="lazy" />
-                                        </div>
-                                        <h3>《FindARTs印象經典》85橫幅</h3>
-                                        <p>FindARTs"Impressionist paintings" 85 Landscape</p>
-                                        <p class="size">85吋橫幅</p>
-                                        <div class="btn-group">
-                                            <a href="gallery/c9_85h_std001.html" class="btn">畫冊簡介</a>
-                                            <a href="cht_contact.html" class="btn">專人諮詢</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+              <!-- <div class="products_card_msg">
+                <span>無符合的畫冊</span>
+              </div> -->
+              <div class="products_card"></div>
             </div>
-            <!-- footer -->
-            <footer>
-                <div class="container">
-                    <div class="footer_logo">
-                        <img src="images/logo_footer.webp" srcset="images/logo_footer@2x.webp 2x,images/logo_footer@3x.webp 3x" width="260" height="88" alt="FindARTs logo" loading="lazy" />
-                    </div>
-                    <div class="contact">
-                        <h4>
-                            Contact US
-                            <a href="https://www.facebook.com/AUO.DAPO/" target="_blank">
-                                <img src="images/icon_facebook.svg" alt="facebook icon" loading="lazy" />
-                            </a>
-                            <a href="https://www.youtube.com/@FindARTs-lo6qi/featured" target="_blank">
-                                <img src="images/icon_youtube.svg" alt="youtube icon" loading="lazy" />
-                            </a>
-                            
-                        </h4>
-                        <p>聯絡我 讓我知道您的需求</p>
-                        <a href="mailto:service@findarts.net">service@findarts.net</a>
-                        <a href="https://slsp.auo.com/zh-tw/privacy-statement">隱私權聲明</a>
-                    </div>
-                    
-                </div>
-            </footer>
+          </section>
         </div>
-        <a href="javascript:;" class="scrollToTop">回頁首</a>
-    </body>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="vendor/jquery.easing.min.js"></script>
-    <script src="vendor/lazyload/lazyload.js"></script>
-    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
-    <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
-    <script src="js/customize.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script>
-        $(function(){
-            // 篩選畫作
-            $('.products_filter select').on("input", function() {
-                let $products_card_msg = $('.products_card_msg');
-                let $pdCard_item = $('.products_card .item');
-                let $arts = $('#arts');
-                let $artSize = $('#art-size');
-                let _artsVal = $arts.val();
-                let _sizeVal = $artSize.val();
+      </div>
+      <!-- footer -->
+      <footer>
+        <div class="container">
+          <div class="footer_logo">
+            <img
+              src="images/logo_footer.webp"
+              srcset="
+                images/logo_footer@2x.webp 2x,
+                images/logo_footer@3x.webp 3x
+              "
+              width="260"
+              height="88"
+              alt="FindARTs logo"
+              loading="lazy"
+            />
+          </div>
+          <div class="contact">
+            <h4>
+              Contact US
+              <a href="https://www.facebook.com/AUO.DAPO/" target="_blank">
+                <img
+                  src="images/icon_facebook.svg"
+                  alt="facebook icon"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/@FindARTs-lo6qi/featured"
+                target="_blank"
+              >
+                <img
+                  src="images/icon_youtube.svg"
+                  alt="youtube icon"
+                  loading="lazy"
+                />
+              </a>
+            </h4>
+            <p>聯絡我 讓我知道您的需求</p>
+            <a href="mailto:service@findarts.net">service@findarts.net</a>
+            <a href="https://slsp.auo.com/zh-tw/privacy-statement"
+              >隱私權聲明</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+  </body>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="vendor/jquery.easing.min.js"></script>
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+  <script src="js/customize.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script type="module" src="js/dom/product-add.js"></script>
+  <script type="module" src="js/dom/search.js"></script>
 
-                let _artsValue = _artsVal ? '.' + _artsVal : '';
-                let _sizeValue = _sizeVal ? '.' + _sizeVal : '';
+  <script>
+    // $(function () {
+    //   // 篩選畫作
+    //   $(".products_filter select").on("input", function () {
+    //     let $products_card_msg = $(".products_card_msg");
+    //     let $pdCard_item = $(".products_card .item");
+    //     let $arts = $("#arts");
+    //     let $artSize = $("#art-size");
+    //     let _artsVal = $arts.val();
+    //     let _sizeVal = $artSize.val();
 
-                $pdCard_item.show();
+    //     let _artsValue = _artsVal ? "." + _artsVal : "";
+    //     let _sizeValue = _sizeVal ? "." + _sizeVal : "";
 
-                // 當任一 select 非空值時隱藏選定 option 以外項目
-                if( _artsVal !== '' || _sizeVal !== '' ){
-                    $pdCard_item.not( _artsValue + _sizeValue ).hide();
-                    // 沒有畫作符合時顯示「無符合畫作」
-                    $products_card_msg.toggle($pdCard_item.filter(':visible').length === 0);
-                }
-            });
-        })
-    </script>
-    <script>
-        new WOW().init();
-        $(
-            $('.products_slider_content').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                autoplay: true,
-                autoplaySpeed: 6000,
-                arrows: false
-            })
-        )
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTX55SQZKS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+    //     $pdCard_item.show();
 
-        gtag('config', 'G-VTX55SQZKS');
-    </script>
+    //     // 當任一 select 非空值時隱藏選定 option 以外項目
+    //     if (_artsVal !== "" || _sizeVal !== "") {
+    //       $pdCard_item.not(_artsValue + _sizeValue).hide();
+    //       // 沒有畫作符合時顯示「無符合畫作」
+    //       $products_card_msg.toggle(
+    //         $pdCard_item.filter(":visible").length === 0,
+    //       );
+    //     }
+    //   });
+    // });
+  </script>
+  <script>
+    new WOW().init();
+    $(
+      $(".products_slider_content").slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: "linear",
+        autoplay: true,
+        autoplaySpeed: 6000,
+        arrows: false,
+      }),
+    );
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-VTX55SQZKS"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-VTX55SQZKS");
+  </script>
 </html>

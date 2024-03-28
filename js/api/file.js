@@ -1,10 +1,12 @@
 import env from "../../env.js";
 
 export default async function getFile(uuid) {
+  const url = `${env.FINDARTS_DOMAIN}/files/${uuid}`;
+
   try {
     const res = await $.ajax({
       type: "GET",
-      url: `${env.FINDARTS_DOMAIN}/files/${uuid}`,
+      url,
       contentType: "application/json",
       dataType: "json",
     });
