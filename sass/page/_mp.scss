@@ -1590,3 +1590,11 @@ section.products {
         font-size: 50px;
     }
 }
+.gallery .btn-area {
+    display: flex;
+    justify-content: flex-end;
+}
+.gallery .btn-area .btn {
+    background-color: #B5A683;
+    color: #fff;
+}
