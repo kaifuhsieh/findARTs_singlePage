@@ -9530,4 +9530,14 @@ section.products .h3_title::after {
   .products_card_msg {
     font-size: 50px;
   }
+}
+
+.gallery .btn-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gallery .btn-area .btn {
+  background-color: #B5A683;
+  color: #fff;
 }/*# sourceMappingURL=findarts_website.min.css.map */
